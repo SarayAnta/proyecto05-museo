@@ -1,19 +1,8 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React from "react";
 import "./add-button.css"
 
-const Addbutton = () => {
-  const history  = useHistory();
+function Addbutton(){
+    return <button className="button">Soy un boton</button>;
+}
 
-  const navigateToFormPage = () => {
-    history.push('/NewItem'); // Navega a la ruta '/NewItem'
-  }
-
-  return (
-    <div>
-      <button onClick = {navigateToFormPage}> Añadir bicicleta </button>
-    </div>
-  );
-};
-
-export default Addbutton;
+export default Addbutton;
