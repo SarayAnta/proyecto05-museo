@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../components/Home";
-import Contacto from "../components/Contacto";
+import Addbutton from "../components/button/Button-add/add-button"
 
 const router = createBrowserRouter([
     {
@@ -9,9 +9,10 @@ const router = createBrowserRouter([
     },
 
     {
-        path: "/contacto",
-        element: <Contacto/>,
-    },
+      path: "/Addbutton",
+      element: <Addbutton/>
+    }
+
   ]);
 
 export default router;
