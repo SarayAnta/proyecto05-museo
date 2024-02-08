@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     {
       path: "/NewItem",
       element: <NewItem/>,
-    }
+    },
   ]);
 
 export default router;
