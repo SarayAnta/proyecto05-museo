@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../components/Home";
-import Addbutton from "../components/button/Button-add/add-button"
-import Nav from "../components/nav/Nav";
+import Addbutton from "../components/button/Button-add/add-button";
 import Contacto from "../components/Contacto";
 import NewItem from "../components/newitem/NewItem";
 
@@ -10,10 +9,10 @@ const router = createBrowserRouter([
       path: "/",
       element: <Home/>,
     },
-    {
 
-        path: "/nav",
-        element: <Nav/>,
+    {
+        path: "/contacto",
+        element: <Contacto/>,
     },
 
     {
