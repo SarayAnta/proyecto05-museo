@@ -10,13 +10,13 @@ const router = createBrowserRouter([
     },
 
     {
-      path: "/Addbutton",
-      element: <Addbutton/>
+      path: "/footer",
+      element: <Footer/>
     },
 
     {
-      path: "/footer",
-      element: <Footer/>
+      path: "/Addbutton",
+      element: <Addbutton/>
     },
 
   ]);

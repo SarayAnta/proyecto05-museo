@@ -1,6 +1,5 @@
 import React from 'react';
 import "./footer.css";
-
 import Copyright from '../../img/Copyright.png';
 //import GitHub from './src/img/GitHub.png';
 //import Instagram from './src/img/Instagram.png';
@@ -10,7 +9,7 @@ import Copyright from '../../img/Copyright.png';
 const Footer = () => {
   return (
     <>
-    <img src={Copyright} alt="" />
+        <img className="blabla" src={Copyright} alt="" />
     </>
   )
 }
