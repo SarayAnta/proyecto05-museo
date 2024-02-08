@@ -1,8 +1,19 @@
-import React from "react";
-import "./add-button.css"
+// FormButton.jsx
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
-function Addbutton(){
-    return <button className="add-button">Añadir Bicicleta</button>;
-}
+const Addbutton = () => {
+  const history = useHistory();
+
+  const navigateToFormPage = () => {
+    history.push('/NewItem'); // Navega a la ruta '/NewItem'
+  };
+
+  return (
+    <div>
+      <button onClick={navigateToFormPage}>Añadir biccleta</button>
+    </div>
+  );
+};
 
 export default Addbutton;
