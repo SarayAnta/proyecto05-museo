@@ -8,11 +8,6 @@ const router = createBrowserRouter([
       path: "/",
       element: <Home/>,
     },
-
-    {
-      path: "/Addbutton",
-      element: <Addbutton/>
-    },
     {
 
         path: "/nav",
