@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
+import './home.css';
+import BackgroundHome from '../../assets/img/BackgroundHome.png'
+import Nav from '../nav/Nav';
 
 const Home = () => {
   return (
-    <div>
-      Mi página Home
-    </div>
+    <>
+    <Nav/>
+    <img src={BackgroundHome}/>
+    </>
   )
 }
 
