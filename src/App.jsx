@@ -1,17 +1,15 @@
 import React from 'react'
 import Nav from './components/Nav'
-import footer from "../src/"
+import footer from "./components/footer"
 
-const App = () => {
-  return (
-    <>
-    <div>
-      App
-    </div>
-    <Nav/>
-    </>
-
-  )
-}
+  function App() {
+    return (
+      <>
+        <div>
+          App
+        </div>
+      </>
+    )
+  }
 
 export default App
