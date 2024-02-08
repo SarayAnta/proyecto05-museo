@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import Nav from '../nav/Nav';
 import './newitem.css';
 
 const NewItem = () => {
@@ -11,7 +12,8 @@ const NewItem = () => {
     }
 
     return(
-    <div>
+    <>
+      <Nav/>      
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Modelo</label>
@@ -43,7 +45,7 @@ const NewItem = () => {
             </div>
             <input type="submit" value="Añadir"/>
         </form>
-    </div>
+    </>
 )}
 
 export default NewItem;
