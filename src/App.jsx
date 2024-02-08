@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from './components/Nav';
-import NewItem from './components/NewItem';
+import NewItem from './components/newitem/NewItem';
 
 const App = () => {
   return (

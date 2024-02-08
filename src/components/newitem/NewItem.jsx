@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import './newitem.css';
 
 const NewItem = () => {
 
@@ -10,7 +11,7 @@ const NewItem = () => {
     }
 
     return(
-    <>
+    <div>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Modelo</label>
@@ -33,9 +34,16 @@ const NewItem = () => {
                 <label>Eléctrica</label>
                 <input type="checkbox" {...register('eléctrica')} />
             </div>
+            <div>
+                <label htmlFor="imageUpload">Img URL</label>
+                <input
+                type="file"
+                accept="image/*"
+                />
+            </div>
             <input type="submit" value="Añadir"/>
         </form>
-    </>
+    </div>
 )}
 
 export default NewItem;

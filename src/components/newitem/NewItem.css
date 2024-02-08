@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    max-width: 400px;
+    max-height: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 3px;
+    box-sizing: border-box;
+  }
+
+  
