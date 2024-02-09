@@ -1,5 +1,5 @@
 import React from "react";
-import "./add-button.css"
+import "./add-button.css";
 import { useNavigate } from "react-router-dom";
  
 const Addbutton = () => {
