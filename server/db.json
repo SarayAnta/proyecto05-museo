@@ -1,4 +1,29 @@
 {
-    "cuadros": [
+    "bicycles": 
+    [
+        {
+            "id": 1,
+            "model": "Bicycle A",
+            "speeds": "10",
+            "frame": "al",
+            "electric": false,
+            "image": "https://drive.google.com/file/d/10IXdKDec5B7fgDil699MukyEbtRgmQw4/view?usp=drive_link"
+          },
+          {
+            "id": 2,
+            "model": "Bicycle B",
+            "speeds": "8",
+            "frame": "steel",
+            "electric": true,
+            "image": "https://drive.google.com/file/d/1wZ0MS33tMP7xjqdU8W9wuFvEfQpMwzyy/view?usp=drive_link"
+          },
+          {
+            "id": 3,
+            "model": "Bicycle C",
+            "speeds": "12",
+            "frame": "carbon",
+            "electric": false,
+            "image": "https://example.com/image3.jpg"
+          }
     ]
 }

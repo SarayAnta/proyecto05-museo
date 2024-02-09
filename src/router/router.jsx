@@ -4,6 +4,7 @@ import NewItem from "../components/newitem/NewItem";
 import Edit from "../components/edit/edit";
 
 import Footer from "../components/footer/Footer";
+import Gallery from "../components/galery/Galery";
 
 const router = createBrowserRouter([
     {
@@ -20,9 +21,15 @@ const router = createBrowserRouter([
       element: <NewItem/>,
     },
     {
+<<<<<<< HEAD
       path: "/Edit",
       element: <Edit/>
     },
+=======
+      path: "/Gallery",
+      element: <Gallery/>
+    }
+>>>>>>> feature/home
   ]);
 
 export default router;
