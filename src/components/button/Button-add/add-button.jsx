@@ -8,7 +8,7 @@ const Addbutton = () => {
     return (
         <button className="add-button" onClick={() => navigate("/NewItem")}>
                 Añadir bicicleta
-            </button>
+        </button>
         );
 }
 
