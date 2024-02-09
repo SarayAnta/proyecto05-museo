@@ -1,6 +1,6 @@
-import React from 'react';
-import './add-button.css'
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import "./add-button.css";
+import { useNavigate } from "react-router-dom";
  
 const Addbutton = () => {
     const navigate = useNavigate();
@@ -8,8 +8,8 @@ const Addbutton = () => {
     return (
         <button className="add-button" onClick={() => navigate("/NewItem")}>
                 Añadir bicicleta
-            </button>
+        </button>
         );
 }
 
-export default Addbutton;
+export default Addbutton;

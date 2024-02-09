@@ -4,6 +4,7 @@
     display: flex; /* Utilizar flexbox para alinear elementos */
     justify-content: center; /* Alinear elementos al centro horizontalmente */
     align-items: center; /* Alinear elementos al centro verticalmente */
+    margin-top: -1vh;
   }
   
   .footer-container img {
