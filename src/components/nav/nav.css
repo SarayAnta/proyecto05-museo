@@ -16,3 +16,7 @@ nav {
 h1 {
     margin-left: 1vw;
 }
+
+.add-button {
+    display: none;
+}
