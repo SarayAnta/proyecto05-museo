@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import Nav from '../nav/Nav';
 import './newitem.css';
+import Footer from '../footer/Footer';
 
 const NewItem = () => {
 
@@ -52,6 +53,7 @@ const NewItem = () => {
             </div>
             <input type="submit" value="Añadir" className='add'/>
         </form>
+    <Footer/>
     </>
 )}
 

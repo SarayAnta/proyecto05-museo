@@ -1,18 +1,16 @@
-import React from 'react';
-import Nav from './components/Nav';
-import NewItem from './components/newitem/NewItem';
+import React from 'react'
+import Nav from './components/Nav'
+import footer from "./components/footer"
 
-const App = () => {
-  return (
-    <>
-    <div>
-      App
-    </div>
-    <Nav/>
-    </>
-
-  )
-}
+  function App() {
+    return (
+      <>
+        <div>
+          App
+        </div>
+      </>
+    )
+  }
 
 function App() {
 
