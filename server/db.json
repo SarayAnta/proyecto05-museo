@@ -3,27 +3,82 @@
     [
         {
             "id": 1,
-            "model": "Bicycle A",
-            "speeds": "10",
-            "frame": "al",
+            "model": "Capri",
+            "speeds": 5,
+            "frame": "Acero",
             "electric": false,
             "image": "https://drive.google.com/file/d/10IXdKDec5B7fgDil699MukyEbtRgmQw4/view?usp=drive_link"
           },
           {
             "id": 2,
-            "model": "Bicycle B",
-            "speeds": "8",
-            "frame": "steel",
+            "model": "Xiaomi",
+            "speeds": 3,
+            "frame": "Aluminio",
             "electric": true,
             "image": "https://drive.google.com/file/d/1wZ0MS33tMP7xjqdU8W9wuFvEfQpMwzyy/view?usp=drive_link"
           },
           {
             "id": 3,
-            "model": "Bicycle C",
-            "speeds": "12",
-            "frame": "carbon",
+            "model": "Reid Boston",
+            "speeds": 5,
+            "frame": "Acero",
             "electric": false,
-            "image": "https://example.com/image3.jpg"
+            "image": "https://drive.google.com/file/d/1sc3fAu0TcJk3zjn2Oya4aHgTlarhXcoc/view?usp=sharing"
+          },
+
+          {
+            "id": 4,
+            "model": "Orbea",
+            "speeds": 28,
+            "frame": "Aluminio",
+            "electric": true,
+            "image": "https://drive.google.com/file/d/1NXiUzGNK-IUNgioZ29ZzxHrHm3cwjreT/view?usp=sharing"
+          },
+
+          {          
+            "id": 5,
+            "model": "Black",
+            "speeds": 1,
+            "frame": "Acero",
+            "electric": false,
+            "image": "https://drive.google.com/file/d/1IK-p3URuqa616ay2CjHLhIfX6ur4Rze1/view?usp=sharing"
+          },
+          
+          {          
+            "id": 6,
+            "model": "Yerka",
+            "speeds": 3,
+            "frame": "Acero",
+            "electric": false,
+            "image": "https://drive.google.com/file/d/1-pOVBS6ekmdgYxPsBSIh2I_0zl7YGX2I/view?usp=sharing"
+          },
+
+          {          
+            "id": 7,
+            "model": "Rebel Bike",
+            "speeds": 1,
+            "frame": "Plástico",
+            "electric": false,
+            "image": "https://drive.google.com/file/d/1rXQDDpyufCDI170MahxIWb6Vxr81gcxr/view?usp=sharing"
+          },
+
+          {          
+            "id": 8,
+            "model": "BH 80",
+            "speeds": 1,
+            "frame": "Acero",
+            "electric": false,
+            "image": "https://drive.google.com/file/d/1AMimxEt643jmpBB47jM1Qt_zyhkbW2E9/view?usp=sharing"
+          },
+
+          {          
+            "id": 9,
+            "model": "Cuadro Csepel",
+            "speeds": 1,
+            "frame": "Acero",
+            "electric": false,
+            "image": "https://drive.google.com/file/d/1eBdKLLWLLEqH7s09ZxJI_yrVe1xpT8aU/view?usp=sharing"
           }
+
     ]
 }
