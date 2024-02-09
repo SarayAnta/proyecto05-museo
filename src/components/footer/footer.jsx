@@ -3,9 +3,9 @@ import "./footer.css";
 
 import Copyright from '../../img/Copyright.png';
 import GitHub from '../../img/GitHub.png';
-import Instagram from "../../img/Instagram.png";
+import Instagram from '../../img/Instagram.png'
 import mail from '../../img/mail.png';
-import Twitter from '../../img/Twitter.png';
+import Twitter from '../../img/TwitterX.png';
 
 const Footer = () => {
   return (
