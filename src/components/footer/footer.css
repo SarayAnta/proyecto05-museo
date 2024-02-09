@@ -1,0 +1,22 @@
+.footer-container {
+    background-color: black; /* Color de fondo gris */
+    padding: 20px; /* Espaciado interno */
+    display: flex; /* Utilizar flexbox para alinear elementos */
+    justify-content: center; /* Alinear elementos al centro horizontalmente */
+    align-items: center; /* Alinear elementos al centro verticalmente */
+  }
+  
+  .footer-container img {
+    margin: 0 10px; /* Espacio entre las imágenes */
+    width: 30px; /* Tamaño de las imágenes */
+    height: 30px;
+  }
+  
+  /* Estilos para hacer el footer responsive */
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Alinear elementos en columna en dispositivos pequeños */
+      padding: 10px; /* Reducir el espaciado en dispositivos pequeños */
+    }
+  }
+  

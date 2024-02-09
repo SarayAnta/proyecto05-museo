@@ -6,7 +6,7 @@ const Addbutton = () => {
     const navigate = useNavigate();
 
     return (
-        <button onClick={() => navigate("/NewItem")}>
+        <button className="add-button" onClick={() => navigate("/NewItem")}>
                 Añadir bicicleta
             </button>
         );
