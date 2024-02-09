@@ -12,14 +12,13 @@
 
 @media only screen and (max-width: 600px) {
     .gallerygrid {
-      flex-direction: column; /* Cambia la dirección de la flexión para apilar las imágenes en dispositivos móviles */
-      align-items: center; /* Centra las imágenes horizontalmente */
-    }
+      flex-direction: column; 
+      align-items: center;
   
     .galleryimg {
-      width: 40vw; /* Ajusta el ancho de la imagen al ancho de la pantalla en dispositivos móviles */
-      height: 20vh; /* Ajusta la altura automáticamente para mantener la proporción */
-      padding: 5vh 0; /* Reduce el espacio vertical entre las imágenes */
-      margin-bottom: 20px; /* Agrega un margen inferior para separar las imágenes */
-    }
+      width: 40vw;
+      height: 20vh; 
+      padding: 5vh 0; 
+      margin-bottom: 20px; 
+    }}
   }
