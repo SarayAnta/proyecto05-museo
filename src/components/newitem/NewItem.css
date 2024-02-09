@@ -1,20 +1,24 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 
 form {
-    max-width: 400px;
-    max-height: 500px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+  font-family: 'Jost', sans-serif;
+  max-width: 400px;
+  max-height: 450px;
+  margin: auto;
+  margin-top: 2%;
+  padding: 20px;
+}
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 0.5%;
+  margin-top: 5%;
+  }
+
+.model, .speeding, select {
+    background-color: #d9d9d9;
   }
 
   input, select {
@@ -24,4 +28,26 @@ label {
     box-sizing: border-box;
   }
 
-  
+  .add {
+    width: 20vh;
+    background-color: #6aa877;
+    margin-left: 35%;
+    margin-top: 3%;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 10px;
+  }
+
+  .cuadred {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+  }
+
+  .electric {
+    margin-left: 20%;
+  }
+
+
+

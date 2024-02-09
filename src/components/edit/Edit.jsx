@@ -1,9 +1,8 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import Nav from '../nav/Nav';
-import './newitem.css';
 
-const NewItem = () => {
+const Edit = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm();
 
@@ -50,9 +49,9 @@ const NewItem = () => {
                 accept="image/*"
                 />
             </div>
-            <input type="submit" value="Añadir" className='add'/>
+            <input type="submit" value="Editar" className='add'/>
         </form>
     </>
 )}
 
-export default NewItem;
+export default Edit;
