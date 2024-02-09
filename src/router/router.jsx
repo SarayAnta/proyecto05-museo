@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../components/home/Home";
 import NewItem from "../components/newitem/NewItem";
-import Footer from "../components/footer/footer";
+import Footer from "../components/footer/Footer";
 
 const router = createBrowserRouter([
     {

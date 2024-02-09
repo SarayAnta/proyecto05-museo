@@ -1,11 +1,11 @@
 import React from 'react';
 import "./footer.css";
 
-import Copyright from '../../img/Copyright.png';
-import GitHub from '../../img/GitHub.png';
-import Instagram from '../../img/Instagram.png'
-import mail from '../../img/mail.png';
-import Twitter from '../../img/TwitterX.png';
+import Copyright from '../../assets/img/Copyright.png';
+import GitHub from '../../assets/img/GitHub.png';
+import Instagram from '../../assets/img/Instagram.png'
+import mail from '../../assets/img/mail.png';
+import Twitter from '../../assets/img/TwitterX.png';
 
 const Footer = () => {
   return (
