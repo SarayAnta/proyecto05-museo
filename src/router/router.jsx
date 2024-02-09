@@ -23,7 +23,6 @@ const router = createBrowserRouter([
       path: "/Edit",
       element: <Edit/>
     },
-    },,
   ]);
 
 export default router;
