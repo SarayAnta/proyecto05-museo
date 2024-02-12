@@ -29,12 +29,13 @@ const Home = () => {
         <img src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul"/>
         <div>
           <h2>Modelos de bicicletas:</h2>
-            {console.log(bicycles)}
             {bicycles.map((bicycle) =>(
-              <div>
+            <section className='gallery'>
+            <div className='gallerygrid '>
+              <img className="bicyclesimg" src={bicycle.image}/>
               <p key={bicycle.id}>{bicycle.model}</p>
-              <img src={bicycle.image}/>
-              </div>
+            </div>
+            </section>
             ))}
         </div>
         <Footer/>  
@@ -43,4 +44,3 @@ const Home = () => {
 }
 
 export default Home
-z
