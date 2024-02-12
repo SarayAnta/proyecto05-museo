@@ -4,6 +4,7 @@ import BackgroundHome from '../../assets/img/BackgroundHome.png'
 import Nav from '../nav/Nav';
 import Footer from '../footer/Footer';
 
+
 const Home = () => {
   return (
     <>
