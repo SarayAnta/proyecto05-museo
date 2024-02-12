@@ -2,19 +2,27 @@ import React from 'react';
 import "./footer.css";
 
 import Copyright from '../../assets/img/Copyright.png';
+import mail from '../../assets/img/mail.png';
 import GitHub from '../../assets/img/GitHub.png';
 import Instagram from '../../assets/img/Instagram.png'
-import mail from '../../assets/img/mail.png';
 import Twitter from '../../assets/img/TwitterX.png';
 
 const Footer = () => {
   return (
     <div className="footer-container">
-      <img src={Copyright} alt="Copyright" />
-      <img src={GitHub} alt="GitHub" />
-      <img src={Instagram} alt="Instagram" />
-      <img src={mail} alt="mail" />
-      <img src={Twitter} alt="Twitter" />
+    <img src={Copyright} alt="Copyright" />
+    <a href="https://gmail.com/">
+        <img src={mail} alt="mail" />
+      </a>
+    <a href="https://github.com/">
+        <img src={GitHub} alt="GitHub" />
+      </a>
+    <a href="https://www.instagram.com/">
+        <img src={Instagram} alt="Instagram" />
+      </a>
+      <a href="https://twitter.com/">
+        <img src={Twitter} alt="Twitter" />
+      </a>
     </div>
   );
 }

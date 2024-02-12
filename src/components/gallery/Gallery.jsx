@@ -8,6 +8,7 @@ const Gallery = () => {
     <>
     <section className='gallerygrid'>
         <img src={Gallery1} className="galleryimg"alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul"/>
+        <img src={Gallery1} className="galleryimg"alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul"/>
     </section>
     <Bicycle/>
     
