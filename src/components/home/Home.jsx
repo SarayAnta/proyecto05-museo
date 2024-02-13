@@ -6,9 +6,18 @@ import Footer from '../footer/footer';
 import { useNavigate } from "react-router-dom";
 
 const HomeContainer = styled.div`
-  body {
+
+body {
     margin: 0;
   }
+
+
+  h2 {
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size: xx-large;
+  }
+  
 
   img {
     height: auto;
@@ -28,13 +37,19 @@ const HomeContainer = styled.div`
   }
 
   .bicyclesimg {
-    max-width: 200px; 
+    max-width: 30vw; 
+  }
+
+  p {
+    text-align: center;
+    font-family: 'Jost', sans-serif;
   }
 
  gallery-button {
-  display:flex;
+  display: flex;
   width: 5vw;
  }
+
  button img {
   width: 20px;
   height: auto; 
@@ -76,9 +91,9 @@ const Home = () => {
   return (
     <>
       <Nav />
-      <img src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul" />
+      <img className=""src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul" />
       <HomeContainer>
-        <h2>Modelos de bicicletas:</h2>
+        <h2>Modelos de bicicletas</h2>
         <div className='gallery'>
           {bicycles.map((bicycle) => (
             <div className='gallerygrid' key={bicycle.id}>
