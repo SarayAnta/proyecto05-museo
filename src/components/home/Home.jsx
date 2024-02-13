@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './home.css';
 import BackgroundHome from '../../assets/img/BackgroundHome.png'
 import Nav from '../nav/Nav';
-import Footer from '../footer/Footer';
+import Footer from '../footer/footer';
+import { useNavigate } from "react-router-dom";
 
 
 const Home = () => {
@@ -36,6 +37,7 @@ const deleteBicycle = async (id) => {
   }
 };
 
+  const navigate = useNavigate();
   return (
     <>
         <Nav/>
@@ -43,14 +45,21 @@ const deleteBicycle = async (id) => {
         <div>
           <h2>Modelos de bicicletas:</h2>
             {bicycles.map((bicycle) =>(
-            <section className='gallery'>
+      <section className='gallery'>
             <div className='gallerygrid '>
               <img className="bicyclesimg" src={bicycle.image}/>
               <p key={bicycle.id}>{bicycle.model}</p>
               <button onClick={() => deleteBicycle(bicycle.id)}>Eliminar</button>
             </div>
-            </section>
+            <button onClick={() => navigate("/Edit")}>
+     <img className="editbutton" src="src\assets\img\Edit.png"></img>
+     </button> 
+     <button>
+     <img className="deletebutton" src="src\assets\img\Delete.png"></img>
+     </button>   
+        </section>  
             ))}
+            
         </div>
         <Footer/>  
     </>

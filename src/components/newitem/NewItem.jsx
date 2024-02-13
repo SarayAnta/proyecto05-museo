@@ -1,8 +1,66 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import Nav from '../nav/Nav';
-import './newitem.css';
-import Footer from '../footer/Footer';
+import styled from 'styled-components';
+import Footer from '../footer/footer';
+
+// Corregido el nombre de la constante StyledNewItem
+const StyledNewItem = styled.div`
+  body {
+    margin: 0;
+  }
+  
+  form {
+    font-family: 'Jost', sans-serif;
+    max-width: 400px;
+    height: 439px;
+    margin: auto;
+    margin-top: 2%;
+    padding: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5%;
+    margin-top: 5%;
+  }
+  
+  .model, .speeding, select {
+    background-color: #d9d9d9;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 3px;
+    box-sizing: border-box;
+  }
+  
+  .add {
+    width: 20vh;
+    background-color: #6aa877;
+    margin-left: 35%;
+    margin-top: 3%;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 10px;
+  }
+  
+  .cuadred {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+  }
+  
+  .electric {
+    margin-left: 10%;
+  }
+  
+  .frame {
+    width: 70%;
+  }
+`;
 
 const NewItem = () => {
 
@@ -15,6 +73,8 @@ const NewItem = () => {
     return(
     <>
       <Nav/>      
+      {/* Corregido: Cambiado "form" a "StyledNewItem" */}
+      <StyledNewItem>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Modelo</label>
@@ -53,7 +113,8 @@ const NewItem = () => {
             </div>
             <input type="submit" value="Añadir" className='add'/>
         </form>
-    <Footer/>
+      </StyledNewItem>
+      <Footer/>
     </>
 )}
 

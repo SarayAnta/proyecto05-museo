@@ -8,16 +8,27 @@ img {
 }
 
 .gallery {
-    display: flex; /* Utilizamos flexbox para colocar las imágenes en línea */
     flex-wrap: wrap; /* Permitimos que las imágenes se envuelvan cuando no haya suficiente espacio */
     justify-content: space-around; /* Distribuimos el espacio sobrante entre las imágenes */
   }
   
   .gallerygrid {
+    display: grid;
     margin: 10px; /* Añadimos un pequeño margen entre cada imagen */
-    text-align: center; /* Centramos el texto del modelo debajo de cada imagen */
   }
   
   .bicyclesimg {
-    max-width: 200px; /* Limitamos el ancho máximo de cada imagen */
+    max-width: 20vw;
   }
+  
+  button {
+    border: none;
+  }
+
+  .editbutton {
+    width: 5vw;
+  }
+
+  .deletebutton {
+    width: 5vw;
+  } 
