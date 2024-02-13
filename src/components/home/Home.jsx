@@ -9,7 +9,7 @@ const Home = () => {
   const [bicycles, setBicycles] = useState([]);
 
   useEffect(() => {
-    const fetchBicycles = async () => {
+    const getBicycles = async () => {
       try {
         const response = await fetch('http://localhost:3000/bicycles');
         const data = await response.json();
@@ -20,9 +20,22 @@ const Home = () => {
       }
     };
 
-    fetchBicycles();
+    getBicycles();
   }, []);
   console.log(bicycles)
+
+const deleteBicycle = async (id) => {
+  try {
+      await fetch(`http://localhost:3000/bicycles/${id}`, {
+      method: 'DELETE'
+    });
+    const updatedBicycles = bicycles.filter(bicycle => bicycle.id !== id);
+    setBicycles(updatedBicycles);
+  } catch (error) {
+    console.error('Error deleting bicycle:', error);
+  }
+};
+
   return (
     <>
         <Nav/>
@@ -34,6 +47,7 @@ const Home = () => {
               <div>
               <p key={bicycle.id}>{bicycle.model}</p>
               <img src={bicycle.image}/>
+              <button onClick={() => deleteBicycle(bicycle.id)}>Eliminar</button>
               </div>
             ))}
         </div>
