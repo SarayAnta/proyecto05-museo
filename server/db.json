@@ -7,7 +7,7 @@
             "speeds": 5,
             "frame": "Acero",
             "electric": false,
-            "image": "https://drive.google.com/file/d/10IXdKDec5B7fgDil699MukyEbtRgmQw4/view?usp=drive_link"
+            "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744066/Gallery_1_nyvctj.png"
           },
           {
             "id": 2,
@@ -15,7 +15,7 @@
             "speeds": 3,
             "frame": "Aluminio",
             "electric": true,
-            "image": "https://drive.google.com/file/d/1wZ0MS33tMP7xjqdU8W9wuFvEfQpMwzyy/view?usp=drive_link"
+            "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_2_goazza.png"
           },
           {
             "id": 3,
@@ -23,7 +23,7 @@
             "speeds": 5,
             "frame": "Acero",
             "electric": false,
-            "image": "https://drive.google.com/file/d/1sc3fAu0TcJk3zjn2Oya4aHgTlarhXcoc/view?usp=sharing"
+            "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744116/Gallery_3_gamemn.png"
           },
 
           {
@@ -32,7 +32,7 @@
             "speeds": 28,
             "frame": "Aluminio",
             "electric": true,
-            "image": "https://drive.google.com/file/d/1NXiUzGNK-IUNgioZ29ZzxHrHm3cwjreT/view?usp=sharing"
+            "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744117/Gallery_4_rtud0n.png"
           },
 
           {          
@@ -41,7 +41,7 @@
             "speeds": 1,
             "frame": "Acero",
             "electric": false,
-            "image": "https://drive.google.com/file/d/1IK-p3URuqa616ay2CjHLhIfX6ur4Rze1/view?usp=sharing"
+            "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744114/Gallery_5_crbwkd.png"
           },
           
           {          
@@ -50,7 +50,7 @@
             "speeds": 3,
             "frame": "Acero",
             "electric": false,
-            "image": "https://drive.google.com/file/d/1-pOVBS6ekmdgYxPsBSIh2I_0zl7YGX2I/view?usp=sharing"
+            "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744114/Gallery_6_bpemav.png"
           },
 
           {          
@@ -59,7 +59,7 @@
             "speeds": 1,
             "frame": "Plástico",
             "electric": false,
-            "image": "https://drive.google.com/file/d/1rXQDDpyufCDI170MahxIWb6Vxr81gcxr/view?usp=sharing"
+            "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744113/Gallery_7_ubzo2k.png"
           },
 
           {          
@@ -68,7 +68,7 @@
             "speeds": 1,
             "frame": "Acero",
             "electric": false,
-            "image": "https://drive.google.com/file/d/1AMimxEt643jmpBB47jM1Qt_zyhkbW2E9/view?usp=sharing"
+            "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707742752/Gallery_8_uyvbzu.png"
           },
 
           {          
@@ -77,7 +77,7 @@
             "speeds": 1,
             "frame": "Acero",
             "electric": false,
-            "image": "https://drive.google.com/file/d/1eBdKLLWLLEqH7s09ZxJI_yrVe1xpT8aU/view?usp=sharing"
+            "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
           }
 
     ]

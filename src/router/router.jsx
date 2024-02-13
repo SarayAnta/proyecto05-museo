@@ -2,8 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../components/home/Home";
 import NewItem from "../components/newitem/NewItem";
 import Edit from "../components/edit/edit";
-
-import Footer from "../components/footer/footer";
+import Footer from "../components/footer/Footer";
 import Gallery from "../components/gallery/Gallery";
 
 const router = createBrowserRouter([
