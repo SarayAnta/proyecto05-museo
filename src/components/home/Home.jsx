@@ -32,15 +32,20 @@ const Home = () => {
         <div>
           <h2>Modelos de bicicletas:</h2>
             {bicycles.map((bicycle) =>(
-            <section className='gallery'>
+      <section className='gallery'>
             <div className='gallerygrid '>
               <img className="bicyclesimg" src={bicycle.image}/>
               <p key={bicycle.id}>{bicycle.model}</p>
             </div>
-            <button className="editbutton" onClick={() => navigate("/Edit")}>
-     <img className="editbutton" src="src\assets\img\Edit.png"></img></button>  
+            <button onClick={() => navigate("/Edit")}>
+     <img className="editbutton" src="src\assets\img\Edit.png"></img>
+     </button> 
+     <button>
+     <img className="deletebutton" src="src\assets\img\Delete.png"></img>
+     </button>   
         </section>  
             ))}
+            
         </div>
         <Footer/>  
     </>
