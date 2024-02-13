@@ -1,0 +1,25 @@
+.gallerygrid{
+    display: flex;
+    justify-content: space-around;
+    padding: auto;
+}
+
+.galleryimg {
+    width: 15vw;
+    height: 20vh;
+    padding: 5vh 5vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .gallerygrid {
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    .bicyclesimg {
+      width: 40vw;
+      height: 20vh; 
+      padding: 5vh 0; 
+      margin-bottom: 20px; 
+    }}
+  

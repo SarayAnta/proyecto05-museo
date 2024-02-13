@@ -1,5 +1,5 @@
 .footer-container {
-    background-color: black; /* Color de fondo gris */
+    background-color: #393939; /* Color de fondo gris */
     padding: 20px; /* Espaciado interno */
     display: flex; /* Utilizar flexbox para alinear elementos */
     justify-content: center; /* Alinear elementos al centro horizontalmente */
@@ -9,8 +9,8 @@
   
   .footer-container img {
     margin: 0 10px; /* Espacio entre las imágenes */
-    width: 30px; /* Tamaño de las imágenes */
-    height: 30px;
+    width: 50px; /* Tamaño de las imágenes */
+    height: 50px;
   }
   
   /* Estilos para hacer el footer responsive */
