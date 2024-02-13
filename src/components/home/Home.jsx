@@ -5,9 +5,35 @@ import Nav from '../nav/Nav';
 import Footer from '../footer/footer';
 import { useNavigate } from "react-router-dom";
 
+const HomeContainer = styled.div`
+  body {
+    margin: 0;
+  }
+
+  img {
+    height: auto;
+    width: 100vw;
+  }
+
+  .gallery {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+  }
+
+  .gallerygrid {
+    margin: 10px; 
+    text-align: center; 
+  }
+
+  .bicyclesimg {
+    max-width: 200px; 
+  }
+`;
 
 const Home = () => {
   const [bicycles, setBicycles] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getBicycles = async () => {
@@ -23,32 +49,30 @@ const Home = () => {
 
     getBicycles();
   }, []);
-  console.log(bicycles)
 
-const deleteBicycle = async (id) => {
-  try {
+  const deleteBicycle = async (id) => {
+    try {
       await fetch(`http://localhost:3000/bicycles/${id}`, {
-      method: 'DELETE'
-    });
-    const updatedBicycles = bicycles.filter(bicycle => bicycle.id !== id);
-    setBicycles(updatedBicycles);
-  } catch (error) {
-    console.error('Error deleting bicycle:', error);
-  }
-};
+        method: 'DELETE'
+      });
+      const updatedBicycles = bicycles.filter(bicycle => bicycle.id !== id);
+      setBicycles(updatedBicycles);
+    } catch (error) {
+      console.error('Error deleting bicycle:', error);
+    }
+  };
 
-  const navigate = useNavigate();
   return (
     <>
-        <Nav/>
-        <img src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul"/>
-        <div>
-          <h2>Modelos de bicicletas:</h2>
-            {bicycles.map((bicycle) =>(
-      <section className='gallery'>
-            <div className='gallerygrid '>
-              <img className="bicyclesimg" src={bicycle.image}/>
-              <p key={bicycle.id}>{bicycle.model}</p>
+      <Nav />
+      <img src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul" />
+      <HomeContainer>
+        <h2>Modelos de bicicletas:</h2>
+        <div className='gallery'>
+          {bicycles.map((bicycle) => (
+            <div className='gallerygrid' key={bicycle.id}>
+              <img className="bicyclesimg" src={bicycle.image} alt={bicycle.model} />
+              <p>{bicycle.model}</p>
               <button onClick={() => deleteBicycle(bicycle.id)}>Eliminar</button>
             </div>
           ))}
@@ -60,4 +84,3 @@ const deleteBicycle = async (id) => {
 }
 
 export default Home;
-
