@@ -3,6 +3,7 @@ import './home.css';
 import BackgroundHome from '../../assets/img/BackgroundHome.png'
 import Nav from '../nav/Nav';
 import Footer from '../footer/Footer';
+import { useNavigate } from "react-router-dom";
 
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
     fetchBicycles();
   }, []);
   console.log(bicycles)
+  const navigate = useNavigate();
   return (
     <>
         <Nav/>
@@ -35,7 +37,9 @@ const Home = () => {
               <img className="bicyclesimg" src={bicycle.image}/>
               <p key={bicycle.id}>{bicycle.model}</p>
             </div>
-            </section>
+            <button className="editbutton" onClick={() => navigate("/Edit")}>
+     <img className="editbutton" src="src\assets\img\Edit.png"></img></button>  
+        </section>  
             ))}
         </div>
         <Footer/>  
