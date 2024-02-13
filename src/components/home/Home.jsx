@@ -13,6 +13,7 @@ const HomeContainer = styled.div`
   img {
     height: auto;
     width: 100vw;
+    
   }
 
   .gallery {
@@ -29,6 +30,16 @@ const HomeContainer = styled.div`
   .bicyclesimg {
     max-width: 200px; 
   }
+
+ gallery-button {
+  display:flex;
+  width: 5vw;
+ }
+ button img {
+  width: 20px;
+  height: auto; 
+}
+
 `;
 
 const Home = () => {
@@ -73,7 +84,13 @@ const Home = () => {
             <div className='gallerygrid' key={bicycle.id}>
               <img className="bicyclesimg" src={bicycle.image} alt={bicycle.model} />
               <p>{bicycle.model}</p>
-              <button onClick={() => deleteBicycle(bicycle.id)}>Eliminar</button>
+              <div className="gallery-button" >
+              <button className="edit-button" onClick={() => navigate("/Edit")}>
+                <img src="src\assets\img\Edit.png" alt="" />
+              </button>
+              <button onClick={() => deleteBicycle(bicycle.id)}>
+                <img src="src\assets\img\Delete.png"></img></button>
+                </div>
             </div>
           ))}
         </div>
