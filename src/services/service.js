@@ -1,3 +1,4 @@
+//Método GET
 export const getBicycles = async () => {
     try {
       const response = await fetch('http://localhost:3000/bicycles');
@@ -8,6 +9,7 @@ export const getBicycles = async () => {
     }
   };
 
+//Método DELETE
 export    const deleteBicycle = async (id) => {
     const response = await fetch(`http://localhost:3000/bicycles/${id}`, {
     method: 'DELETE'});
@@ -15,7 +17,6 @@ export    const deleteBicycle = async (id) => {
 };
 
 //Método POST
-
 export const addBicycle = async (data) => {
   try {
       const response = await fetch('http://localhost:3000/bicycles', {
@@ -34,5 +35,27 @@ export const addBicycle = async (data) => {
   } catch (error) {
       console.error('Error:', error);
       return { success: false, error: 'Hubo un problema al añadir tu bicicleta. Por favor, intenta de nuevo más tarde.' };
+  }
+};
+
+//Método PATCH
+export const updateItem = async (id, newData) => {
+  try {
+    const response = await fetch(`http://localhost:3000/bicycles/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newData)
+    });
+
+    if (!response.ok) {
+      throw new Error('Error updating item');
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error('Error updating item:', error);
+    throw error;
   }
 };
