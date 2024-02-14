@@ -1,8 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import styled from 'styled-components';
-import Nav from '../nav/Nav';
-import Footer from '../footer/footer';
 
 
 const StyledEdit = styled.div`
@@ -118,7 +116,7 @@ const Edit = () => {
         
     return (
         <StyledEdit>
-        <Nav/>  
+      
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Modelo</label>
@@ -160,7 +158,7 @@ const Edit = () => {
             </div>
             <input type="submit" value="Editar"/>
         </form>
-        <Footer/>
+       
         </StyledEdit>
     );
             }
