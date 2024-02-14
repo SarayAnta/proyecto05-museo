@@ -13,3 +13,4 @@ export    const deleteBicycle = async (id) => {
     method: 'DELETE'});
     return response;
 };
+
