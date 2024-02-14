@@ -1,19 +1,21 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import styled from 'styled-components';
-import Nav from '../nav/Nav';
-import Footer from '../footer/footer';
-
+import { addBicycle } from '../../services/service';
 
 const StyledNewItem = styled.div`
+
+height: 80vh;
+display: flex;
+align-items: center;
+
 body {
     max-height: 100%;
   }
-  
+
   form {
     font-family: 'Jost', sans-serif;
     max-width: 400px;
-    height: 62vh;
     margin: 0 auto;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -80,6 +82,7 @@ body {
   .frame label,
   .electric label {
     margin-right: 20px; /* Espacio entre el label y el input */
+    margin-top: -2vh;
   }
   
   .frame select {
@@ -89,6 +92,7 @@ body {
   
   .electric input[type="checkbox"] {
     flex: 1; /* El input ocupa todo el espacio restante */
+    margin-top: -3vh;
   }
   
   input[type="submit"] {
@@ -107,18 +111,23 @@ body {
 const NewItem = () => {
 
     const { register, formState: { errors }, handleSubmit, reset} = useForm();
-
-    const onSubmit = (data) => {
-        console.log(data);
-        // Mostrar mensaje de éxito
-        alert('¡Tu bicicleta fue añadida correctamente!');
-        // Reiniciar el formulario
-        reset();
-    }
         
+    const onSubmit = async (data) => {
+        const { success, error } = await addBicycle(data);
+
+        if (success) {
+            // Mostrar mensaje de éxito
+            alert('¡La bicicleta fue añadida correctamente!');
+            // Reiniciar el formulario
+            reset();
+        } else {
+            // Mostrar mensaje de error
+            alert(error);
+        }
+    }
+
     return (
         <StyledNewItem>
-        <Nav/>  
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Modelo</label>
@@ -160,9 +169,8 @@ const NewItem = () => {
             </div>
             <input type="submit" value="Añadir"/>
         </form>
-        <Footer/>
         </StyledNewItem>
     );
-            }
+}
            
 export default NewItem;

@@ -11,11 +11,10 @@ import Twitter from '../../assets/img/TwitterX.png';
 // Cambiado "Footer" por "footer" para coincidir con el nombre de la etiqueta HTML
 const FooterContainer = styled.footer`
   background-color: #393939;
-  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -1vh;
+  height: 10vh;
   
   img {
     margin: 0 10px;

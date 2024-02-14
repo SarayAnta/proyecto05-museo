@@ -8,7 +8,6 @@
       "electric": false,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744066/Gallery_1_nyvctj.png"
     },
-
     {
       "id": "2",
       "model": "Xiaomi",
@@ -17,7 +16,6 @@
       "electric": true,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_2_goazza.png"
     },
-    
     {
       "id": "3",
       "model": "Reid Boston",
@@ -26,7 +24,6 @@
       "electric": false,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744116/Gallery_3_gamemn.png"
     },
-
     {
       "id": "4",
       "model": "Orbea",
@@ -35,7 +32,6 @@
       "electric": true,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744117/Gallery_4_rtud0n.png"
     },
-
     {
       "id": "5",
       "model": "Black",
@@ -44,7 +40,6 @@
       "electric": false,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744114/Gallery_5_crbwkd.png"
     },
-
     {
       "id": "6",
       "model": "Yerka",
@@ -53,8 +48,7 @@
       "electric": false,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744114/Gallery_6_bpemav.png"
     },
-
-    {          
+    {
       "id": "7",
       "model": "Rebel Bike",
       "speeds": 1,
@@ -62,8 +56,7 @@
       "electric": false,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744113/Gallery_7_ubzo2k.png"
     },
-
-    {          
+    {
       "id": "8",
       "model": "BH 80",
       "speeds": 1,
@@ -71,7 +64,6 @@
       "electric": false,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707742752/Gallery_8_uyvbzu.png"
     },
-
     {
       "id": "9",
       "model": "Cuadro Csepel",
