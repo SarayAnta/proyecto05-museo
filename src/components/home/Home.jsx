@@ -46,6 +46,7 @@ body {
   }
 
  gallery-button {
+  border: none;
   display: flex;
   width: 5vw;
  }
