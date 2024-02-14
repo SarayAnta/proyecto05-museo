@@ -2,8 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { useForm } from "react-hook-form";
 import styled from 'styled-components';
-import Nav from '../nav/Nav';
-import Footer from '../footer/footer';
 import { updateItem } from '../../services/service'
 
 const StyledEdit = styled.div`
