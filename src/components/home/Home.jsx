@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import BackgroundHome from '../../assets/img/BackgroundHome.png';
-import Nav from '../nav/Nav';
-import Footer from '../footer/footer';
 import { useNavigate } from "react-router-dom";
 import { getBicycles, deleteBicycle } from '../../services/service';
 
@@ -77,7 +75,6 @@ const Home = () => {
 
   return (
     <>
-      <Nav />
       <img className=""src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul" />
       <HomeContainer>
         <h2>Modelos de bicicletas</h2>
@@ -97,7 +94,6 @@ const Home = () => {
           ))}
         </div>
       </HomeContainer>
-      <Footer />
     </>
   );
 }
