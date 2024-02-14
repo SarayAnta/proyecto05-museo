@@ -44,12 +44,9 @@ body {
     font-family: 'Jost', sans-serif;
   }
 
- gallery-button {
+  button{
   border: none;
-  display: flex;
-  width: 5vw;
- }
-
+}
  button img {
   width: 20px;
   height: auto; 
@@ -89,7 +86,7 @@ const Home = () => {
               </button>
               <button onClick={() => deleteBicycle(`${bicycle.id}`)}>
                 <img src="src\assets\img\Delete.png"></img></button>
-                </div>
+              </div>
             </div>
           ))}
         </div>
