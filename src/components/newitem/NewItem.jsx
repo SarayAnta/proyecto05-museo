@@ -5,14 +5,18 @@ import styled from 'styled-components';
 
 
 const StyledNewItem = styled.div`
+
+height: 80vh;
+display: flex;
+align-items: center;
+
 body {
     max-height: 100%;
   }
-  
+
   form {
     font-family: 'Jost', sans-serif;
     max-width: 400px;
-    height: 62vh;
     margin: 0 auto;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -117,7 +121,6 @@ const NewItem = () => {
         
     return (
         <StyledNewItem>
-      
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Modelo</label>
