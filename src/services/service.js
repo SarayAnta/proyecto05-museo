@@ -16,7 +16,7 @@ export    const deleteBicycle = async (id) => {
 
 //Método POST
 
-export const postBicycle = async (data) => {
+export const addBicycle = async (data) => {
   try {
       const response = await fetch('http://localhost:3000/bicycles', {
           method: 'POST',

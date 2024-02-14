@@ -71,14 +71,6 @@
       "frame": "Acero",
       "electric": false,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
-    },
-    {
-      "id": "8d3a",
-      "modelo": "Modelo X",
-      "velocidades": "8",
-      "cuadro": "ace",
-      "eléctrica": true,
-      "imageUpload": "https://www.madrid360.es/wp-content/uploads/2023/01/portada-bicimad-nuevo.png"
     }
   ]
 }

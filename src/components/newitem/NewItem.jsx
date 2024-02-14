@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import styled from 'styled-components';
 import Nav from '../nav/Nav';
 import Footer from '../footer/footer';
-import { postBicycle } from '../../services/service'
+import { addBicycle } from '../../services/service';
 
 
 const StyledNewItem = styled.div`
@@ -108,22 +108,21 @@ body {
 const NewItem = () => {
 
     const { register, formState: { errors }, handleSubmit, reset} = useForm();
-
-    //Método POST
-        const onSubmit = async (data) => {
-            const { success, error } = await postBicycle(data);
-    
-            if (success) {
-                // Mostrar mensaje de éxito
-                alert('¡Tu bicicleta fue añadida correctamente!');
-                // Reiniciar el formulario
-                reset();
-            } else {
-                // Mostrar mensaje de error
-                alert(error);
-            }
-        }
         
+    const onSubmit = async (data) => {
+        const { success, error } = await addBicycle(data);
+
+        if (success) {
+            // Mostrar mensaje de éxito
+            alert('¡La bicicleta fue añadida correctamente!');
+            // Reiniciar el formulario
+            reset();
+        } else {
+            // Mostrar mensaje de error
+            alert(error);
+        }
+    }
+
     return (
         <StyledNewItem>
         <Nav/>  
