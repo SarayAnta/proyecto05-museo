@@ -1,17 +1,21 @@
 import React from 'react';
+import { useState } from 'react';
 import { useForm } from "react-hook-form";
 import styled from 'styled-components';
-
+import { updateItem } from '../../services/service'
 
 const StyledEdit = styled.div`
+height: 80vh;
+display: flex;
+align-items: center;
+
 body {
     max-height: 100%;
   }
-  
+
   form {
     font-family: 'Jost', sans-serif;
     max-width: 400px;
-    height: 62vh;
     margin: 0 auto;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -78,6 +82,7 @@ body {
   .frame label,
   .electric label {
     margin-right: 20px; /* Espacio entre el label y el input */
+    margin-top: -2vh;
   }
   
   .frame select {
@@ -87,6 +92,7 @@ body {
   
   .electric input[type="checkbox"] {
     flex: 1; /* El input ocupa todo el espacio restante */
+    margin-top: -3vh;
   }
   
   input[type="submit"] {
@@ -102,21 +108,31 @@ body {
   }
 `;
 
-const Edit = () => {
+const Edit = ({ itemId }) => {
+  const { register, formState: { errors }, handleSubmit, reset } = useForm();
+  const [loading, setLoading] = useState(false);
 
-    const { register, formState: { errors }, handleSubmit, reset} = useForm();
-
-    const onSubmit = (data) => {
-        console.log(data);
-        // Mostrar mensaje de éxito
-        alert('¡Los datos de tu bicicleta han sido editados correctamente!');
-        // Reiniciar el formulario
-        reset();
+  const onSubmit = async (data) => {
+    try {
+      setLoading(true);
+      // Realiza la solicitud para actualizar el elemento en la base de datos utilizando la función updateItem
+      await updateItem(itemId, data);
+      // Mostrar mensaje de éxito
+      alert('¡Los datos del elemento han sido actualizados correctamente!');
+      // Reiniciar el formulario
+      reset();
+    } catch (error) {
+      // Manejar errores
+      console.error('Error al actualizar el elemento:', error);
+      // Mostrar mensaje de error
+      alert('Error al actualizar el elemento. Por favor, intenta nuevamente.');
+    } finally {
+      setLoading(false);
     }
+  }
         
     return (
         <StyledEdit>
-      
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Modelo</label>
@@ -158,7 +174,6 @@ const Edit = () => {
             </div>
             <input type="submit" value="Editar"/>
         </form>
-       
         </StyledEdit>
     );
             }

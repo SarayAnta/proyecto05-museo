@@ -18,10 +18,9 @@ body {
   }
   
 
-  img {
+  .background-img {
+    width: 100%;
     height: auto;
-    width: 100vw;
-    
   }
 
   .gallery {
@@ -76,8 +75,8 @@ const Home = () => {
 
   return (
     <>
-      <img className=""src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul" />
-      <HomeContainer>
+    <HomeContainer>
+        <img className="background-img"src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul" />
         <h2>Modelos de bicicletas</h2>
         <div className='gallery'>
           {bicycles.map((bicycle) => (
