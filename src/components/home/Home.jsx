@@ -36,7 +36,8 @@ body {
   }
 
   .bicyclesimg {
-    max-width: 30vw; 
+    max-width: 30vw;
+    border: 0.5rem solid #D9D9D9;
   }
 
   p {
