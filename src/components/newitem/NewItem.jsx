@@ -108,12 +108,44 @@ const NewItem = () => {
 
     const { register, formState: { errors }, handleSubmit, reset} = useForm();
 
-    const onSubmit = (data) => {
-        console.log(data);
-        // Mostrar mensaje de éxito
-        alert('¡Tu bicicleta fue añadida correctamente!');
-        // Reiniciar el formulario
-        reset();
+    //Método POST
+
+        //const onSubmit = async (data) => {: Esto define una función llamada onSubmit. Esta función toma un argumento llamado data, que contiene los datos del formulario.
+
+        //try { ... }: try inicia un bloque de código en el que se puede manejar una excepción (error) si ocurre. Si no ocurre ningún error dentro de este bloque, el control pasa al bloque catch.
+
+        //const response = await fetch('http://localhost:etc', { ... }): Usamos fetch para realizar una solicitud HTTP a la URL /api/nuevo-item en el servidor backend. fetch devuelve una promesa, y utilizamos await para esperar a que esta promesa se resuelva antes de continuar con la ejecución del código.
+
+        //method: 'POST': Esto especifica que queremos hacer una solicitud POST al servidor.
+
+        //headers: { 'Content-Type': 'application/json' }: Aquí configuramos los encabezados de la solicitud. Estamos diciendo que el cuerpo de la solicitud contendrá datos en formato JSON.
+
+        //body: JSON.stringify(data): Este es el cuerpo de la solicitud. Aquí convertimos el objeto data en formato JSON utilizando JSON.stringify(). Esto es necesario porque fetch solo puede enviar datos en formato de texto plano.
+
+    const onSubmit = async (data) => { 
+        try {
+            const response = await fetch('http://localhost:3000/bicycles', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                // Mostrar mensaje de éxito
+                alert('¡Tu bicicleta fue añadida correctamente!');
+                // Reiniciar el formulario
+                reset();
+            } else {
+                // Manejar errores de la respuesta
+                alert('Hubo un problema al añadir tu bicicleta. Por favor, intenta de nuevo más tarde.');
+            }
+        } catch (error) {
+            // Manejar errores de conexión
+            console.error('Error:', error);
+            alert('Hubo un problema al añadir tu bicicleta. Por favor, intenta de nuevo más tarde.');
+        }
     }
         
     return (
