@@ -7,13 +7,23 @@ import { useNavigate } from "react-router-dom";
 import { getBicycles, deleteBicycle } from '../../services/service';
 
 const HomeContainer = styled.div`
-  body {
+
+body {
     margin: 0;
   }
+
+
+  h2 {
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size: xx-large;
+  }
+  
 
   img {
     height: auto;
     width: 100vw;
+    
   }
 
   .gallery {
@@ -28,8 +38,25 @@ const HomeContainer = styled.div`
   }
 
   .bicyclesimg {
-    max-width: 200px; 
+    max-width: 30vw; 
   }
+
+  p {
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+  }
+
+ gallery-button {
+  border: none;
+  display: flex;
+  width: 5vw;
+ }
+
+ button img {
+  width: 20px;
+  height: auto; 
+}
+
 `;
 
 const Home = () => {
@@ -51,15 +78,21 @@ const Home = () => {
   return (
     <>
       <Nav />
-      <img src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul" />
+      <img className=""src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul" />
       <HomeContainer>
-        <h2>Modelos de bicicletas:</h2>
+        <h2>Modelos de bicicletas</h2>
         <div className='gallery'>
           {bicycles.map((bicycle) => (
             <div className='gallerygrid' key={bicycle.id}>
               <img className="bicyclesimg" src={bicycle.image} alt={bicycle.model} />
               <p>{bicycle.model}</p>
-              <button onClick={() => deleteBicycle(`${bicycle.id}`)}>Eliminar</button>
+              <div className="gallery-button" >
+              <button className="edit-button" onClick={() => navigate("/Edit")}>
+                <img src="src\assets\img\Edit.png" alt="" />
+              </button>
+              <button onClick={() => deleteBicycle(`${bicycle.id}`)}>
+                <img src="src\assets\img\Delete.png"></img></button>
+                </div>
             </div>
           ))}
         </div>
