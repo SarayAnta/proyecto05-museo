@@ -4,6 +4,7 @@ import BackgroundHome from '../../assets/img/BackgroundHome.png';
 import Nav from '../nav/Nav';
 import Footer from '../footer/footer';
 import { useNavigate } from "react-router-dom";
+import { getBicycles, deleteBicycle } from '../../services/service';
 
 const HomeContainer = styled.div`
   body {
@@ -36,31 +37,16 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const getBicycles = async () => {
-      try {
-        const response = await fetch('http://localhost:3000/bicycles');
-        const data = await response.json();
-        setBicycles(data);
-        console.log(data);
-      } catch (error) {
-        console.error('Error fetching bicycles:', error);
-      }
-    };
-
-    getBicycles();
-  }, []);
-
-  const deleteBicycle = async (id) => {
-    try {
-      await fetch(`http://localhost:3000/bicycles/${id}`, {
-        method: 'DELETE'
-      });
-      const updatedBicycles = bicycles.filter(bicycle => bicycle.id !== id);
-      setBicycles(updatedBicycles);
-    } catch (error) {
-      console.error('Error deleting bicycle:', error);
+      const fetchData = async () => {
+      const data = await getBicycles()
+      console.log(data);
+      setBicycles(data);
     }
-  };
+    fetchData();
+    }
+
+   , []);
+
 
   return (
     <>
@@ -73,7 +59,7 @@ const Home = () => {
             <div className='gallerygrid' key={bicycle.id}>
               <img className="bicyclesimg" src={bicycle.image} alt={bicycle.model} />
               <p>{bicycle.model}</p>
-              <button onClick={() => deleteBicycle(bicycle.id)}>Eliminar</button>
+              <button onClick={() => deleteBicycle(`${bicycle.id}`)}>Eliminar</button>
             </div>
           ))}
         </div>
