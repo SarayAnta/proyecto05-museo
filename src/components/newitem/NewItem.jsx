@@ -1,8 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import styled from 'styled-components';
-import Nav from '../nav/Nav';
-import Footer from '../footer/footer';
+
 
 
 const StyledNewItem = styled.div`
@@ -118,7 +117,7 @@ const NewItem = () => {
         
     return (
         <StyledNewItem>
-        <Nav/>  
+      
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Modelo</label>
@@ -160,7 +159,7 @@ const NewItem = () => {
             </div>
             <input type="submit" value="Añadir"/>
         </form>
-        <Footer/>
+       
         </StyledNewItem>
     );
             }
