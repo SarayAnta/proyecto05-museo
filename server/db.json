@@ -2,7 +2,7 @@
     "bicycles": 
     [
         {
-            "id": 1,
+            "id": "1",
             "model": "Capri",
             "speeds": 5,
             "frame": "Acero",
@@ -10,7 +10,7 @@
             "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744066/Gallery_1_nyvctj.png"
           },
           {
-            "id": 2,
+            "id": "2",
             "model": "Xiaomi",
             "speeds": 3,
             "frame": "Aluminio",
@@ -18,7 +18,7 @@
             "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_2_goazza.png"
           },
           {
-            "id": 3,
+            "id": "3",
             "model": "Reid Boston",
             "speeds": 5,
             "frame": "Acero",
@@ -27,7 +27,7 @@
           },
 
           {
-            "id": 4,
+            "id": "4",
             "model": "Orbea",
             "speeds": 28,
             "frame": "Aluminio",
@@ -36,7 +36,7 @@
           },
 
           {          
-            "id": 5,
+            "id": "5",
             "model": "Black",
             "speeds": 1,
             "frame": "Acero",
@@ -45,7 +45,7 @@
           },
           
           {          
-            "id": 6,
+            "id": "6",
             "model": "Yerka",
             "speeds": 3,
             "frame": "Acero",
@@ -54,7 +54,7 @@
           },
 
           {          
-            "id": 7,
+            "id": "7",
             "model": "Rebel Bike",
             "speeds": 1,
             "frame": "Plástico",
@@ -63,7 +63,7 @@
           },
 
           {          
-            "id": 8,
+            "id": "8",
             "model": "BH 80",
             "speeds": 1,
             "frame": "Acero",
@@ -72,7 +72,7 @@
           },
 
           {          
-            "id": 9,
+            "id": "9",
             "model": "Cuadro Csepel",
             "speeds": 1,
             "frame": "Acero",
