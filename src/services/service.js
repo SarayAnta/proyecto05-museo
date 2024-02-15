@@ -11,9 +11,22 @@ export const getBicycles = async () => {
 
 //Método DELETE
 export    const deleteBicycle = async (id) => {
+  try {
     const response = await fetch(`http://localhost:3000/bicycles/${id}`, {
-    method: 'DELETE'});
+      method: 'DELETE'
+    });
+
+    if (response.ok) {
+      window.location.reload(); // Recarga la página si la eliminación fue exitosa
+    } else {
+      console.error('Error al eliminar la bicicleta:', response.statusText);
+    }
+
     return response;
+  } catch (error) {
+    console.error('Error al eliminar la bicicleta:', error);
+    throw error;
+  }
 };
 
 //Método POST

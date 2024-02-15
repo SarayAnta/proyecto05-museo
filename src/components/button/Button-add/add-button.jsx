@@ -11,6 +11,7 @@ const AddButton = styled.button`
         height: 6vh;
         margin-right: 1vw;
         border-radius: 10px 10px 10px 10px;
+        cursor: pointer;
     `;
 
 const Addbutton = () => {

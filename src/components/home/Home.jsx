@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import BackgroundHome from '../../assets/img/BackgroundHome.png';
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { getBicycles, deleteBicycle } from '../../services/service';
 
 const HomeContainer = styled.div`
