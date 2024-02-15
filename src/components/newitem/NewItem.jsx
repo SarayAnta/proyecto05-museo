@@ -160,7 +160,7 @@ const NewItem = () => {
             </div>
             <div>
                 <label htmlFor="imageUpload">Img URL</label>
-                <input type="text" {...register('image', {
+                <input className="bicyclesimg" type="text" {...register('image', {
                 pattern: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
                 required:true,
                 })}/>
