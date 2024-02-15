@@ -112,6 +112,12 @@ const NewItem = () => {
 
     const { register, formState: { errors }, handleSubmit, reset} = useForm();
         
+
+    //Este código maneja el envío de datos del formulario al servidor, muestra un mensaje de éxito o error dependiendo de la respuesta del servidor y reinicia el formulario en caso de éxito.
+    //const onSubmit = async (data) => {: Esta línea define una función asíncrona llamada onSubmit que toma los datos del formulario como argumento. Esta función se ejecutará cuando se envíe el formulario.
+    //const { success, error } = await addBicycle(data);: En esta línea, llamamos a la función addBicycle y pasamos los datos del formulario como argumento. Esta función se encarga de enviar los datos al servidor y devuelve un objeto que contiene un booleano success y un posible mensaje de error. Utilizamos await para esperar a que la función addBicycle se resuelva antes de continuar.
+    //if (success) { ... } else { ... }: Aquí verificamos si el envío de datos fue exitoso. Si success es verdadero, significa que el envío de datos fue exitoso, por lo que mostramos un mensaje de éxito con alert('¡La bicicleta fue añadida correctamente!') y reiniciamos el formulario utilizando reset(). Si success es falso, significa que hubo un problema al enviar los datos, por lo que mostramos el mensaje de error obtenido de la respuesta del servidor utilizando alert(error).
+
     const onSubmit = async (data) => {
         const { success, error } = await addBicycle(data);
 
@@ -131,14 +137,14 @@ const NewItem = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Modelo</label>
-                <input className='model' type="text" {...register('modelo', {
+                <input className='model' type="text" {...register('model', {
                     required: true,
                 })}/>
                 {errors.modelo?.type === 'required' && <p>El campo modelo es requerido</p>}
             </div>
             <div>
                 <label>Velocidades</label>
-                <input className='speeding' type="text" {...register('velocidades', {
+                <input className='speeding' type="text" {...register('speeds', {
                     required: true,
                 })}/>
                 {errors.velocidades?.type === 'required' && <p>El campo velocidades es requerido</p>}
@@ -146,7 +152,7 @@ const NewItem = () => {
             <div className='cuadred'>
                 <div className='frame'>
                     <label>Cuadro</label>
-                    <select {...register('cuadro')}>
+                    <select {...register('frame')}>
                         <option value="al">Aluminio</option>
                         <option value="ace">Acero</option>
                         <option value="car">Carbono</option>
@@ -155,12 +161,12 @@ const NewItem = () => {
                 </div>
                 <div className='electric'>
                     <label>Eléctrica</label>
-                    <input className="checkbox-css" type="checkbox" {...register('eléctrica')} />
+                    <input className="checkbox-css" type="checkbox" {...register('electric')} />
                 </div>
             </div>
             <div>
                 <label htmlFor="imageUpload">Img URL</label>
-                <input type="text" {...register('imageUpload', {
+                <input type="text" {...register('image', {
                 pattern: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
                 required:true,
                 })}/>
