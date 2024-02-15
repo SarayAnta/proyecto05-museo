@@ -38,7 +38,7 @@ export const addBicycle = async (data) => {
   }
 };
 
-//Método PATCH
+//Método PUT
 export const updateItem = async (id, newData) => {
   try {
     const response = await fetch(`http://localhost:3000/bicycles/${id}`, {
