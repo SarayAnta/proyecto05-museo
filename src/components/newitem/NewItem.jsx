@@ -147,10 +147,10 @@ const NewItem = () => {
                 <div className='frame'>
                     <label>Cuadro</label>
                     <select {...register('frame')}>
-                        <option value="al">Aluminio</option>
-                        <option value="ace">Acero</option>
-                        <option value="car">Carbono</option>
-                        <option value="ot">Otros</option>
+                        <option value="Aluminio">Aluminio</option>
+                        <option value="Acero">Acero</option>
+                        <option value="Carbono">Carbono</option>
+                        <option value="Otros">Otros</option>
                     </select>
                 </div>
                 <div className='electric'>
