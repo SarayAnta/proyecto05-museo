@@ -11,10 +11,13 @@ body {
   }
 
 
-  h2 {
+  .title-gallery {
     text-align: center;
     font-family: 'Jost', sans-serif;
     font-size: xx-large;
+    text-shadow:  4px 4px 4px #D9D9D9;
+    text-transform: uppercase;
+    
   }
   
 
@@ -35,13 +38,23 @@ body {
   }
 
   .bicyclesimg {
-    max-width: 30vw;
+    max-width: 17w;
     border: 0.5rem solid #D9D9D9;
+  }
+
+  .bicyclesimg:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
   }
 
   p {
     text-align: center;
     font-family: 'Jost', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: bold;
+    text-shadow:  4px 4px 4px #D9D9D9;
+
   }
 
  gallery-button {
@@ -54,7 +67,7 @@ body {
  }
 
  button img {
-  width: 20px;
+  width: 2rem;
   height: auto;
   
 
@@ -67,6 +80,12 @@ button.edit-button, button.delete-button  {
   margin: 0.75rem;
   
 
+}
+
+
+
+button.edit-button:hover, button.delete-button:hover {
+  transform: scale(1.5);
 }
 
 
@@ -92,7 +111,7 @@ const Home = () => {
     <>
     <HomeContainer>
         <img className="background-img"src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul" />
-        <h2>Modelos de bicicletas</h2>
+        <h2 className="title-gallery">Modelos de bicicletas</h2>
         <div className='gallery'>
           {bicycles.map((bicycle) => (
             <div className='gallerygrid' key={bicycle.id}>
