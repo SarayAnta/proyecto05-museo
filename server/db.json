@@ -71,14 +71,6 @@
       "frame": "Acero",
       "electric": false,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
-    },
-    {
-      "id": "3b31",
-      "model": "bmx",
-      "speeds": "200",
-      "frame": "ace",
-      "electric": true,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
     }
   ]
 }
