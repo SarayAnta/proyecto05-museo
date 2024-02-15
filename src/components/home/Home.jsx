@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import BackgroundHome from '../../assets/img/BackgroundHome.png';
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { getBicycles, deleteBicycle } from '../../services/service';
 
 const HomeContainer = styled.div`
@@ -83,7 +83,7 @@ const Home = () => {
               <button className="edit-button" onClick={() => navigate(`/Edit/${bicycle.id}`)}>
                 <img src="src\assets\img\Edit.png" alt="" />
               </button>
-              <button onClick={() => deleteBicycle(`${bicycle.id}`)}>
+              <button onClick={() => {deleteBicycle(`${bicycle.id}`); navigate(0)}}>
                 <img src="src\assets\img\Delete.png"></img></button>
               </div>
             </div>
