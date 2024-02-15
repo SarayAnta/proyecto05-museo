@@ -131,14 +131,14 @@ const NewItem = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Modelo</label>
-                <input className='model' type="text" {...register('modelo', {
+                <input className='model' type="text" {...register('model', {
                     required: true,
                 })}/>
                 {errors.modelo?.type === 'required' && <p>El campo modelo es requerido</p>}
             </div>
             <div>
                 <label>Velocidades</label>
-                <input className='speeding' type="text" {...register('velocidades', {
+                <input className='speeding' type="text" {...register('speeds', {
                     required: true,
                 })}/>
                 {errors.velocidades?.type === 'required' && <p>El campo velocidades es requerido</p>}
@@ -146,7 +146,7 @@ const NewItem = () => {
             <div className='cuadred'>
                 <div className='frame'>
                     <label>Cuadro</label>
-                    <select {...register('cuadro')}>
+                    <select {...register('frame')}>
                         <option value="al">Aluminio</option>
                         <option value="ace">Acero</option>
                         <option value="car">Carbono</option>
@@ -155,12 +155,12 @@ const NewItem = () => {
                 </div>
                 <div className='electric'>
                     <label>Eléctrica</label>
-                    <input className="checkbox-css" type="checkbox" {...register('eléctrica')} />
+                    <input className="checkbox-css" type="checkbox" {...register('electric')} />
                 </div>
             </div>
             <div>
                 <label htmlFor="imageUpload">Img URL</label>
-                <input type="text" {...register('imageUpload', {
+                <input type="text" {...register('image', {
                 pattern: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
                 required:true,
                 })}/>
