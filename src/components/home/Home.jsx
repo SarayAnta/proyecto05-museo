@@ -35,7 +35,8 @@ body {
   }
 
   .bicyclesimg {
-    max-width: 17vw; 
+    max-width: 17vw;
+    max-height: 45vh; 
   }
 
   p {
