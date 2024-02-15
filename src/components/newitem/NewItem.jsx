@@ -134,14 +134,14 @@ const NewItem = () => {
                 <input className='model' type="text" {...register('model', {
                     required: true,
                 })}/>
-                {errors.modelo?.type === 'required' && <p>El campo modelo es requerido</p>}
+                {errors.model?.type === 'required' && <p>El campo modelo es requerido</p>}
             </div>
             <div>
                 <label>Velocidades</label>
                 <input className='speeding' type="text" {...register('speeds', {
                     required: true,
                 })}/>
-                {errors.velocidades?.type === 'required' && <p>El campo velocidades es requerido</p>}
+                {errors.speeds?.type === 'required' && <p>El campo velocidades es requerido</p>}
             </div>
             <div className='cuadred'>
                 <div className='frame'>
@@ -164,8 +164,8 @@ const NewItem = () => {
                 pattern: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
                 required:true,
                 })}/>
-                {errors.imageUpload?.type === 'pattern' && <p>El formato de la url de la imagen es incorrecto</p>}
-                {errors.imageUpload?.type === 'required' && <p>El campo url de la imagen es requerido</p>}
+                {errors.image?.type === 'pattern' && <p>El formato de la url de la imagen es incorrecto</p>}
+                {errors.image?.type === 'required' && <p>El campo url de la imagen es requerido</p>}
             </div>
             <input type="submit" value="Añadir"/>
         </form>
