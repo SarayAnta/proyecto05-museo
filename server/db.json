@@ -9,30 +9,6 @@
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744066/Gallery_1_nyvctj.png"
     },
     {
-      "id": "2",
-      "model": "Xiaomi",
-      "speeds": 3,
-      "frame": "Aluminio",
-      "electric": true,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_2_goazza.png"
-    },
-    {
-      "id": "3",
-      "model": "Reid Boston",
-      "speeds": 5,
-      "frame": "Acero",
-      "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744116/Gallery_3_gamemn.png"
-    },
-    {
-      "id": "4",
-      "model": "Orbea",
-      "speeds": 28,
-      "frame": "Aluminio",
-      "electric": true,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744117/Gallery_4_rtud0n.png"
-    },
-    {
       "id": "5",
       "model": "Black",
       "speeds": 1,

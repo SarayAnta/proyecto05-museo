@@ -45,15 +45,30 @@ body {
   }
 
  gallery-button {
-  border: none;
+  
   display: flex;
   width: 5vw;
+  justify-content: space-around;
+  
+  
  }
 
  button img {
   width: 20px;
-  height: auto; 
+  height: auto;
+  
+
+ }
+
+button.edit-button, button.delete-button  {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0.75rem;
+  
+
 }
+
 
 `;
 
@@ -87,7 +102,7 @@ const Home = () => {
               <button className="edit-button" onClick={() => navigate("/Edit")}>
                 <img src="src\assets\img\Edit.png" alt="" />
               </button>
-              <button onClick={() => deleteBicycle(`${bicycle.id}`)}>
+              <button className="delete-button" onClick={() => deleteBicycle(`${bicycle.id}`)}>
                 <img src="src\assets\img\Delete.png"></img></button>
                 </div>
             </div>
