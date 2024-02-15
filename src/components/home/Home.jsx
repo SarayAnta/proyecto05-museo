@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import BackgroundHome from '../../assets/img/BackgroundHome.png';
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { getBicycles, deleteBicycle } from '../../services/service';
 
 const HomeContainer = styled.div`
@@ -35,7 +35,7 @@ body {
   }
 
   .bicyclesimg {
-    max-width: 30vw; 
+    max-width: 17vw; 
   }
 
   p {
@@ -43,12 +43,9 @@ body {
     font-family: 'Jost', sans-serif;
   }
 
- gallery-button {
+  button{
   border: none;
-  display: flex;
-  width: 5vw;
- }
-
+}
  button img {
   width: 20px;
   height: auto; 
@@ -88,7 +85,7 @@ const Home = () => {
               </button>
               <button onClick={() => deleteBicycle(`${bicycle.id}`)}>
                 <img src="src\assets\img\Delete.png"></img></button>
-                </div>
+              </div>
             </div>
           ))}
         </div>
