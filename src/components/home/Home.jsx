@@ -80,7 +80,7 @@ const Home = () => {
               <img className="bicyclesimg" src={bicycle.image} alt={bicycle.model} />
               <p>{bicycle.model}</p>
               <div className="gallery-button" >
-              <button className="edit-button" onClick={() => navigate("/Edit")}>
+              <button className="edit-button" onClick={() => navigate(`/Edit/${bicycle.id}`)}>
                 <img src="src\assets\img\Edit.png" alt="" />
               </button>
               <button onClick={() => deleteBicycle(`${bicycle.id}`)}>
@@ -93,5 +93,5 @@ const Home = () => {
     </>
   );
 }
-
+//useparamt luego peticion get de id que tngo en la url 
 export default Home;

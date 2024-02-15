@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import { updateItem } from '../../services/service'
 
@@ -111,12 +111,15 @@ body {
 const Edit = ({ itemId }) => {
   const { register, formState: { errors }, handleSubmit, reset } = useForm();
   const [loading, setLoading] = useState(false);
+  
 
   const onSubmit = async (data) => {
+    console.log(data)
     try {
       setLoading(true);
       // Realiza la solicitud para actualizar el elemento en la base de datos utilizando la función updateItem
-      await updateItem(itemId, data);
+      console.log(itemId)
+      await updateItem (itemId, data);
       // Mostrar mensaje de éxito
       alert('¡Los datos del elemento han sido actualizados correctamente!');
       // Reiniciar el formulario
@@ -133,7 +136,7 @@ const Edit = ({ itemId }) => {
         
     return (
         <StyledEdit>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit = { handleSubmit (onSubmit)}>
             <div>
                 <label>Modelo</label>
                 <input className='model' type="text" {...register('model', {

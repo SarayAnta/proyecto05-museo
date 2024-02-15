@@ -38,7 +38,7 @@ export const addBicycle = async (data) => {
   }
 };
 
-//Método PUT
+//Método PATCH
 export const updateItem = async (id, newData) => {
   try {
     const response = await fetch(`http://localhost:3000/bicycles/${id}`, {
@@ -50,12 +50,12 @@ export const updateItem = async (id, newData) => {
     });
 
     if (!response.ok) {
-      throw new Error('Error updating item');
+      throw new Error('Error updatingItem');
     }
 
     return response.json();
   } catch (error) {
-    console.error('Error updating item:', error);
+    console.error('Error updatingItem:', error);
     throw error;
   }
 };
