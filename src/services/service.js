@@ -1,3 +1,5 @@
+
+
 //Método GET
 export const getBicycles = async () => {
     try {
@@ -8,12 +10,11 @@ export const getBicycles = async () => {
       console.error('Error fetching bicycles:', error);
     }
   };
-
 //Método DELETE
 export    const deleteBicycle = async (id) => {
     const response = await fetch(`http://localhost:3000/bicycles/${id}`, {
-    method: 'DELETE'});
-    return response;
+      method: 'DELETE'
+    });
 };
 
 //Método POST
@@ -50,12 +51,12 @@ export const updateItem = async (id, newData) => {
     });
 
     if (!response.ok) {
-      throw new Error('Error updating item');
+      throw new Error('Error updatingItem');
     }
 
     return response.json();
   } catch (error) {
-    console.error('Error updating item:', error);
+    console.error('Error updatingItem:', error);
     throw error;
   }
 };

@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
-import { updateItem } from '../../services/service'
+import { updateItem } from '../../services/service';
+import {useParams} from 'react-router';
 
 const StyledEdit = styled.div`
 height: 80vh;
@@ -108,23 +109,19 @@ body {
   }
 `;
 
-const Edit = ({ itemId }) => {
+const Edit = () => {
+  const { id } = useParams(); // Obtiene el parámetro id de la URL
   const { register, formState: { errors }, handleSubmit, reset } = useForm();
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (data) => {
     try {
       setLoading(true);
-      // Realiza la solicitud para actualizar el elemento en la base de datos utilizando la función updateItem
-      await updateItem(itemId, data);
-      // Mostrar mensaje de éxito
+      await updateItem(id, data); // Utiliza el id capturado de la URL
       alert('¡Los datos del elemento han sido actualizados correctamente!');
-      // Reiniciar el formulario
       reset();
     } catch (error) {
-      // Manejar errores
       console.error('Error al actualizar el elemento:', error);
-      // Mostrar mensaje de error
       alert('Error al actualizar el elemento. Por favor, intenta nuevamente.');
     } finally {
       setLoading(false);
@@ -133,25 +130,25 @@ const Edit = ({ itemId }) => {
         
     return (
         <StyledEdit>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit = { handleSubmit (onSubmit)}>
             <div>
                 <label>Modelo</label>
-                <input className='model' type="text" {...register('modelo', {
+                <input className='model' type="text" {...register('model', {
                     required: true,
                 })}/>
-                {errors.modelo?.type === 'required' && <p>El campo modelo es requerido</p>}
+                {errors.model?.type === 'required' && <p>El campo modelo es requerido</p>}
             </div>
             <div>
                 <label>Velocidades</label>
-                <input className='speeding' type="text" {...register('velocidades', {
+                <input className='speeding' type="text" {...register('speeds', {
                     required: true,
                 })}/>
-                {errors.velocidades?.type === 'required' && <p>El campo velocidades es requerido</p>}
+                {errors.speeds?.type === 'required' && <p>El campo velocidades es requerido</p>}
             </div>
             <div className='cuadred'>
                 <div className='frame'>
                     <label>Cuadro</label>
-                    <select {...register('cuadro')}>
+                    <select {...register('frame')}>
                         <option value="al">Aluminio</option>
                         <option value="ace">Acero</option>
                         <option value="car">Carbono</option>
@@ -160,17 +157,17 @@ const Edit = ({ itemId }) => {
                 </div>
                 <div className='electric'>
                     <label>Eléctrica</label>
-                    <input className="checkbox-css" type="checkbox" {...register('eléctrica')} />
+                    <input className="checkbox-css" type="checkbox" {...register('electric')} />
                 </div>
             </div>
             <div>
                 <label htmlFor="imageUpload">Img URL</label>
-                <input type="text" {...register('imageUpload', {
+                <input className='bicyclesimg' type="text" {...register('image', {
                 pattern: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
                 required:true,
                 })}/>
-                {errors.imageUpload?.type === 'pattern' && <p>El formato de la url de la imagen es incorrecto</p>}
-                {errors.imageUpload?.type === 'required' && <p>El campo url de la imagen es requerido</p>}
+                {errors.image?.type === 'pattern' && <p>El formato de la url de la imagen es incorrecto</p>}
+                {errors.image?.type === 'required' && <p>El campo url de la imagen es requerido</p>}
             </div>
             <input type="submit" value="Editar"/>
         </form>
