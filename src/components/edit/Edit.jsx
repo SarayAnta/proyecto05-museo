@@ -2,7 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
-import { updateItem } from '../../services/service'
+import { updateItem } from '../../services/service';
+import {useParams} from 'react-router';
 
 const StyledEdit = styled.div`
 height: 80vh;
@@ -108,26 +109,19 @@ body {
   }
 `;
 
-const Edit = ({ itemId }) => {
+const Edit = () => {
+  const { id } = useParams(); // Obtiene el parámetro id de la URL
   const { register, formState: { errors }, handleSubmit, reset } = useForm();
   const [loading, setLoading] = useState(false);
-  
 
   const onSubmit = async (data) => {
-    console.log(data)
     try {
       setLoading(true);
-      // Realiza la solicitud para actualizar el elemento en la base de datos utilizando la función updateItem
-      console.log(itemId)
-      await updateItem (itemId, data);
-      // Mostrar mensaje de éxito
+      await updateItem(id, data); // Utiliza el id capturado de la URL
       alert('¡Los datos del elemento han sido actualizados correctamente!');
-      // Reiniciar el formulario
       reset();
     } catch (error) {
-      // Manejar errores
       console.error('Error al actualizar el elemento:', error);
-      // Mostrar mensaje de error
       alert('Error al actualizar el elemento. Por favor, intenta nuevamente.');
     } finally {
       setLoading(false);
