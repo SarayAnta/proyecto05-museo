@@ -47,7 +47,7 @@ const Card = () => {
     }, [id]);
     
       if (!bicycle) {
-        return <div style={{height: "80vh", fontFamily: "Jost", fontSize: "2em", color: "red", textAlign: "center"}}>No se encontró la bicicleta</div>;
+        return <div style={{height: "80vh", fontFamily: "Jost", fontSize: "2em", color: "red", display: "flex", justifyContent: "center", alignItems: "center"}}>No se encontró la bicicleta</div>;
       };
 
     return (
