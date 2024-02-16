@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Addbutton from '../button/Button-add/Add-button';
+import Addbutt from '../button/Button-add/add-button';
 
 // Eliminé la declaración de estilo 'body' ya que no se puede usar en este contexto
 
@@ -13,10 +13,12 @@ const StyledNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 `;
 
 const Title = styled.h1`
   margin-left: 1vw;
+  font-size: 1.5rem;
 `;
 
 const Nav = () => {

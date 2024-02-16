@@ -15,11 +15,11 @@ body {
 
   form {
     font-family: 'Jost', sans-serif;
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
     margin-top: 3%;
     margin-bottom: 3%;
-    padding: 20px;
+    padding: 2rem;
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

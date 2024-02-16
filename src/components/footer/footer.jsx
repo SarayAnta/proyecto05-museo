@@ -14,19 +14,16 @@ const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   height: 10vh;
   
   img {
-    margin: 0 10px;
-    width: 50px;
-    height: 50px;
+    margin: 5%;
+    width: 10%;
+    height: 10%;
   }
 
-  /* Estilos para hacer el footer responsive */
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    padding: 10px;
-  }
 `;
 
 const Footer = () => {

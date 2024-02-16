@@ -8,9 +8,27 @@ const AddButton = styled.button`
         color: black;
         font-family: 'Jost', sans-serif;
         width: 15vw;
-        height: 6vh;
+        height: 8vh;
         margin-right: 1vw;
-        border-radius: 10px 10px 10px 10px;
+        border-radius: 15px;
+
+        &:hover {
+            background-color: #3DE361;
+            color: black;
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+
+        &:active {
+            background-color: #3DE361;
+            color: black;
+            transform: scale(0.9);
+            transition: 0.5s;
+        }
+
+        &:focus {
+            outline: none;
+        }
     `;
 
 const Addbutton = () => {
@@ -18,6 +36,7 @@ const Addbutton = () => {
 
     return (
         <AddButton className="add-button" onClick={() => navigate("/NewItem")}>
+            
                 Añadir bicicleta
         </AddButton>
         );
