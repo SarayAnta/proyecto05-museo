@@ -166,6 +166,7 @@ const Edit = () => {
                     <select {...register('frame')}>
                         <option value="Aluminio">Aluminio</option>
                         <option value="Acero">Acero</option>
+                        <option value="Plástico">Plástico</option>
                         <option value="Carbono">Carbono</option>
                         <option value="Otros c">Otros</option>
                     </select>
