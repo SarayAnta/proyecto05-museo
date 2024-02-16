@@ -2,8 +2,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
-import { updateItem, getItemById } from '../../services/service';
+import { updateItem, getItemById} from '../../services/service';
 import {useParams} from 'react-router';
+
 
 const StyledEdit = styled.div`
 height: 80vh;
@@ -158,7 +159,7 @@ const Edit = () => {
             </div>
             <div>
                 <label>Velocidades</label>
-                <input className='speeding' type="text" {...register('speeds', {
+                <input className='speeding' type="text" defaultValue={itemData.speeds}  {...register('speeds', {
                     required: true,
                 })}/>
                 {errors.speeds?.type === 'required' && <p>El campo velocidades es requerido</p>}
@@ -166,7 +167,7 @@ const Edit = () => {
             <div className='cuadred'>
                 <div className='frame'>
                     <label>Cuadro</label>
-                    <select {...register('frame')}>
+                    <select defaultValue={itemData.frame} {...register('frame')}>
                         <option value="al">Aluminio</option>
                         <option value="ace">Acero</option>
                         <option value="car">Carbono</option>
@@ -175,12 +176,12 @@ const Edit = () => {
                 </div>
                 <div className='electric'>
                     <label>Eléctrica</label>
-                    <input className="checkbox-css" type="checkbox" {...register('electric')} />
+                    <input className="checkbox-css" type="checkbox" defaultValue={itemData.electric} {...register('electric')} />
                 </div>
             </div>
             <div>
                 <label htmlFor="imageUpload">Img URL</label>
-                <input className='bicyclesimg' type="text" {...register('image', {
+                <input className='bicyclesimg' type="text" defaultValue={itemData.image}  {...register('image', {
                 pattern: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
                 required:true,
                 })}/>

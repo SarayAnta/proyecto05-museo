@@ -9,12 +9,7 @@
       "id": "1"
     },
     {
-      "id": "2",
-      "model": "Xiaomi",
-      "speeds": 3,
-      "frame": "Aluminio",
-      "electric": true,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_2_goazza.png"
+      "id": "2"
     },
     {
       "id": "3",
