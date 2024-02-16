@@ -37,6 +37,7 @@ body {
   .bicyclesimg {
     max-width: 17vw;
     max-height: 45vh; 
+    cursor: pointer;
   }
 
   p {
@@ -78,7 +79,7 @@ const Home = () => {
         <div className='gallery'>
           {bicycles.map((bicycle) => (
             <div className='gallerygrid' key={bicycle.id}>
-              <img className="bicyclesimg" src={bicycle.image} alt={bicycle.model} />
+              <img  onClick={() => navigate(`/card/${bicycle.id}`)} className="bicyclesimg" src={bicycle.image} alt={bicycle.model} />
               <p>{bicycle.model}</p>
               <div className="gallery-button" >
               <button className="edit-button" onClick={() => navigate(`/Edit/${bicycle.id}`)}>

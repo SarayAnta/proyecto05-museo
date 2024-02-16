@@ -60,3 +60,16 @@ export const updateItem = async (id, newData) => {
     throw error;
   }
 };
+
+//Método GET para una bicicleta
+
+//Método GET
+export const getOneBicycle = async (id) => {
+  try {
+    const response = await fetch(`http://localhost:3000/bicycles/${id}`);
+    const data = await response.json();
+    return data
+  } catch (error) {
+    console.error('Error fetching bicycles:', error);
+  }
+};
