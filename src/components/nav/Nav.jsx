@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Addbutton from '../button/Button-add/Add-button';
+import Addbutton from '../button/Button-add/add-button';
 import { Link } from 'react-router-dom';
 
 // Eliminé la declaración de estilo 'body' ya que no se puede usar en este contexto

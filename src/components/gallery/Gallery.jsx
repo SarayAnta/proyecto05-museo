@@ -15,6 +15,7 @@ const GalleryContainer = styled.div`
     width: 15vw;
     height: 20vh;
     padding: 5vh 5vw;
+   
   }
 
   @media only screen and (max-width: 600px) {

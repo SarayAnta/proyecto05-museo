@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import { updateItem } from '../../services/service';
@@ -113,7 +113,20 @@ const Edit = () => {
   const { id } = useParams(); // Obtiene el parámetro id de la URL
   const { register, formState: { errors }, handleSubmit, reset } = useForm();
   const [loading, setLoading] = useState(false);
+  const [itemData, setItemData] = useState(null); // Estado para almacenar los datos del elemento
 
+  useEffect(() => {
+    const fetchItemData = async () => {
+      try {
+        const data = await getItemById(id); // Realiza la petición GET para obtener los datos del elemento
+        setItemData(data);
+      } catch (error) {
+        console.error('Error al obtener los datos del elemento:', error);
+      }
+    };
+
+    fetchItemData();
+  }, [id]);
   // peticion get para que los valores del  formulario se impriman con los datos del  id de la url
 
   const onSubmit = async (data) => {
@@ -128,6 +141,9 @@ const Edit = () => {
     } finally {
       setLoading(false);
     }
+  };
+  if (!itemData) {
+    return <p>Cargando...</p>; // Muestra un mensaje de carga mientras se obtienen los datos del elemento
   }
         
     return (
@@ -135,7 +151,7 @@ const Edit = () => {
         <form onSubmit = { handleSubmit (onSubmit)}>
             <div>
                 <label>Modelo</label>
-                <input className='model' type="text" {...register('model', {
+                <input className='model' type="text" defaultValue={itemData.model} {...register('model', {
                     required: true,
                 })}/>
                 {errors.model?.type === 'required' && <p>El campo modelo es requerido</p>}
