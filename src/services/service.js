@@ -1,3 +1,5 @@
+//declarar en constante http// url para reutilizacion
+
 //Método GET
 export const getBicycles = async () => {
     try {

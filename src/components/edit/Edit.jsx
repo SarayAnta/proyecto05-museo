@@ -114,6 +114,8 @@ const Edit = () => {
   const { register, formState: { errors }, handleSubmit, reset } = useForm();
   const [loading, setLoading] = useState(false);
 
+  // peticion get para que los valores del  formulario se impriman con los datos del  id de la url
+
   const onSubmit = async (data) => {
     try {
       setLoading(true);
