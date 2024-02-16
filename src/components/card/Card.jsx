@@ -12,6 +12,7 @@ const CardContainer = styled.div`
     img {
         max-height: 70vh;
         max-width: 70vw;
+        border: 0.5rem solid #D9D9D9;
     }
 
     .properties {
