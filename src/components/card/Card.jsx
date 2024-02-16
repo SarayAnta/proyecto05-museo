@@ -36,28 +36,18 @@ const CardContainer = styled.div`
 
 const Card = () => {
     const { id } = useParams();
-    const [bicycle, setBicycle] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [bicycle, setBicycle] = useState();
 
     useEffect(() => {
         const fetchBicycleDetails = async () => {
-          try {
             const detailedBicycle = await getOneBicycle(id);
             setBicycle(detailedBicycle);
-            setLoading(false);
-          } catch (error) {
-            console.error('Error fetching bicycle:', error);
-          }
         };
         fetchBicycleDetails();
     }, [id]);
-
-    if (loading) {
-        return <div>Cargando...</div>;
-      }
     
       if (!bicycle) {
-        return <div>No se encontró la bicicleta</div>;
+        return <div style={{height: "80vh"}}>No se encontró la bicicleta</div>;
       };
 
     return (
