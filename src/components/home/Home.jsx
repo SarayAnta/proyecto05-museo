@@ -11,10 +11,13 @@ body {
   }
 
 
-  h2 {
+  .title-gallery {
     text-align: center;
     font-family: 'Jost', sans-serif;
     font-size: xx-large;
+    text-shadow:  4px 4px 4px #D9D9D9;
+    text-transform: uppercase;
+    
   }
   
 
@@ -37,21 +40,57 @@ body {
   .bicyclesimg {
     max-width: 17vw;
     max-height: 45vh; 
+    border: 0.5rem solid #D9D9D9;
     cursor: pointer;
+  }
+
+  .bicyclesimg:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+
   }
 
   p {
     text-align: center;
     font-family: 'Jost', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: bold;
+    text-shadow:  4px 4px 4px #D9D9D9;
+
   }
 
-  button{
-  border: none;
-}
+ gallery-button {
+  
+  display: flex;
+  width: 5vw;
+  justify-content: space-around;
+  
+  
+ }
+
  button img {
-  width: 20px;
-  height: auto; 
+  width: 2rem;
+  height: auto;
+  
+
+ }
+
+button.edit-button, button.delete-button  {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0.75rem;
+  
+
 }
+
+
+
+button.edit-button:hover, button.delete-button:hover {
+  transform: scale(1.5);
+}
+
 
 `;
 
@@ -75,7 +114,7 @@ const Home = () => {
     <>
     <HomeContainer>
         <img className="background-img"src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul" />
-        <h2>Modelos de bicicletas</h2>
+        <h2 className="title-gallery">Modelos de bicicletas</h2>
         <div className='gallery'>
           {bicycles.map((bicycle) => (
             <div className='gallerygrid' key={bicycle.id}>
@@ -85,7 +124,7 @@ const Home = () => {
               <button className="edit-button" onClick={() => navigate(`/Edit/${bicycle.id}`)}>
                 <img src="src\assets\img\Edit.png" alt="" />
               </button>
-              <button onClick={() => {deleteBicycle(`${bicycle.id}`); navigate(0)}}>
+              <button className="delete-button" onClick={() => {deleteBicycle(`${bicycle.id}`); navigate(0)}}>
                 <img src="src\assets\img\Delete.png"></img></button>
               </div>
             </div>
