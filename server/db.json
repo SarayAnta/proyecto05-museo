@@ -1,20 +1,21 @@
 {
   "bicycles": [
     {
-      "id": "1",
-      "model": "Capri",
-      "speeds": 5,
-      "frame": "Acero",
+      "model": "bmx",
+      "speeds": "200",
+      "frame": "al",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744066/Gallery_1_nyvctj.png"
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png",
+      "id": "1"
     },
     {
       "id": "2",
       "model": "Xiaomi",
-      "speeds": 3,
+      "speeds": "3",
       "frame": "Aluminio",
       "electric": true,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_2_goazza.png"
+
     },
     {
       "id": "3",

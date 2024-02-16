@@ -38,7 +38,16 @@ export const addBicycle = async (data) => {
       return { success: false, error: 'Hubo un problema al añadir tu bicicleta. Por favor, intenta de nuevo más tarde.' };
   }
 };
-
+//get para introducir datos en el formulario de editar
+export const getItemById = async (id) => {
+  try {
+    const response = await fetch(`http://localhost:3000/bicycles/${id}`);
+    const data = await response.json();
+    return data
+  } catch (error) {
+    console.error('Error fetching bicycles:', error);
+  }
+};
 //Método PATCH
 export const updateItem = async (id, newData) => {
   try {

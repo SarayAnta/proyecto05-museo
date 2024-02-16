@@ -141,7 +141,7 @@ const Edit = () => {
     } finally {
       setLoading(false);
     }
-  }
+  };
         
     return (
         <StyledEdit>
