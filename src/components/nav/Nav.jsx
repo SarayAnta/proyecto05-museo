@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Addbutt from '../button/Button-add/add-button';
+import Addbutton from '../addbutton/Addbutton';
+import { Link } from 'react-router-dom';
 
 // Eliminé la declaración de estilo 'body' ya que no se puede usar en este contexto
 
@@ -16,6 +17,12 @@ const StyledNav = styled.nav`
   
 `;
 
+const StyleLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`
+
+
 const Title = styled.h1`
   margin-left: 1vw;
   font-size: 1.5rem;
@@ -24,7 +31,9 @@ const Title = styled.h1`
 const Nav = () => {
   return (
     <StyledNav>
-      <Title>MUSEO DE BICICLETAS</Title>
+      <StyleLink to="/">
+        <Title>MUSEO DE BICICLETAS</Title>
+        </StyleLink>
       <Addbutton />
     </StyledNav>
   );

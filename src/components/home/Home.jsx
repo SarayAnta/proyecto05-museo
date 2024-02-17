@@ -38,7 +38,8 @@ body {
   }
 
   .bicyclesimg {
-    max-width: 17w;
+    max-width: 17vw;
+    max-height: 45vh; 
     border: 0.5rem solid #D9D9D9;
   }
 
@@ -118,12 +119,12 @@ const Home = () => {
               <img className="bicyclesimg" src={bicycle.image} alt={bicycle.model} />
               <p>{bicycle.model}</p>
               <div className="gallery-button" >
-              <button className="edit-button" onClick={() => navigate("/Edit")}>
+              <button className="edit-button" onClick={() => navigate(`/Edit/${bicycle.id}`)}>
                 <img src="src\assets\img\Edit.png" alt="" />
               </button>
-              <button className="delete-button" onClick={() => deleteBicycle(`${bicycle.id}`)}>
+              <button className="delete-button" onClick={() => {deleteBicycle(`${bicycle.id}`); navigate(0)}}>
                 <img src="src\assets\img\Delete.png"></img></button>
-                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -131,5 +132,5 @@ const Home = () => {
     </>
   );
 }
-
+//useparamt luego peticion get de id que tngo en la url 
 export default Home;

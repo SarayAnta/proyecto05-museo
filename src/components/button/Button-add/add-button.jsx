@@ -29,6 +29,7 @@ const AddButton = styled.button`
         &:focus {
             outline: none;
         }
+        cursor: pointer;
     `;
 
 const Addbutton = () => {

@@ -9,6 +9,30 @@
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744066/Gallery_1_nyvctj.png"
     },
     {
+      "id": "2",
+      "model": "Xiaomi",
+      "speeds": 3,
+      "frame": "Aluminio",
+      "electric": true,
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_2_goazza.png"
+    },
+    {
+      "id": "3",
+      "model": "Reid Boston",
+      "speeds": 5,
+      "frame": "Acero",
+      "electric": false,
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744116/Gallery_3_gamemn.png"
+    },
+    {
+      "id": "4",
+      "model": "Orbea",
+      "speeds": 28,
+      "frame": "Aluminio",
+      "electric": true,
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744117/Gallery_4_rtud0n.png"
+    },
+    {
       "id": "5",
       "model": "Black",
       "speeds": 1,
@@ -47,6 +71,14 @@
       "frame": "Acero",
       "electric": false,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
+    },
+    {
+      "id": "9e2e",
+      "model": "BH",
+      "speeds": "3",
+      "frame": "Aluminio",
+      "electric": false,
+      "image": "https://plus.unsplash.com/premium_photo-1677623022346-2175a0aaa2c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ]
 }
