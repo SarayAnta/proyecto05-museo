@@ -100,7 +100,6 @@ body {
     margin-top: 1%;
   }
   
-  
   @media screen and (max-width: 480px) {
     form {
       padding: 30px;

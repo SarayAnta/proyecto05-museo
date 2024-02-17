@@ -1,9 +1,8 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
-import { updateItem } from '../../services/service';
-import {useParams} from 'react-router';
+import { updateItem, getOneBicycle } from '../../services/service';
+import { useParams } from 'react-router';
 
 const StyledEdit = styled.div`
 height: 80vh;
@@ -112,8 +111,24 @@ body {
 
 const Edit = () => {
   const { id } = useParams(); // Obtiene el parámetro id de la URL
-  const { register, formState: { errors }, handleSubmit, reset } = useForm();
+  const { register, formState: { errors }, handleSubmit, reset, setValue, watch } = useForm();
   const [loading, setLoading] = useState(false);
+  const [bicycleData, setBicycleData] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const bicycleData = await getOneBicycle(id);
+      setBicycleData(bicycleData);
+
+      setValue('model', bicycleData.model)
+      setValue('speeds', bicycleData.speeds)
+      setValue('frame', bicycleData.frame)
+      setValue('electric', bicycleData.electric)
+      setValue('image', bicycleData.image)
+    };
+
+    fetchData();
+  }, [id, setValue])
 
   const onSubmit = async (data) => {
     try {
@@ -127,7 +142,7 @@ const Edit = () => {
     } finally {
       setLoading(false);
     }
-  }
+  };
         
     return (
         <StyledEdit>
@@ -150,15 +165,16 @@ const Edit = () => {
                 <div className='frame'>
                     <label>Cuadro</label>
                     <select {...register('frame')}>
-                        <option value="al">Aluminio</option>
-                        <option value="ace">Acero</option>
-                        <option value="car">Carbono</option>
-                        <option value="ot">Otros</option>
+                        <option value="Aluminio">Aluminio</option>
+                        <option value="Acero">Acero</option>
+                        <option value="Plástico">Plástico</option>
+                        <option value="Carbono">Carbono</option>
+                        <option value="Otros c">Otros</option>
                     </select>
                 </div>
                 <div className='electric'>
                     <label>Eléctrica</label>
-                    <input className="checkbox-css" type="checkbox" {...register('electric')} />
+                    <input className="checkbox-css" type="checkbox" {...register('electric')} checked={watch('electric')} />
                 </div>
             </div>
             <div>
