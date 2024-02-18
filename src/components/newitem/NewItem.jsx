@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import styled from 'styled-components';
 import { addBicycle } from '../../services/service';
+import { useRef } from 'react';
 
 const StyledNewItem = styled.div`
 
@@ -110,6 +111,15 @@ body {
 const NewItem = () => {
 
     const { register, formState: { errors }, handleSubmit, reset} = useForm();
+
+const audioRef = useRef(null);
+
+    // Function to play sound
+    const playSound = () => {
+      if (audioRef.current) {
+        audioRef.current.play();
+      }
+    };
         
     const onSubmit = async (data) => {
         const { success, error } = await addBicycle(data);
@@ -127,6 +137,7 @@ const NewItem = () => {
 
     return (
         <StyledNewItem>
+    <audio ref={audioRef} src="src\components\newitem\bicycle-pipi-sound.mp3" />
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Modelo</label>
@@ -166,7 +177,7 @@ const NewItem = () => {
                 {errors.image?.type === 'pattern' && <p>El formato de la url de la imagen es incorrecto</p>}
                 {errors.image?.type === 'required' && <p>El campo url de la imagen es requerido</p>}
             </div>
-            <input type="submit" value="Añadir"/>
+            <input type="submit" value="Añadir" onClick={playSound}/>
         </form>
         </StyledNewItem>
     );
