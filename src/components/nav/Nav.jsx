@@ -14,7 +14,6 @@ const StyledNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 `;
 
 const StyleLink = styled(Link)`
@@ -25,7 +24,7 @@ const StyleLink = styled(Link)`
 
 const Title = styled.h1`
   margin-left: 1vw;
-  font-size: 1.5rem;
+  font-size: 10%;
 `;
 
 const Nav = () => {

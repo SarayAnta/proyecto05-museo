@@ -27,7 +27,7 @@ body {
   
   label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 80o99o%;
     color: #000000;
   }
   
@@ -35,8 +35,8 @@ body {
   input[type="file"],
   select {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 2%;
+    margin-bottom: 5%;
     border: none;
     background-color: #D9D9D9;
     border-radius: 5px;
@@ -45,11 +45,11 @@ body {
   
   input[type="submit"] {
     width: 100%;
-    padding: 10px;
+    padding: 3%;
     border: none;
     background-color: #000000;
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 10%;
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 5px;
@@ -59,9 +59,12 @@ body {
   input[type="submit"]:hover {
     background-color: #333333;
   }
+
+  input[type="submit"]:active {
+    background-color: #666666;
   
   .add {
-    margin-top: 15px;
+    margin-top: 3%;
   }
   
   .error {
@@ -76,35 +79,33 @@ body {
   .electric {
     display: flex;
     align-items: center; /* Alinear verticalmente */
-    margin-right: 30px; /* Espacio entre los campos */
+    align-content: center; /* Alinear verticalmente */
+    justify-content: space-between; /* Alinear horizontalmente */
+    margin-right: 3%; /* Espacio entre los campos */
   }
   
   .frame label,
   .electric label {
-    margin-right: 20px; /* Espacio entre el label y el input */
-    margin-top: -2vh;
+    margin-right: 4%; /* Espacio entre el label y el input */
+    margin-bottom: 8%; /* Eliminar el espacio inferior */
   }
   
   .frame select {
     flex: 1; /* El input ocupa todo el espacio restante */
-    width: 200px;
+    width: 50vw;
   }
   
   .electric input[type="checkbox"] {
-    flex: 1; /* El input ocupa todo el espacio restante */
-    margin-top: -3vh;
+    width: 10%;
+    margin-top: 3%; /* Espacio superior */
   }
   
   input[type="submit"] {
     background-color: #3de161d2;
-    margin-top: 1%;
+    margin-top: 2%;
   }
   
-  @media screen and (max-width: 480px) {
-    form {
-      padding: 30px;
-    }
-  }
+}
 `;
 
 const NewItem = () => {

@@ -53,10 +53,11 @@ body {
   p {
     text-align: center;
     font-family: 'Jost', sans-serif;
-    font-size: 1.5rem;
+    font-size: 10%;
     text-transform: uppercase;
     text-decoration: bold;
     text-shadow:  4px 4px 4px #D9D9D9;
+    padding-top:5%;
 
   }
 

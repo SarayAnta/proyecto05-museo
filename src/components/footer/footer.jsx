@@ -12,16 +12,24 @@ import Twitter from '../../assets/img/TwitterX.png';
 const FooterContainer = styled.footer`
   background-color: #393939;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
   flex-direction: row;
-  flex-wrap: wrap;
   height: 10vh;
   
   img {
-    margin: 5%;
-    width: 10%;
-    height: 10%;
+    width: auto;
+    height: auto;
+    max-width: 30px;
+  }
+
+  .footer-container {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
   }
 
 `;

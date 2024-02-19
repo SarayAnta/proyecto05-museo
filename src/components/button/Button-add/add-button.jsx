@@ -4,7 +4,7 @@ import styled from "styled-components";
  
 const AddButton = styled.button`
         background-color: #3DE361;
-        font-size: 1em;
+        font-size: 9%;
         color: black;
         font-family: 'Jost', sans-serif;
         width: 15vw;
@@ -30,6 +30,8 @@ const AddButton = styled.button`
             outline: none;
         }
         cursor: pointer;
+
+       
     `;
 
 const Addbutton = () => {
@@ -38,7 +40,7 @@ const Addbutton = () => {
     return (
         <AddButton className="add-button" onClick={() => navigate("/NewItem")}>
             
-                Añadir bicicleta
+                <p className="add-bicycle">Añadir bicicleta</p>
         </AddButton>
         );
 }
