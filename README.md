@@ -54,6 +54,52 @@ Eliminar una bicicleta: Haz clic en el botón "Eliminar" junto a un modelo de bi
 
 Explorar la galería de imágenes: Visita la sección de la galería para ver imágenes relacionadas con el ciclismo.
 
+organizar por carpetas 
+
+src/
+|-- assets/
+|   |-- img/
+|   |   |-- Gallery1.png
+|   |   |-- BackgroundHome.png
+|   |   |-- ...
+|   |-- sound/
+|       |-- 7TSW2M4-bicycle-bell.mp3
+|       |-- ...
+|
+|-- components/
+|   |-- card/
+|   |   |-- Card.jsx
+|   |
+|   |-- edit/
+|   |   |-- Edit.jsx
+|   |
+|   |-- footer/
+|   |   |-- Footer.jsx
+|   |
+|   |-- gallery/
+|   |   |-- Gallery.jsx
+|   |
+|   |-- home/
+|   |   |-- Home.jsx
+|   |
+|   |-- layout/
+|   |   |-- LayoutPublic.jsx
+|   |
+|   |-- nav/
+|   |   |-- Nav.jsx
+|   |
+|   |-- newitem/
+|       |-- NewItem.jsx
+|
+|-- router/
+|   |-- router.jsx
+|
+|-- services/
+|   |-- service.js
+|
+|-- index.html
+|-- index.js
+
 
 Estructura del Proyecto:
 
