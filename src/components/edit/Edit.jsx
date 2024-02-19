@@ -64,9 +64,10 @@ body {
     margin-top: 15px;
   }
   
-  .error {
+  .error-message {
     color: red;
-  }
+    font-size: 14px;
+  } 
   
   .cuadred {
     display: flex;
@@ -139,23 +140,26 @@ const Edit = ({ itemId }) => {
                 <input className='model' type="text" {...register('model', {
                     required: true,
                 })}/>
-                {errors.model?.type === 'required' && <p>El campo modelo es requerido</p>}
+                {errors.model?.type === 'required' && <p className="error-message">El campo modelo es requerido</p>}
             </div>
             <div>
                 <label>Velocidades</label>
                 <input className='speeding' type="text" {...register('speeds', {
+                    pattern: /^[0-9]{1,3}$/,
                     required: true,
                 })}/>
-                {errors.speeds?.type === 'required' && <p>El campo velocidades es requerido</p>}
+                {errors.speeds?.type === 'pattern' && <p className="error-message">La velocidad debe ser un valor numérico</p>}
+                {errors.speeds?.type === 'required' && <p className="error-message">El campo velocidades es requerido</p>}
             </div>
             <div className='cuadred'>
                 <div className='frame'>
                     <label>Cuadro</label>
                     <select {...register('frame')}>
-                        <option value="al">Aluminio</option>
-                        <option value="ace">Acero</option>
-                        <option value="car">Carbono</option>
-                        <option value="ot">Otros</option>
+                        <option value="Aluminio">Aluminio</option>
+                        <option value="Acero">Acero</option>
+                        <option value="Plástico">Plástico</option>
+                        <option value="Carbono">Carbono</option>
+                        <option value="Otros">Otros</option>
                     </select>
                 </div>
                 <div className='electric'>
@@ -169,8 +173,8 @@ const Edit = ({ itemId }) => {
                 pattern: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
                 required:true,
                 })}/>
-                {errors.image?.type === 'pattern' && <p>El formato de la url de la imagen es incorrecto</p>}
-                {errors.image?.type === 'required' && <p>El campo url de la imagen es requerido</p>}
+                {errors.image?.type === 'pattern' && <p className="error-message">El formato de la url de la imagen es incorrecto</p>}
+                {errors.image?.type === 'required' && <p className="error-message">El campo url de la imagen es requerido</p>}
             </div>
             <input type="submit" value="Editar"/>
         </form>

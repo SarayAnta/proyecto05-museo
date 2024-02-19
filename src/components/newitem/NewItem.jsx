@@ -64,9 +64,10 @@ body {
     margin-top: 15px;
   }
   
-  .error {
+  .error-message {
     color: red;
-  }
+    font-size: 14px;
+  }  
   
   .cuadred {
     display: flex;
@@ -112,12 +113,6 @@ const NewItem = () => {
 
     const { register, formState: { errors }, handleSubmit, reset} = useForm();
         
-
-    //Este código maneja el envío de datos del formulario al servidor, muestra un mensaje de éxito o error dependiendo de la respuesta del servidor y reinicia el formulario en caso de éxito.
-    //const onSubmit = async (data) => {: Esta línea define una función asíncrona llamada onSubmit que toma los datos del formulario como argumento. Esta función se ejecutará cuando se envíe el formulario.
-    //const { success, error } = await addBicycle(data);: En esta línea, llamamos a la función addBicycle y pasamos los datos del formulario como argumento. Esta función se encarga de enviar los datos al servidor y devuelve un objeto que contiene un booleano success y un posible mensaje de error. Utilizamos await para esperar a que la función addBicycle se resuelva antes de continuar.
-    //if (success) { ... } else { ... }: Aquí verificamos si el envío de datos fue exitoso. Si success es verdadero, significa que el envío de datos fue exitoso, por lo que mostramos un mensaje de éxito con alert('¡La bicicleta fue añadida correctamente!') y reiniciamos el formulario utilizando reset(). Si success es falso, significa que hubo un problema al enviar los datos, por lo que mostramos el mensaje de error obtenido de la respuesta del servidor utilizando alert(error).
-
     const onSubmit = async (data) => {
         const { success, error } = await addBicycle(data);
 
@@ -140,23 +135,26 @@ const NewItem = () => {
                 <input className='model' type="text" {...register('model', {
                     required: true,
                 })}/>
-                {errors.model?.type === 'required' && <p>El campo modelo es requerido</p>}
+                {errors.model?.type === 'required' && <p className="error-message">El campo modelo es requerido</p>}
             </div>
             <div>
                 <label>Velocidades</label>
                 <input className='speeding' type="text" {...register('speeds', {
+                    pattern: /^[0-9]{1,3}$/,
                     required: true,
                 })}/>
-                {errors.speeds?.type === 'required' && <p>El campo velocidades es requerido</p>}
+                {errors.speeds?.type === 'pattern' && <p className="error-message">La velocidad debe ser un valor numérico</p>}
+                {errors.speeds?.type === 'required' && <p className="error-message">El campo velocidades es requerido</p>}
             </div>
             <div className='cuadred'>
                 <div className='frame'>
                     <label>Cuadro</label>
                     <select {...register('frame')}>
-                        <option value="al">Aluminio</option>
-                        <option value="ace">Acero</option>
-                        <option value="car">Carbono</option>
-                        <option value="ot">Otros</option>
+                        <option value="Aluminio">Aluminio</option>
+                        <option value="Acero">Acero</option>
+                        <option value="Plástico">Plástico</option>
+                        <option value="Carbono">Carbono</option>
+                        <option value="Otros">Otros</option>
                     </select>
                 </div>
                 <div className='electric'>
@@ -170,8 +168,8 @@ const NewItem = () => {
                 pattern: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
                 required:true,
                 })}/>
-                {errors.image?.type === 'pattern' && <p>El formato de la url de la imagen es incorrecto</p>}
-                {errors.image?.type === 'required' && <p>El campo url de la imagen es requerido</p>}
+                {errors.image?.type === 'pattern' && <p className="error-message">El formato de la url de la imagen es incorrecto</p>}
+                {errors.image?.type === 'required' && <p className="error-message">El campo url de la imagen es requerido</p>}
             </div>
             <input type="submit" value="Añadir"/>
         </form>
