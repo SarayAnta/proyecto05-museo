@@ -11,7 +11,8 @@ Museo de Bicicletas
 
 Este proyecto es una aplicación web desarrollada con React que sirve como un museo virtual de bicicletas, donde los usuarios pueden ver diferentes modelos de bicicletas, agregar nuevas bicicletas, editar y eliminar modelos existentes, y explorar una galería de imágenes relacionadas con el ciclismo.
 
-Instalación
+1.Instalación:
+
 Clona el repositorio:
 
 bash
@@ -27,7 +28,17 @@ bash
 npm start
 La aplicación estará disponible en http://localhost:5173/
 
-Uso
+2. Tecnologías Utilizadas:
+
+tecnologías principales que hemos utilizado para desarrollar esta aplicacion web
+
+React: Librería de JavaScript para construir interfaces de usuario.
+React Router: Para la navegación dentro de la aplicación.
+Styled Components: Para el estilo CSS en los componentes de React.
+Fetch API: Para realizar llamadas a la API del servidor.
+Vite: Para la compilación rápida del código fuente.
+
+3. Uso:
 
 Una vez que la aplicación esté instalada y ejecutándose, puedes hacer lo siguiente:
 
@@ -42,7 +53,7 @@ Eliminar una bicicleta: Haz clic en el botón "Eliminar" junto a un modelo de bi
 Explorar la galería de imágenes: Visita la sección de la galería para ver imágenes relacionadas con el ciclismo.
 
 
-Estructura del Proyecto:
+4. Estructura del Proyecto:
 
 El proyecto está estructurado de la siguiente manera:
 
@@ -54,7 +65,7 @@ router/: Contiene el enrutador de la aplicación que mapea las rutas a los compo
 Contribuciones
 ¡Las contribuciones son bienvenidas! Si quieres contribuir al proyecto, sigue estos pasos:
 
-Haz un fork del repositorio.
+5. Haz un fork del repositorio.
 Crea una nueva rama para tu función o corrección de errores: git checkout -b nombre-de-la-rama.
 Realiza tus cambios y haz commits: git commit -m "Descripción de los cambios".
 Sube tus cambios a tu repositorio: git push origin nombre-de-la-rama.
@@ -62,5 +73,5 @@ Envía un pull request con tus cambios.
 Contacto
 Si tienes alguna pregunta o sugerencia sobre el proyecto, no dudes en ponerte en contacto con nosotros en correo electrónico o a través de nuestras redes sociales.
 
-Licencia
+6. Licencia
 Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para obtener más detalles.
