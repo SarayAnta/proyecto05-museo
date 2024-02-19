@@ -67,7 +67,6 @@ body {
   
   .error-message {
     color: red;
-    font-size: 14px;
   }  
   
   .cuadred {
