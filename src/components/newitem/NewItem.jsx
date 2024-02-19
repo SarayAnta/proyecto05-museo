@@ -143,7 +143,7 @@ const audioRef = useRef(null);
 
     return (
         <StyledNewItem>
-    <audio ref={audioRef} src="src\components\newitem\bicycle-pipi-sound.mp3" />
+    <audio ref={audioRef} src="src\assets\sound\7TSW2M4-bicycle-bell.mp3" />
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Modelo</label>
@@ -184,7 +184,7 @@ const audioRef = useRef(null);
                 {errors.image?.type === 'required' && <p>El campo url de la imagen es requerido</p>}
             </div>
             <input type="submit" value="Añadir" onClick={playSound}/>
-        </form>
+       </form>
         </StyledNewItem>
     );
 }
