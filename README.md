@@ -12,7 +12,8 @@ Museo de Bicicletas
 
 Este proyecto es una aplicación web desarrollada con React que sirve como un museo virtual de bicicletas, donde los usuarios pueden ver diferentes modelos de bicicletas, agregar nuevas bicicletas, editar y eliminar modelos existentes, y explorar una galería de imágenes relacionadas con el ciclismo.
 
-Instalación
+Instalación:
+
 Clona el repositorio:
 
 bash
@@ -28,7 +29,18 @@ bash
 npm start
 La aplicación estará disponible en http://localhost:5173/
 
-Uso
+Tecnologías Utilizadas:
+
+tecnologías principales que hemos utilizado para desarrollar esta aplicacion web
+
+React: Librería de JavaScript para construir interfaces de usuario.
+React Router: Para la navegación dentro de la aplicación.
+Styled Components: Para el estilo CSS en los componentes de React.
+Fetch API: Para realizar llamadas a la API del servidor.
+Vite: Para la compilación rápida del código fuente.
+
+
+Uso:
 
 Una vez que la aplicación esté instalada y ejecutándose, puedes hacer lo siguiente:
 
@@ -62,6 +74,7 @@ Sube tus cambios a tu repositorio: git push origin nombre-de-la-rama.
 Envía un pull request con tus cambios.
 Contacto
 Si tienes alguna pregunta o sugerencia sobre el proyecto, no dudes en ponerte en contacto con nosotros en correo electrónico o a través de nuestras redes sociales.
+
 
 Licencia
 Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para obtener más detalles.
