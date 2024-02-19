@@ -1,17 +1,17 @@
 {
   "bicycles": [
     {
-      "id": "1",
-      "model": "Capri",
-      "speeds": 5,
-      "frame": "Acero",
+      "model": "bmx",
+      "speeds": "200",
+      "frame": "Aluminio",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744066/Gallery_1_nyvctj.png"
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png",
+      "id": "1"
     },
     {
       "id": "2",
       "model": "Xiaomi",
-      "speeds": 3,
+      "speeds": "3",
       "frame": "Aluminio",
       "electric": true,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_2_goazza.png"
@@ -71,6 +71,38 @@
       "frame": "Acero",
       "electric": false,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
+    },
+    {
+      "id": "9e2e",
+      "model": "BH",
+      "speeds": "3",
+      "frame": "Aluminio",
+      "electric": false,
+      "image": "https://plus.unsplash.com/premium_photo-1677623022346-2175a0aaa2c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "8126",
+      "model": "bmx",
+      "speeds": "200",
+      "frame": "Acero",
+      "electric": false,
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
+    },
+    {
+      "id": "9139",
+      "model": "bmw",
+      "speeds": "200",
+      "frame": "Aluminio",
+      "electric": false,
+      "image": "https://plus.unsplash.com/premium_photo-1677623022346-2175a0aaa2c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.png"
+    },
+    {
+      "id": "0163",
+      "model": "bmw",
+      "speeds": "200",
+      "frame": "Aluminio",
+      "electric": false,
+      "image": "https://plus.unsplash.com/premium_photo-1677623022346-2175a0aaa2c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "
     }
   ]
 }

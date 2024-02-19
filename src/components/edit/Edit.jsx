@@ -1,8 +1,8 @@
-import React from 'react';
-import { useState } from 'react';
-import { useForm } from "react-hook-form";
+import React, { useState, useEffect} from 'react';
+import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
-import { updateItem } from '../../services/service'
+import { updateItem, getOneBicycle } from '../../services/service';
+import { useParams } from 'react-router';
 
 const StyledEdit = styled.div`
 height: 80vh;
@@ -108,32 +108,44 @@ body {
   }
 `;
 
-const Edit = ({ itemId }) => {
-  const { register, formState: { errors }, handleSubmit, reset } = useForm();
+const Edit = () => {
+  const { id } = useParams(); // Obtiene el parámetro id de la URL
+  const { register, formState: { errors }, handleSubmit, reset, setValue, watch } = useForm();
   const [loading, setLoading] = useState(false);
+  const [bicycleData, setBicycleData] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const bicycleData = await getOneBicycle(id);
+      setBicycleData(bicycleData);
+
+      setValue('model', bicycleData.model)
+      setValue('speeds', bicycleData.speeds)
+      setValue('frame', bicycleData.frame)
+      setValue('electric', bicycleData.electric)
+      setValue('image', bicycleData.image)
+    };
+
+    fetchData();
+  }, [id, setValue])
 
   const onSubmit = async (data) => {
     try {
       setLoading(true);
-      // Realiza la solicitud para actualizar el elemento en la base de datos utilizando la función updateItem
-      await updateItem(itemId, data);
-      // Mostrar mensaje de éxito
+      await updateItem(id, data); // Utiliza el id capturado de la URL
       alert('¡Los datos del elemento han sido actualizados correctamente!');
-      // Reiniciar el formulario
       reset();
     } catch (error) {
-      // Manejar errores
       console.error('Error al actualizar el elemento:', error);
-      // Mostrar mensaje de error
       alert('Error al actualizar el elemento. Por favor, intenta nuevamente.');
     } finally {
       setLoading(false);
     }
-  }
+  };
         
     return (
         <StyledEdit>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit = { handleSubmit (onSubmit)}>
             <div>
                 <label>Modelo</label>
                 <input className='model' type="text" {...register('model', {
@@ -152,15 +164,16 @@ const Edit = ({ itemId }) => {
                 <div className='frame'>
                     <label>Cuadro</label>
                     <select {...register('frame')}>
-                        <option value="al">Aluminio</option>
-                        <option value="ace">Acero</option>
-                        <option value="car">Carbono</option>
-                        <option value="ot">Otros</option>
+                        <option value="Aluminio">Aluminio</option>
+                        <option value="Acero">Acero</option>
+                        <option value="Plástico">Plástico</option>
+                        <option value="Carbono">Carbono</option>
+                        <option value="Otros c">Otros</option>
                     </select>
                 </div>
                 <div className='electric'>
                     <label>Eléctrica</label>
-                    <input className="checkbox-css" type="checkbox" {...register('electric')} />
+                    <input className="checkbox-css" type="checkbox" {...register('electric')} checked={watch('electric')} />
                 </div>
             </div>
             <div>
