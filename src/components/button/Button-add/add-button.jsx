@@ -4,12 +4,12 @@ import styled from "styled-components";
  
 const AddButton = styled.button`
         background-color: #3DE361;
-        font-size: 9%;
-        color: black;
+       
         font-family: 'Jost', sans-serif;
-        width: 15vw;
+        width: 25vw;
         height: 8vh;
-        margin-right: 1vw;
+        max-width: 150px;
+        margin-right: 20px;
         border-radius: 15px;
 
         &:hover {
@@ -28,8 +28,22 @@ const AddButton = styled.button`
 
         &:focus {
             outline: none;
+            cursor: pointer;
         }
-        cursor: pointer;
+
+        .add-bicycle {
+            font-size: 50%;
+            text-align: center;
+            
+        }
+
+        //media queries
+        @media (max-width: 500px) {
+            width: 30%;
+            margin-right: 10px;
+        }
+
+      
 
        
     `;

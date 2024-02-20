@@ -14,7 +14,7 @@ body {
   .title-gallery {
     text-align: center;
     font-family: 'Jost', sans-serif;
-    font-size: xx-large;
+    font-size:125%;
     text-shadow:  4px 4px 4px #D9D9D9;
     text-transform: uppercase;
     
@@ -71,7 +71,7 @@ body {
  }
 
  button img {
-  width: 2rem;
+  width: 50%;
   height: auto;
   
 
@@ -82,6 +82,7 @@ button.edit-button, button.delete-button  {
   border: none;
   cursor: pointer;
   margin: 0.75rem;
+  transition: 0.5s;
   
 
 }

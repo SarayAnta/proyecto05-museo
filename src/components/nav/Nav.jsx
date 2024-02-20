@@ -24,7 +24,8 @@ const StyleLink = styled(Link)`
 
 const Title = styled.h1`
   margin-left: 1vw;
-  font-size: 10%;
+  font-size: 125%;
+  letter-spacing: 0.1em;
 `;
 
 const Nav = () => {

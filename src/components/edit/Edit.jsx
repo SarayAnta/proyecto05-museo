@@ -88,12 +88,15 @@ body {
   
   .frame select {
     flex: 1; /* El input ocupa todo el espacio restante */
-    width: 200px;
+    width: 125px;
+    margin-top: 5%;
+    
   }
   
   .electric input[type="checkbox"] {
-    
-    width: 15%;
+    justify-content: flex-end;
+    width: 50%;
+    height: 50%;
   }
   
   input[type="submit"] {
@@ -102,11 +105,7 @@ body {
   }
   
   
-  @media screen and (max-width: 480px) {
-    form {
-      padding: 30px;
-    }
-  }
+
 `;
 
 const Edit = () => {
@@ -157,7 +156,7 @@ const Edit = () => {
             <div>
                 <label>Velocidades</label>
                 <input className='speeding' type="text" {...register('speeds', {
-                    required: true,
+                  required: true,
                 })}/>
                 {errors.speeds?.type === 'required' && <p>El campo velocidades es requerido</p>}
             </div>
