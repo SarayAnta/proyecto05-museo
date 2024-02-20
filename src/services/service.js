@@ -1,45 +1,45 @@
 
 
 //Método GET
-export const getBicycles = async () => {
-    try {
-      const response = await fetch('http://localhost:3000/bicycles');
-      const data = await response.json();
-      return data
-    } catch (error) {
-      console.error('Error fetching bicycles:', error);
+export const getBicycles = async () => {  //Declaramos una función asíncrona llamada getBicycles que nos permite hacer la petición a la API
+    try {  //Usamos try para manejar errores
+      const response = await fetch('http://localhost:3000/bicycles'); //Usamos el método fetch para hacer la petición a la API y almacenamos la respuesta en la constante response
+      const data = await response.json(); //Usamos el método json() para convertir la respuesta en un objeto JSON y lo almacenamos en la constante data 
+      return data //Retornamos la constante data que contiene los datos de las bicicletas
+    } catch (error) { //Usamos catch para manejar errores y mostramos un mensaje de error en la consola
+      console.error('Error fetching bicycles:', error); //Mostramos un mensaje de error en la consola
     }
   };
 //Método DELETE
-export    const deleteBicycle = async (id) => {
-    const response = await fetch(`http://localhost:3000/bicycles/${id}`, {
-      method: 'DELETE'
+export    const deleteBicycle = async (id) => {  //Definimos una función asíncrona llamada deleteBicycle que recibe un parámetro id que representa el ID de la bicicleta que queremos eliminar
+    const response = await fetch(`http://localhost:3000/bicycles/${id}`, { //Usamos el método fetch para hacer la petición a la API y almacenamos la respuesta en la constante response
+      method: 'DELETE'//Especificamos que esta es una solicitud de tipo DELETE
     });
 };
 
 //Método POST
-export const addBicycle = async (data) => {
+export const addBicycle = async (data) => { //Definimos una función asíncrona llamada addBicycle que recibe un parámetro data que representa los datos de la bicicleta que queremos añadir
   try {
-      const response = await fetch('http://localhost:3000/bicycles', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
+      const response = await fetch('http://localhost:3000/bicycles', { //Usamos el método fetch para hacer la petición a la API y almacenamos la respuesta en la constante response
+          method: 'POST', //Especificamos que esta es una solicitud de tipo POST 
+          headers: { //Especificamos el tipo de contenido que estamos enviando en la solicitud
+              'Content-Type': 'application/json'//Especificamos que estamos enviando un objeto JSON 
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify(data)//Convertimos el objeto data a un objeto JSON y lo enviamos en la solicitud
       });
 
-      if (response.ok) {
+      if (response.ok) { //Verificamos si la respuesta es exitosa
           return { success: true };
-      } else {
+      } else { //Si la respuesta no es exitosa
           return { success: false, error: 'Hubo un problema al añadir tu bicicleta. Por favor, intenta de nuevo más tarde.' };
       }
-  } catch (error) {
+  } catch (error) { //Usamos catch para manejar errores
       console.error('Error:', error);
       return { success: false, error: 'Hubo un problema al añadir tu bicicleta. Por favor, intenta de nuevo más tarde.' };
   }
 };
 //get para introducir datos en el formulario de editar
-export const getItemById = async (id) => {
+export const getItemById = async (id) => { //Definimos una función asíncrona llamada getItemById que recibe un parámetro id que representa el ID de la bicicleta que queremos obtener
   try {
     const response = await fetch(`http://localhost:3000/bicycles/${id}`);
     const data = await response.json();
@@ -49,24 +49,24 @@ export const getItemById = async (id) => {
   }
 };
 //Método PUT
-export const updateItem = async (id, newData) => {
+export const updateItem = async (id, newData) => { //Definimos una función asíncrona llamada updateItem que recibe dos parámetros: id que representa el ID de la bicicleta que queremos actualizar y newData que representa los nuevos datos de la bicicleta
   try {
     const response = await fetch(`http://localhost:3000/bicycles/${id}`, {
-      method: 'PUT',
+      method: 'PUT',//Especificamos que esta es una solicitud de tipo PUT
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(newData)
     });
 
-    if (!response.ok) {
-      throw new Error('Error updatingItem');
+    if (!response.ok) { //Verificamos si la respuesta no es exitosa
+      throw new Error('Error updatingItem'); //Lanzamos un error si la respuesta no es exitosa
     }
 
-    return response.json();
-  } catch (error) {
-    console.error('Error updatingItem:', error);
-    throw error;
+    return response.json(); //Retornamos la respuesta de la API
+  } catch (error) { //Usamos catch para manejar errores
+    console.error('Error updatingItem:', error);//Mostramos un mensaje de error en la consola
+    throw error;//Lanzamos el error
   }
 };
 

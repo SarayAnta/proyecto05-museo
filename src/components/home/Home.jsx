@@ -96,23 +96,23 @@ button.edit-button:hover, button.delete-button:hover {
 
 `;
 
-const Home = () => {
-  const [bicycles, setBicycles] = useState([]);
-  const navigate = useNavigate();
+const Home = () => { // Crea un componente Home
+  const [bicycles, setBicycles] = useState([]); // Declara una constante bicycles y una función setBicycles que almacenan un array vacío UseState, se desestructura el array en dos elementos
+  const navigate = useNavigate(); // Declara una constante navigate que almacena el hook useNavigate
 
-  useEffect(() => {
-      const fetchData = async () => {
-      const data = await getBicycles()
-      console.log(data);
-      setBicycles(data);
+  useEffect(() => {  // Crea un efecto que se ejecuta al renderizar el componente
+      const fetchData = async () => {  // Crea una función fetchData que se ejecuta de manera asíncrona
+      const data = await getBicycles() // Declara una constante data que almacena el resultado de la función getBicycles
+      console.log(data); // Muestra en consola el contenido de la constante data
+      setBicycles(data); // Ejecuta la función setBicycles con el contenido de la constante data como argumento
     }
-    fetchData();
+    fetchData(); // Ejecuta la función fetchData
     }
 
    , []);
 
 
-  return (
+  return ( // Retorna un fragmento con el contenido del componente
     <>
     <HomeContainer>
         <img className="background-img"src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul" />

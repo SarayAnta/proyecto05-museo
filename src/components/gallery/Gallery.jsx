@@ -34,7 +34,7 @@ const GalleryContainer = styled.div`
   }*/
 `;
 
-const Gallery = () => {
+const Gallery = () => { // Cambiado "props" por "id" para que coincida con el nombre que le damos en el archivo App.jsx
   return (
     <>
       {/* Cambiado "Gallery" por "GalleryContainer" */}
