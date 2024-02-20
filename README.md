@@ -26,8 +26,17 @@ npm install
 Inicia la aplicación:
 
 bash
-npm start
+npm run dev
+Cuando ejecutas npm run dev, estás ejecutando un script definido en el archivo package.json de tu proyecto. Este script generalmente está configurado para iniciar el servidor de desarrollo proporcionado por Vite.js. El servidor de desarrollo sirve la aplicación React y proporciona capacidades como recarga en caliente (hot reloading), lo que significa que los cambios que hagas en el código se reflejarán automáticamente en el navegador sin necesidad de recargar la página manualmente.
+
+En resumen, utilizamos npm run dev para iniciar el servidor de desarrollo de Vite.js, que nos permite trabajar de manera eficiente en nuestro proyecto React y ver los cambios en tiempo real mientras desarrollamos.
+
 La aplicación estará disponible en http://localhost:5173/
+
+bash
+npm run api
+"api": "npx json-server server/db.json"
+Asegúrate de reemplazar las versiones de las dependencias con las que estés utilizando en tu proyecto. Una vez que hayas configurado adecuadamente tu package.json, podrás ejecutar npm run api para iniciar el servidor de desarrollo de Vite.js.
 
 Tecnologías Utilizadas:
 
@@ -107,9 +116,10 @@ El proyecto está estructurado de la siguiente manera:
 
 src/: Contiene todos los archivos fuente de la aplicación.
 components/: Contiene los componentes de React utilizados en la aplicación, como Home, NewItem, Edit, Footer, Gallery, Card, etc.
-services/: Contiene los archivos que gestionan las llamadas a la API para obtener, añadir, editar y eliminar bicicletas.
+services/: Contiene los archivos que gestionan las llamadas a la API para obtener, añadir, editar y eliminar bicicletas. como getBicycles, addBicycle, deleteBicycle, updateItem, etc.
 assets/: Contiene archivos estáticos como imágenes, fuentes, y sonidos utilizados en la aplicación.
 router/: Contiene el enrutador de la aplicación que mapea las rutas a los componentes correspondientes.
+
 Contribuciones
 ¡Las contribuciones son bienvenidas! Si quieres contribuir al proyecto, sigue estos pasos:
 
