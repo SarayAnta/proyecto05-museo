@@ -12,21 +12,40 @@ import Twitter from '../../assets/img/TwitterX.png';
 const FooterContainer = styled.footer`
   background-color: #393939;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
   height: 10vh;
   
   img {
-    margin: 0 10px;
-    width: 50px;
-    height: 50px;
+    width: auto;
+    height: auto;
+    max-width: 30px;
+    transition: 0.5s;
   }
 
-  /* Estilos para hacer el footer responsive */
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    padding: 10px;
+  img:hover {
+    transform: scale(1.3);
+    color: black;
   }
+
+  img:active {
+    transform: scale(0.9);
+  }
+
+  img:focus {
+    color: black;
+  }
+
+  .footer-container {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+
 `;
 
 const Footer = () => {

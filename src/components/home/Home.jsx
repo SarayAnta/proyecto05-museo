@@ -10,12 +10,14 @@ body {
     margin: 0;
   }
 
-.title-gallery {
-  text-align: center;
-  font-family: 'Jost', sans-serif;
-  font-size: xx-large;
-  text-shadow:  4px 4px 4px #D9D9D9;
-  text-transform: uppercase;
+
+  .title-gallery {
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size:125%;
+    text-shadow:  4px 4px 4px #D9D9D9;
+    text-transform: uppercase;
+    
   }
   
 .background-img {
@@ -46,13 +48,15 @@ body {
   transition: 0.5s;
   }
 
-p {
-  text-align: center;
-  font-family: 'Jost', sans-serif;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-decoration: bold;
-  text-shadow:  4px 4px 4px #D9D9D9;
+  p {
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 10%;
+    text-transform: uppercase;
+    text-decoration: bold;
+    text-shadow:  4px 4px 4px #D9D9D9;
+    padding-top:5%;
+
   }
 
 gallery-button {
@@ -61,8 +65,8 @@ gallery-button {
   justify-content: space-around;
  }
 
-button img {
-  width: 2rem;
+ button img {
+  width: 50%;
   height: auto;
   }
 
@@ -71,7 +75,12 @@ button.edit-button, button.delete-button  {
   border: none;
   cursor: pointer;
   margin: 0.75rem;
-  }
+  transition: 0.5s;
+  
+
+}
+
+
 
 button.edit-button:hover, button.delete-button:hover {
   transform: scale(1.5);

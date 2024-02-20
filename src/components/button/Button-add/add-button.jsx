@@ -4,14 +4,48 @@ import styled from "styled-components";
  
 const AddButton = styled.button`
         background-color: #3DE361;
-        font-size: 1em;
-        color: black;
+       
         font-family: 'Jost', sans-serif;
-        width: 15vw;
-        height: 6vh;
-        margin-right: 1vw;
-        border-radius: 10px 10px 10px 10px;
-        cursor: pointer;
+        width: 25vw;
+        height: 8vh;
+        max-width: 150px;
+        margin-right: 20px;
+        border-radius: 15px;
+
+        &:hover {
+            background-color: #3DE361;
+            color: black;
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+
+        &:active {
+            background-color: #3DE361;
+            color: black;
+            transform: scale(0.9);
+            transition: 0.5s;
+        }
+
+        &:focus {
+            outline: none;
+            cursor: pointer;
+        }
+
+        .add-bicycle {
+            font-size: 50%;
+            text-align: center;
+            
+        }
+
+        //media queries
+        @media (max-width: 500px) {
+            width: 30%;
+            margin-right: 10px;
+        }
+
+      
+
+       
     `;
 
 const Addbutton = () => {
@@ -19,7 +53,8 @@ const Addbutton = () => {
 
     return (
         <AddButton className="add-button" onClick={() => navigate("/NewItem")}>
-                Añadir bicicleta
+            
+                <p className="add-bicycle">Añadir bicicleta</p>
         </AddButton>
         );
 }
