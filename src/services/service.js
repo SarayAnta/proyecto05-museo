@@ -48,7 +48,7 @@ export const getItemById = async (id) => {
     console.error('Error fetching bicycles:', error);
   }
 };
-//Método PATCH
+//Método PUT
 export const updateItem = async (id, newData) => {
   try {
     const response = await fetch(`http://localhost:3000/bicycles/${id}`, {
