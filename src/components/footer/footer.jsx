@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from "react-router-dom";
 import styled from 'styled-components';
 
-import Copyright from '../../assets/img/Copyright.png';
+import Copyright from '../../assets/img/Copyright.png'; // Cambiado "copy" por "Copyright" para que coincida con el nombre del archivo
 import mail from '../../assets/img/mail.png';
 import GitHub from '../../assets/img/GitHub.png';
 import Instagram from '../../assets/img/Instagram.png';

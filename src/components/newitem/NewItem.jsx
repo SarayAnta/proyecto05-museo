@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import styled from 'styled-components';
 import { addBicycle } from '../../services/service';
 import { useRef } from 'react';
+import { useRef } from 'react';
 
 const StyledNewItem = styled.div`
 
@@ -109,30 +110,28 @@ body {
   }
 `;
 
-const NewItem = () => {
+const NewItem = () => {  // Añade el hook useNavigate a la importación de react-router-dom y declara una constante navigate que almacena el hook useNavigate
 
-    const { register, formState: { errors }, handleSubmit, reset} = useForm();
-
-const audioRef = useRef(null);
+    const { register, formState: { errors }, handleSubmit, reset} = useForm(); // Desestructura los métodos register, errors y handleSubmit del hook useForm
+    const audioRef = useRef(null);
 
     // Function to play sound
     const playSound = () => {
       if (audioRef.current) {
         audioRef.current.play();
       }
-    };
-        
-    const onSubmit = async (data) => {
-        const { success, error } = await addBicycle(data);
+    };  
+    const onSubmit = async (data) => {  // Crea una función asíncrona onSubmit que recibe un parámetro data y hace una petición a la API con el método addBicycle
+        const { success, error } = await addBicycle(data);  // Desestructura las propiedades success y error de la respuesta de la petición a la API con el método addBicycle
 
-        if (success) {
+        if (success) {  // Si success es true
             // Mostrar mensaje de éxito
             alert('¡La bicicleta fue añadida correctamente!');
             // Reiniciar el formulario
             reset();
         } else {
             // Mostrar mensaje de error
-            alert(error);
+            alert(error);  // Si success es false, muestra el mensaje de error
         }
     }
 
@@ -187,4 +186,4 @@ const audioRef = useRef(null);
     );
 }
            
-export default NewItem;
+export default NewItem; // Exporta el componente NewItem para poder utilizarlo en otros archivos
