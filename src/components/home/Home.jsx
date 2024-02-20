@@ -10,94 +10,77 @@ body {
     margin: 0;
   }
 
-
-  .title-gallery {
-    text-align: center;
-    font-family: 'Jost', sans-serif;
-    font-size: xx-large;
-    text-shadow:  4px 4px 4px #D9D9D9;
-    text-transform: uppercase;
-    
+.title-gallery {
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-size: xx-large;
+  text-shadow:  4px 4px 4px #D9D9D9;
+  text-transform: uppercase;
   }
   
-
-  .background-img {
-    width: 100%;
-    height: auto;
+.background-img {
+  width: 100%;
+  height: auto;
   }
 
-  .gallery {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-around; 
+.gallery {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-around; 
   }
 
-  .gallerygrid {
-    margin: 10px; 
-    text-align: center; 
+.gallerygrid {
+  margin: 10px; 
+  text-align: center; 
   }
 
-  .bicyclesimg {
-    max-width: 17vw;
-    max-height: 45vh; 
-    border: 0.5rem solid #D9D9D9;
-    cursor: pointer;
+.bicyclesimg {
+  max-width: 17vw;
+  max-height: 45vh; 
+  border: 0.5rem solid #D9D9D9;
+  cursor: pointer;
   }
 
-  .bicyclesimg:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-
+.bicyclesimg:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
   }
 
-  p {
-    text-align: center;
-    font-family: 'Jost', sans-serif;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-decoration: bold;
-    text-shadow:  4px 4px 4px #D9D9D9;
-
+p {
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: bold;
+  text-shadow:  4px 4px 4px #D9D9D9;
   }
 
- gallery-button {
-  
+gallery-button {
   display: flex;
   width: 5vw;
   justify-content: space-around;
-  
-  
  }
 
- button img {
+button img {
   width: 2rem;
   height: auto;
-  
-
- }
+  }
 
 button.edit-button, button.delete-button  {
   background-color: transparent;
   border: none;
   cursor: pointer;
   margin: 0.75rem;
-  
-
-}
-
-
+  }
 
 button.edit-button:hover, button.delete-button:hover {
   transform: scale(1.5);
-}
-
-
+  }
 `;
 
 const Home = () => {
   const [bicycles, setBicycles] = useState([]);
   const navigate = useNavigate();
-
   useEffect(() => {
       const fetchData = async () => {
       const data = await getBicycles()
@@ -106,9 +89,7 @@ const Home = () => {
     }
     fetchData();
     }
-
    , []);
-
 
   return (
     <>
