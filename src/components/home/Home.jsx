@@ -124,8 +124,9 @@ const Home = () => {
               <button className="edit-button" onClick={() => navigate(`/Edit/${bicycle.id}`)}>
                 <img src="src\assets\img\Edit.png" alt="" />
               </button>
-              <button className="delete-button" onClick={() => {deleteBicycle(`${bicycle.id}`); navigate(0)}}>
-                <img src="src\assets\img\Delete.png"></img></button>
+              <button className="delete-button" onClick={() => {const confirmDelete = window.confirm('¿Deseas eliminar esta bicicleta?'); if (confirmDelete) {deleteBicycle(`${bicycle.id}`); navigate(0)}}}>
+                <img src="src\assets\img\Delete.png" alt= "Eliminar"/>
+              </button>
               </div>
             </div>
           ))}
@@ -134,5 +135,5 @@ const Home = () => {
     </>
   );
 }
-//useparamt luego peticion get de id que tngo en la url 
+
 export default Home;
