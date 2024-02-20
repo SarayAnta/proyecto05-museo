@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from "react-router-dom";
 import styled from 'styled-components';
 
-import Copyright from '../../assets/img/Copyright.png';
+import Copyright from '../../assets/img/Copyright.png'; // Cambiado "copy" por "Copyright" para que coincida con el nombre del archivo
 import mail from '../../assets/img/mail.png';
 import GitHub from '../../assets/img/GitHub.png';
 import Instagram from '../../assets/img/Instagram.png';
@@ -12,21 +12,40 @@ import Twitter from '../../assets/img/TwitterX.png';
 const FooterContainer = styled.footer`
   background-color: #393939;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
   height: 10vh;
   
   img {
-    margin: 0 10px;
-    width: 50px;
-    height: 50px;
+    width: auto;
+    height: auto;
+    max-width: 30px;
+    transition: 0.5s;
   }
 
-  /* Estilos para hacer el footer responsive */
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    padding: 10px;
+  img:hover {
+    transform: scale(1.3);
+    color: black;
   }
+
+  img:active {
+    transform: scale(0.9);
+  }
+
+  img:focus {
+    color: black;
+  }
+
+  .footer-container {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+
 `;
 
 const Footer = () => {

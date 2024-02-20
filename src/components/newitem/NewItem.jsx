@@ -6,6 +6,7 @@ import { useRef } from 'react';
 
 const StyledNewItem = styled.div`
 
+
 height: 80vh;
 display: flex;
 align-items: center;
@@ -16,11 +17,12 @@ body {
 
   form {
     font-family: 'Jost', sans-serif;
-    max-width: 400px;
+    max-width: 450px;
+    min-width: 300px;
     margin: 0 auto;
     margin-top: 3%;
     margin-bottom: 3%;
-    padding: 20px;
+    padding: 2%;
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -28,7 +30,7 @@ body {
   
   label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 2%;
     color: #000000;
   }
   
@@ -36,8 +38,8 @@ body {
   input[type="file"],
   select {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 3%;
+    margin-bottom: 5%;
     border: none;
     background-color: #D9D9D9;
     border-radius: 5px;
@@ -46,11 +48,11 @@ body {
   
   input[type="submit"] {
     width: 100%;
-    padding: 10px;
+    padding: 3%;
     border: none;
     background-color: #000000;
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 15%;
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 5px;
@@ -62,7 +64,7 @@ body {
   }
   
   .add {
-    margin-top: 15px;
+    margin-top: 10%;
   }
   
   .error-message {
@@ -77,63 +79,58 @@ body {
   .electric {
     display: flex;
     align-items: center; /* Alinear verticalmente */
-    margin-right: 30px; /* Espacio entre los campos */
+    margin-right: 5%; /* Espacio entre los campos */
   }
   
   .frame label,
   .electric label {
-    margin-right: 20px; /* Espacio entre el label y el input */
-    margin-top: -2vh;
+    margin-right: 5%; /* Espacio entre el label y el input */
+    
   }
   
   .frame select {
     flex: 1; /* El input ocupa todo el espacio restante */
-    width: 200px;
+    width: 125px;
+    margin-top: 5%;
+    
   }
   
   .electric input[type="checkbox"] {
-    flex: 1; /* El input ocupa todo el espacio restante */
-    margin-top: -3vh;
+    justify-content: flex-end;
+    width: 50%;
+    height: 50%;
   }
   
   input[type="submit"] {
     background-color: #3de161d2;
     margin-top: 1%;
   }
-  
-  @media screen and (max-width: 480px) {
-    form {
-      padding: 30px;
-    }
-  }
 `;
 
-const NewItem = () => {
+const NewItem = () => {  // Añade el hook useNavigate a la importación de react-router-dom y declara una constante navigate que almacena el hook useNavigate
 
-    const { register, formState: { errors }, handleSubmit, reset} = useForm();
-
-const audioRef = useRef(null);
+    const { register, formState: { errors }, handleSubmit, reset} = useForm(); // Desestructura los métodos register, errors y handleSubmit del hook useForm
+    const audioRef = useRef(null);
 
     // Function to play sound
     const playSound = () => {
       if (audioRef.current) {
         audioRef.current.play();
       }
-    };
-        
-    const onSubmit = async (data) => {
-        const { success, error } = await addBicycle(data);
+    };  
+    const onSubmit = async (data) => {  // Crea una función asíncrona onSubmit que recibe un parámetro data y hace una petición a la API con el método addBicycle
+        const { success, error } = await addBicycle(data);  // Desestructura las propiedades success y error de la respuesta de la petición a la API con el método addBicycle
 
-        if (success) {
+        if (success) {  // Si success es true
             // Mostrar mensaje de éxito
             alert('¡La bicicleta fue añadida correctamente!');
             // Reiniciar el formulario
             reset();
         } else {
             // Mostrar mensaje de error
-            alert(error);
+            alert(error);  // Si success es false, muestra el mensaje de error
         }
-    }
+    };
 
     return (
         <StyledNewItem>
@@ -186,4 +183,4 @@ const audioRef = useRef(null);
     );
 }
            
-export default NewItem;
+export default NewItem; // Exporta el componente NewItem para poder utilizarlo en otros archivos

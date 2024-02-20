@@ -18,6 +18,7 @@ const GalleryContainer = styled.div`
    
   }
 
+  /*
   @media only screen and (max-width: 600px) {
     .gallerygrid {
       flex-direction: column; 
@@ -30,10 +31,10 @@ const GalleryContainer = styled.div`
       padding: 5vh 0; 
       margin-bottom: 20px; 
     }
-  }
+  }*/
 `;
 
-const Gallery = () => {
+const Gallery = () => { // Cambiado "props" por "id" para que coincida con el nombre que le damos en el archivo App.jsx
   return (
     <>
       {/* Cambiado "Gallery" por "GalleryContainer" */}

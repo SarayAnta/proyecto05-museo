@@ -135,6 +135,14 @@
       "frame": "Aluminio",
       "electric": false,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
+    },
+    {
+      "id": "87c7",
+      "model": "bmx",
+      "speeds": "3",
+      "frame": "Aluminio",
+      "electric": false,
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
     }
   ]
 }
