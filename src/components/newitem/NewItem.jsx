@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import styled from 'styled-components';
 import { addBicycle } from '../../services/service';
 import { useRef } from 'react';
-import { useRef } from 'react';
 
 const StyledNewItem = styled.div`
 
