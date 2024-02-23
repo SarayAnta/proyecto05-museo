@@ -20,40 +20,38 @@ body {
     
   }
   
-
-  .background-img {
-    width: 100%;
-    height: auto;
+.background-img {
+  width: 100%;
+  height: auto;
   }
 
-  .gallery {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-around; 
+.gallery {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-around; 
   }
 
-  .gallerygrid {
-    margin: 10px; 
-    text-align: center; 
+.gallerygrid {
+  margin: 10px; 
+  text-align: center; 
   }
 
-  .bicyclesimg {
-    max-width: 17vw;
-    max-height: 45vh; 
-    border: 0.5rem solid #D9D9D9;
-    cursor: pointer;
+.bicyclesimg {
+  max-width: 17vw;
+  max-height: 45vh; 
+  border: 0.5rem solid #D9D9D9;
+  cursor: pointer;
   }
 
-  .bicyclesimg:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-
+.bicyclesimg:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
   }
 
   p {
     text-align: center;
     font-family: 'Jost', sans-serif;
-    font-size: 10%;
+    font-size: 100%;
     text-transform: uppercase;
     text-decoration: bold;
     text-shadow:  4px 4px 4px #D9D9D9;
@@ -61,21 +59,16 @@ body {
 
   }
 
- gallery-button {
-  
+gallery-button {
   display: flex;
   width: 5vw;
   justify-content: space-around;
-  
-  
  }
 
  button img {
   width: 50%;
   height: auto;
-  
-
- }
+  }
 
 button.edit-button, button.delete-button  {
   background-color: transparent;
@@ -91,28 +84,25 @@ button.edit-button, button.delete-button  {
 
 button.edit-button:hover, button.delete-button:hover {
   transform: scale(1.5);
-}
-
-
+  }
 `;
 
-const Home = () => {
-  const [bicycles, setBicycles] = useState([]);
-  const navigate = useNavigate();
+const Home = () => { // Crea un componente Home
+  const [bicycles, setBicycles] = useState([]); // Declara una constante bicycles y una función setBicycles que almacenan un array vacío UseState, se desestructura el array en dos elementos
+  const navigate = useNavigate(); // Declara una constante navigate que almacena el hook useNavigate
 
-  useEffect(() => {
-      const fetchData = async () => {
-      const data = await getBicycles()
-      console.log(data);
-      setBicycles(data);
+  useEffect(() => {  // Crea un efecto que se ejecuta al renderizar el componente
+      const fetchData = async () => {  // Crea una función fetchData que se ejecuta de manera asíncrona
+      const data = await getBicycles() // Declara una constante data que almacena el resultado de la función getBicycles
+      console.log(data); // Muestra en consola el contenido de la constante data
+      setBicycles(data); // Ejecuta la función setBicycles con el contenido de la constante data como argumento
     }
-    fetchData();
+    fetchData(); // Ejecuta la función fetchData
     }
-
    , []);
 
 
-  return (
+  return ( // Retorna un fragmento con el contenido del componente
     <>
     <HomeContainer>
         <img className="background-img"src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul" />
@@ -126,8 +116,9 @@ const Home = () => {
               <button className="edit-button" onClick={() => navigate(`/Edit/${bicycle.id}`)}>
                 <img src="src\assets\img\Edit.png" alt="" />
               </button>
-              <button className="delete-button" onClick={() => {deleteBicycle(`${bicycle.id}`); navigate(0)}}>
-                <img src="src\assets\img\Delete.png"></img></button>
+              <button className="delete-button" onClick={() => {const confirmDelete = window.confirm('¿Deseas eliminar esta bicicleta?'); if (confirmDelete) {deleteBicycle(`${bicycle.id}`); navigate(0)}}}>
+                <img src="src\assets\img\Delete.png" alt= "Eliminar"/>
+              </button>
               </div>
             </div>
           ))}
@@ -136,5 +127,6 @@ const Home = () => {
     </>
   );
 }
-//useparamt luego peticion get de id que tngo en la url 
+
+//useparamt luego peticion get de id que tngo en la url y luego el id que me llega lo paso a la funcion de getBicycleById
 export default Home;

@@ -1,8 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
+import { useNavigate } from "react-router-dom";  // Importa el hook useNavigate
+import styled from "styled-components";  // Importa styled-components
  
-const AddButton = styled.button`
+const AddButton = styled.button`    // Crea un componente AddButton con styled-components
         background-color: #3DE361;
        
         font-family: 'Jost', sans-serif;
@@ -32,7 +32,7 @@ const AddButton = styled.button`
         }
 
         .add-bicycle {
-            font-size: 50%;
+            font-size: 100%;
             text-align: center;
             
         }
@@ -48,15 +48,14 @@ const AddButton = styled.button`
        
     `;
 
-const Addbutton = () => {
-    const navigate = useNavigate();
+const Addbutton = () => {   // Crea un componente Addbutton
+    const navigate = useNavigate();  // Declara una constante navigate que almacena el hook useNavigate
 
-    return (
-        <AddButton className="add-button" onClick={() => navigate("/NewItem")}>
-            
+    return (  // Devuelve el componente AddButton con el evento onClick que redirige a la ruta /NewItem// Añade la clase "add-button" al componente AddButton
+        <AddButton className="add-button" onClick={() => navigate("/NewItem")}>             
                 <p className="add-bicycle">Añadir bicicleta</p>
         </AddButton>
         );
 }
 
-export default Addbutton;
+export default Addbutton; // Exporta el componente Addbutton

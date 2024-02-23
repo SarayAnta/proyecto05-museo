@@ -6,6 +6,8 @@ import Edit from "../components/edit/Edit";
 import Footer from "../components/footer/footer";
 import Gallery from "../components/gallery/Gallery";
 import Card from "../components/card/Card";
+import ImageUpload from "../components/ImageUpload/imgupload";
+
 
 export const router = createBrowserRouter([
   {
@@ -36,6 +38,10 @@ export const router = createBrowserRouter([
     {
       path: "/card/:id",
       element: <Card/>
+    },
+    {
+      path: "/imgupload/",
+      element: <ImageUpload/>
     }
   ],
   }

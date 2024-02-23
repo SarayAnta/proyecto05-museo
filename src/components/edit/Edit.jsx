@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import { updateItem, getOneBicycle } from '../../services/service';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router'; // Importa el hook useParams
 
 const StyledEdit = styled.div`
 height: 80vh;
@@ -108,42 +108,42 @@ body {
 
 `;
 
-const Edit = () => {
-  const { id } = useParams(); // Obtiene el parámetro id de la URL
-  const { register, formState: { errors }, handleSubmit, reset, setValue, watch } = useForm();
-  const [loading, setLoading] = useState(false);
-  const [bicycleData, setBicycleData] = useState();
+const Edit = () => { //Edit es un componente funcional
+  const { id } = useParams(); // Obtiene el parámetro id de la URL UseParams es un hook que nos permite acceder a los parámetros de la URL
+  const { register, formState: { errors }, handleSubmit, reset, setValue, watch } = useForm(); // Utiliza el hook useForm para manejar el formulario
+  const [loading, setLoading] = useState(false); // Utiliza el hook useState para guardar el estado de loading
+  const [bicycleData, setBicycleData] = useState();// Utiliza el hook useState para guardar el estado de bicycleData
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const bicycleData = await getOneBicycle(id);
-      setBicycleData(bicycleData);
+  useEffect(() => { // Utiliza el hook useEffect para hacer la petición a la API
+    const fetchData = async () => { //fetchData es una función asíncrona que nos permite hacer la petición a la API
+      const bicycleData = await getOneBicycle(id); //bicycleData es una constante que almacena el resultado de la petición a la API
+      setBicycleData(bicycleData); //Usamos el método setBicycleData para guardar los detalles de la bicicleta en el estado
 
-      setValue('model', bicycleData.model)
-      setValue('speeds', bicycleData.speeds)
-      setValue('frame', bicycleData.frame)
-      setValue('electric', bicycleData.electric)
-      setValue('image', bicycleData.image)
+      setValue('model', bicycleData.model) // Utiliza el método setValue para actualizar el valor del campo model con el valor de bicycleData.model
+      setValue('speeds', bicycleData.speeds) // Utiliza el método setValue para actualizar el valor del campo speeds con el valor de bicycleData.speeds
+      setValue('frame', bicycleData.frame) // Utiliza el método setValue para actualizar el valor del campo frame con el valor de bicycleData.frame
+      setValue('electric', bicycleData.electric) // Utiliza el método setValue para actualizar el valor del campo electric con el valor de bicycleData.electric
+      setValue('image', bicycleData.image) // Utiliza el método setValue para actualizar el valor del campo image con el valor de bicycleData.image
     };
 
-    fetchData();
-  }, [id, setValue])
+    fetchData(); // Llama a la función fetchData cuando el componente se monta
+  }, [id, setValue]) // Le pasa el id y el método setValue como dependencias para que se ejecute cada vez que cambien
 
-  const onSubmit = async (data) => {
-    try {
-      setLoading(true);
+  const onSubmit = async (data) => { // Define una función asincrónica llamada onSubmit que recibe los datos del formulario
+    try { // Utiliza un bloque try...catch para manejar errores
+      setLoading(true); // Actualiza el estado de loading a true
       await updateItem(id, data); // Utiliza el id capturado de la URL
-      alert('¡Los datos del elemento han sido actualizados correctamente!');
-      reset();
-    } catch (error) {
-      console.error('Error al actualizar el elemento:', error);
-      alert('Error al actualizar el elemento. Por favor, intenta nuevamente.');
-    } finally {
-      setLoading(false);
+      alert('¡Los datos del elemento han sido actualizados correctamente!');// Muestra un mensaje de éxito
+      reset();// Reinicia el formulario
+    } catch (error) {// Maneja el error
+      console.error('Error al actualizar el elemento:', error);// Muestra un mensaje de error en la consola
+      alert('Error al actualizar el elemento. Por favor, intenta nuevamente.');// Muestra un mensaje de error
+    } finally { 
+      setLoading(false); // Actualiza el estado de loading a false
     }
   };
         
-  return (
+  return ( // Renderiza el formulario
     <StyledEdit>
     <form onSubmit={handleSubmit(onSubmit)}>
         <div>
@@ -151,7 +151,7 @@ const Edit = () => {
             <input className='model' type="text" {...register('model', {
                 required: true,
             })}/>
-            {errors.model?.type === 'required' && <p className="error-message">El campo modelo es requerido</p>}
+            {errors.model?.type === 'required' && <p className="error-message">El campo modelo es requerido</p>} 
         </div>
         <div>
             <label>Velocidades</label>
