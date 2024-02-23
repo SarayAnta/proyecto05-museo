@@ -20,34 +20,32 @@ body {
     
   }
   
-
-  .background-img {
-    width: 100%;
-    height: auto;
+.background-img {
+  width: 100%;
+  height: auto;
   }
 
-  .gallery {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-around; 
+.gallery {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-around; 
   }
 
-  .gallerygrid {
-    margin: 10px; 
-    text-align: center; 
+.gallerygrid {
+  margin: 10px; 
+  text-align: center; 
   }
 
-  .bicyclesimg {
-    max-width: 17vw;
-    max-height: 45vh; 
-    border: 0.5rem solid #D9D9D9;
-    cursor: pointer;
+.bicyclesimg {
+  max-width: 17vw;
+  max-height: 45vh; 
+  border: 0.5rem solid #D9D9D9;
+  cursor: pointer;
   }
 
-  .bicyclesimg:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-
+.bicyclesimg:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
   }
 
   p {
@@ -61,21 +59,16 @@ body {
 
   }
 
- gallery-button {
-  
+gallery-button {
   display: flex;
   width: 5vw;
   justify-content: space-around;
-  
-  
  }
 
  button img {
   width: 50%;
   height: auto;
-  
-
- }
+  }
 
 button.edit-button, button.delete-button  {
   background-color: transparent;
@@ -91,9 +84,7 @@ button.edit-button, button.delete-button  {
 
 button.edit-button:hover, button.delete-button:hover {
   transform: scale(1.5);
-}
-
-
+  }
 `;
 
 const Home = () => { // Crea un componente Home
@@ -108,7 +99,6 @@ const Home = () => { // Crea un componente Home
     }
     fetchData(); // Ejecuta la función fetchData
     }
-
    , []);
 
 
@@ -126,8 +116,9 @@ const Home = () => { // Crea un componente Home
               <button className="edit-button" onClick={() => navigate(`/Edit/${bicycle.id}`)}>
                 <img src="src\assets\img\Edit.png" alt="" />
               </button>
-              <button className="delete-button" onClick={() => {deleteBicycle(`${bicycle.id}`); navigate(0)}}>
-                <img src="src\assets\img\Delete.png"></img></button>
+              <button className="delete-button" onClick={() => {const confirmDelete = window.confirm('¿Deseas eliminar esta bicicleta?'); if (confirmDelete) {deleteBicycle(`${bicycle.id}`); navigate(0)}}}>
+                <img src="src\assets\img\Delete.png" alt= "Eliminar"/>
+              </button>
               </div>
             </div>
           ))}
@@ -136,5 +127,5 @@ const Home = () => { // Crea un componente Home
     </>
   );
 }
-//useparamt luego peticion get de id que tngo en la url 
+
 export default Home;
