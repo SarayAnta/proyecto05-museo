@@ -30,13 +30,13 @@ const CardContainer = styled.div`
         justify-content: space-evenly;
         align-items: center;
         width: 30vw;
-        max-height: 70vh;
+        max-height: 60vh;
     }
 
     h2 {
         text-align: center;
         font-family: 'Jost', sans-serif;
-        font-size: 120%;
+        font-size: 1vw;
         text-transform: uppercase;
         text-decoration: bold;
         text-shadow:  4px 4px 4px #D9D9D9;
@@ -45,6 +45,7 @@ const CardContainer = styled.div`
     p {
         font-family: 'Jost', sans-serif;
         text-align: center;
+        font-size: 1vw;
     }
 
   

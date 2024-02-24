@@ -15,8 +15,8 @@ body {
 
   form {
     font-family: 'Jost', sans-serif;
-    max-width: 450px;
-    min-width: 300px;
+    max-width: 600px;
+    min-width: 350px;
     margin: 0 auto;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -24,6 +24,7 @@ body {
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1vw;
   }
   
   label {
@@ -50,7 +51,7 @@ body {
     border: none;
     background-color: #000000;
     color: #FFFFFF;
-    font-size: 15%;
+    font-size: 1.5vw;
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 5px;

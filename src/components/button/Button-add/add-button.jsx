@@ -6,13 +6,14 @@ const AddButton = styled.button`    // Crea un componente AddButton con styled-c
         background-color: #3DE361;
         display: flex;
         justify-content: center;
-    
+        align-items: center;
         font-family: 'Jost', sans-serif;
         width: 25vw;
         height: 8vh;
         max-width: 150px;
         margin-right: 20px;
         border-radius: 15px;
+        
 
         &:hover {
             background-color: #3DE361;
@@ -28,18 +29,11 @@ const AddButton = styled.button`    // Crea un componente AddButton con styled-c
             transition: 0.5s;
         }
 
-        p ¨
-
     
-
         .add-bicycle {
             justify-content: center;
-            align-items: center;
-            align-content: center;
-            font-size: 100%;
-            text-align: center;
-            
-            
+            font-size:1vw;
+            margin:0;
         }
 
         //media queries

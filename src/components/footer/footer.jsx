@@ -52,17 +52,17 @@ const Footer = () => {
   return (
     <FooterContainer>
       <div className="footer-container">
-        <img src={Copyright} alt="Copyright" />
-        <a href="https://gmail.com/">
+        <img src={Copyright} alt="Copyright"/>
+        <a href="https://gmail.com/" target="_blank">
           <img src={mail} alt="mail" />
         </a>
-        <a href="https://github.com/">
+        <a href="https://github.com/" target="_blank">
           <img src={GitHub} alt="GitHub" />
         </a>
-        <a href="https://www.instagram.com/">
+        <a href="https://www.instagram.com/" target="_blank">
           <img src={Instagram} alt="Instagram" />
         </a>
-        <a href="https://twitter.com/">
+        <a href="https://twitter.com/" target="_blank">
           <img src={Twitter} alt="Twitter" />
         </a>
       </div>

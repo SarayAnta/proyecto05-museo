@@ -8,13 +8,14 @@ const HomeContainer = styled.div`
 
 body {
     margin: 0;
+    border-box: box-sizing;
   }
 
 
   .title-gallery {
     text-align: center;
     font-family: 'Jost', sans-serif;
-    font-size:125%;
+    font-size:2vw;
     text-shadow:  4px 4px 4px #D9D9D9;
     text-transform: uppercase;
     
@@ -51,7 +52,7 @@ body {
   p {
     text-align: center;
     font-family: 'Jost', sans-serif;
-    font-size: 100%;
+    font-size: 1vw;
     text-transform: uppercase;
     text-decoration: bold;
     text-shadow:  4px 4px 4px #D9D9D9;
