@@ -36,7 +36,7 @@ const CardContainer = styled.div`
     h2 {
         text-align: center;
         font-family: 'Jost', sans-serif;
-        font-size: 20%;
+        font-size: 120%;
         text-transform: uppercase;
         text-decoration: bold;
         text-shadow:  4px 4px 4px #D9D9D9;
