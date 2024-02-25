@@ -20,21 +20,20 @@ const FooterContainer = styled.footer`
     width: auto;
     height: auto;
     max-width: 45px;
-    transition: 0.5s;
+    
   }
 
   img:hover {
-    transform: scale(1.3);
-    color: black;
+    transform: scale(1.3) rotate(360deg);
+    transition: 0.5s;
+    
   }
 
   img:active {
     transform: scale(0.9);
   }
 
-  img:focus {
-    color: black;
-  }
+  
 
   .footer-container {
     width: 75%;

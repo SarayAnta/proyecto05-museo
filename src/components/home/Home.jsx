@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import BackgroundHome from '../../assets/img/BackgroundHome.png';
 import { useNavigate } from "react-router-dom";
 import { getBicycles, deleteBicycle } from '../../services/service';
+import { useLinkClickHandler } from 'react-router-dom';
+/*import { LikeButton } from '../likeButton/LikeButton';*/
 
 const HomeContainer = styled.div`
 
@@ -49,7 +51,7 @@ body {
   transition: 0.5s;
   }
 
-  p {
+p {
     text-align: center;
     font-family: 'Jost', sans-serif;
     font-size: 1vw;
@@ -60,31 +62,38 @@ body {
 
   }
 
+  p:hover {
+    color: #3DE361;
+    transition: 0.5s;
+    transform: scale(1.1) rotate(360deg);
+    font-size: 1.5vw;
+  }
+
 gallery-button {
   display: flex;
   width: 5vw;
   justify-content: space-around;
  }
 
- button img {
-  width: 50%;
+button img {
+  width: 2vw;
   height: auto;
   }
 
-button.edit-button, button.delete-button  {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  margin: 0.75rem;
-  transition: 0.5s;
+  button.edit-button, button.delete-button, button.like-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0.75rem;
+    transition: 0.5s;
   
 
-}
+  }
 
+  button.edit-button:hover, button.delete-button:hover, button.like-button:hover {
+    transform: scale(1.5);
+    transition: 0.5s;
 
-
-button.edit-button:hover, button.delete-button:hover {
-  transform: scale(1.5);
   }
 `;
 
@@ -115,11 +124,18 @@ const Home = () => { // Crea un componente Home
               <p>{bicycle.model}</p>
               <div className="gallery-button" >
               <button className="edit-button" onClick={() => navigate(`/Edit/${bicycle.id}`)}>
-                <img src="src\assets\img\Edit.png" alt="" />
+                <img src="src\assets\img\Edit.png" alt="Editar" />
               </button>
               <button className="delete-button" onClick={() => {const confirmDelete = window.confirm('¿Deseas eliminar esta bicicleta?'); if (confirmDelete) {deleteBicycle(`${bicycle.id}`); navigate(0)}}}>
                 <img src="src\assets\img\Delete.png" alt= "Eliminar"/>
               </button>
+              <button className="like-button" onDoubleClick={() => CounterLikes(`${bicycle.likes}`)}>
+                <img src="src\assets\img\Like.png" alt="Me gusta" />
+              </button>
+              
+            
+
+
               </div>
             </div>
           ))}
