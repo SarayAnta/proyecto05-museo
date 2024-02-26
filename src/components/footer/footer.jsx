@@ -19,22 +19,21 @@ const FooterContainer = styled.footer`
   img {
     width: auto;
     height: auto;
-    max-width: 30px;
-    transition: 0.5s;
+    max-width: 45px;
+    
   }
 
   img:hover {
-    transform: scale(1.3);
-    color: black;
+    transform: scale(1.3) rotate(360deg);
+    transition: 0.5s;
+    
   }
 
   img:active {
     transform: scale(0.9);
   }
 
-  img:focus {
-    color: black;
-  }
+  
 
   .footer-container {
     width: 75%;
@@ -52,17 +51,17 @@ const Footer = () => {
   return (
     <FooterContainer>
       <div className="footer-container">
-        <img src={Copyright} alt="Copyright" />
-        <a href="https://gmail.com/">
+        <img src={Copyright} alt="Copyright"/>
+        <a href="https://gmail.com/" target="_blank">
           <img src={mail} alt="mail" />
         </a>
-        <a href="https://github.com/">
+        <a href="https://github.com/" target="_blank">
           <img src={GitHub} alt="GitHub" />
         </a>
-        <a href="https://www.instagram.com/">
+        <a href="https://www.instagram.com/" target="_blank">
           <img src={Instagram} alt="Instagram" />
         </a>
-        <a href="https://twitter.com/">
+        <a href="https://twitter.com/" target="_blank">
           <img src={Twitter} alt="Twitter" />
         </a>
       </div>

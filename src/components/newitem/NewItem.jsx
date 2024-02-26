@@ -16,7 +16,8 @@ body {
 
   form {
     font-family: 'Jost', sans-serif;
-    max-width: 400px;
+    font-size: 1vw;
+    max-width: 550px;
     margin: 0 auto;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -50,7 +51,7 @@ body {
     border: none;
     background-color: #000000;
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 1vw;
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 5px;
