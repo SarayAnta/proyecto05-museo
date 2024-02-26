@@ -88,7 +88,7 @@ export const getOneBicycle = async (id) => {
 export const uploadImage = async (imageData) => {
   try {
     const response = await axios.post(
-      "http://api.cloudinary.com/v1_1/dlg7gpmha/image/upload",
+      "http://api.cloudinary.com/v1_1/dlg7gpmha/image/upload", //http://api.cloudinary/v1_1 (siempre necesario tal cual para la carga de archivos) / nombre de usuario/ image/upload
       imageData
     );
     return response.data;

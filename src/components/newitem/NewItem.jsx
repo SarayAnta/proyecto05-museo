@@ -125,12 +125,12 @@ const NewItem = () => {
     try {
       const imageData = new FormData();
       imageData.append("file", data.image[0]); // Agrega el archivo de imagen al FormData
-      imageData.append("upload_preset", "Presents_react"); // Agrega el preset de carga de Cloudinary
+      imageData.append("upload_preset", "Presents_react"); // Agrega el preset de carga de Cloudinary // declaramos donde estan guardados nuestros achivos dentro de cloudinary
 
       const response = await uploadImage(imageData); // Llama a la función para cargar la imagen en Cloudinary
       setImageUrl(response.secure_url); // Almacena la URL de la imagen devuelta por Cloudinary
 
-      const bicycleData = { ...data, image: response.secure_url };
+      const bicycleData = { ...data, image: response.secure_url }; //le pedimos mediandte respons que nos de como respuesta la url del archivo
       const { success, error } = await addBicycle(bicycleData);
 
       if (success) {

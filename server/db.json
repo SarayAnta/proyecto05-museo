@@ -71,22 +71,6 @@
       "electric": false,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707742752/Gallery_8_uyvbzu.png",
       "likes": 0
-    },
-    {
-      "id": "d146",
-      "model": "cloudinary api working ?",
-      "speeds": "200",
-      "frame": "Plástico",
-      "electric": true,
-      "image": "https://res.cloudinary.com/dlg7gpmha/image/upload/v1708945523/bicyclesmuseum/uve3bs8ydecycwlu9ozq.png"
-    },
-    {
-      "id": "51a6",
-      "model": "cloudinary api working ?",
-      "speeds": "200",
-      "frame": "Acero",
-      "electric": false,
-      "image": "https://res.cloudinary.com/dlg7gpmha/image/upload/v1708945646/bicyclesmuseum/vczju1c8z3g9qdmt1mrh.png"
     }
   ]
 }
