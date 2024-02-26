@@ -107,7 +107,6 @@
       "electric": false,
       "image": "https://plus.unsplash.com/premium_photo-1677623022346-2175a0aaa2c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.png",
       "likes": 0
-    
     },
     {
       "id": "73de",
@@ -128,13 +127,12 @@
       "likes": 0
     },
     {
-      "id": "14b7",
+      "image": "https://res.cloudinary.com/dlg7gpmha/image/upload/v1708944870/bicyclesmuseum/lyxqjqyve2gzeygnkgzi.png",
       "model": "bmx",
       "speeds": "3",
       "frame": "Aluminio",
       "electric": false,
-      "image": "https://plus.unsplash.com/premium_photo-1677623022346-2175a0aaa2c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.png",
-      "likes": 0
+      "id": "14b7"
     }
   ]
 }

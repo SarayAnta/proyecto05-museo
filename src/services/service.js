@@ -1,4 +1,4 @@
-
+import axios from 'axios';
 
 //Método GET
 export const getBicycles = async () => {  //Declaramos una función asíncrona llamada getBicycles que nos permite hacer la petición a la API
@@ -80,5 +80,19 @@ export const getOneBicycle = async (id) => {
     return data
   } catch (error) {
     console.error('Error fetching bicycles:', error);
+  }
+};
+
+//rying to add uploadimage
+
+export const uploadImage = async (imageData) => {
+  try {
+    const response = await axios.post(
+      "http://api.cloudinary.com/v1_1/dlg7gpmha/image/upload",
+      imageData
+    );
+    return response.data;
+  } catch (error) {
+    throw new Error("Error al cargar la imagen en Cloudinary: " + error.message);
   }
 };
