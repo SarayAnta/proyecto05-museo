@@ -183,4 +183,4 @@ const NewItem = () => {  // Añade el hook useNavigate a la importación de reac
     );
 }
            
-export default NewItem; // Exporta el componente NewItem para poder utilizarlo en otros archivos
+export default NewItem; // Exporta el componente NewItem para poder utilizarlo en otros archivo
