@@ -147,6 +147,7 @@ const NewItem = () => {
 
   return (
     <StyledNewItem>
+      <audio ref={audioRef} src="src\assets\sound\7TSW2M4-bicycle-bell.mp3" />
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label>Modelo</label>
