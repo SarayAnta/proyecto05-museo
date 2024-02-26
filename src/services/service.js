@@ -83,7 +83,7 @@ export const getOneBicycle = async (id) => {
   }
 };
 
-//rying to add uploadimage
+//trying to add uploadimage
 
 export const uploadImage = async (imageData) => {
   try {

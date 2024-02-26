@@ -1,7 +1,8 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import { updateItem, getOneBicycle, uploadImage } from '../../services/service';
+
 import { useParams } from 'react-router';
 
 const StyledEdit = styled.div`
@@ -129,20 +130,19 @@ const Edit = () => {
     };
 
     fetchData();
-  }, [id, setValue])
+  }, [id, setValue]);
 
   const onSubmit = async (data) => {
     try {
       setLoading(true);
       const imageData = new FormData();
-      imageData.append("file", data.image[0]); // Agrega el archivo de imagen al FormData
-      imageData.append("upload_preset", "Presents_react"); // Agrega el preset de carga de Cloudinary
+      imageData.append("file", data.image[0]);
+      imageData.append("upload_preset", "Presents_react");
 
-      const response = await uploadImage(imageData); // Llama a la función para cargar la imagen en Cloudinary
-
+      const response = await uploadImage(imageData);
       const updatedData = { ...data, image: response.secure_url };
+
       await updateItem(id, updatedData);
-      
       alert('¡Los datos del elemento han sido actualizados correctamente!');
       reset();
     } catch (error) {
@@ -155,15 +155,39 @@ const Edit = () => {
         
   return (
     <StyledEdit>
-      {/* Formulario para editar una bicicleta */}
       <form onSubmit={handleSubmit(onSubmit)}>
-        {/* Campos del formulario omitidos por brevedad */}
+        <div>
+          <label>Modelo</label>
+          <input className='model' type="text" {...register('model', { required: true })}/>
+          {errors.model?.type === 'required' && <p className="error-message">El campo modelo es requerido</p>} 
+        </div>
+        <div>
+          <label>Velocidades</label>
+          <input className='speeding' type="text" {...register('speeds', { pattern: /^[0-9]{1,3}$/, required: true })}/>
+          {errors.speeds?.type === 'pattern' && <p className="error-message">La velocidad debe ser un valor numérico</p>}
+          {errors.speeds?.type === 'required' && <p className="error-message">El campo velocidades es requerido</p>}
+        </div>
+        <div className='cuadred'>
+          <div className='frame'>
+            <label>Cuadro</label>
+            <select {...register('frame')}>
+              <option value="Aluminio">Aluminio</option>
+              <option value="Acero">Acero</option>
+              <option value="Plástico">Plástico</option>
+              <option value="Carbono">Carbono</option>
+              <option value="Otros">Otros</option>
+            </select>
+          </div>
+          <div className='electric'>
+            <label>Eléctrica</label>
+            <input className="checkbox-css" type="checkbox" {...register('electric')} />
+          </div>
+        </div>
         <div>
           <label>Adjuntar imagen</label>
           <input type="file" {...register('image', { required: true })} />
           {errors.image && <p className="error-message">Por favor adjunta una imagen</p>}
         </div>
-        {/* Botón de envío */}
         <input type="submit" value="Editar" />
       </form>
     </StyledEdit>

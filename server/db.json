@@ -127,12 +127,28 @@
       "likes": 0
     },
     {
-      "image": "https://res.cloudinary.com/dlg7gpmha/image/upload/v1708944870/bicyclesmuseum/lyxqjqyve2gzeygnkgzi.png",
       "model": "bmx",
       "speeds": "3",
-      "frame": "Aluminio",
-      "electric": false,
+      "frame": "Plástico",
+      "electric": true,
+      "image": "https://res.cloudinary.com/dlg7gpmha/image/upload/v1708945372/bicyclesmuseum/auylbtt4nyi4nmeozwjq.jpg",
       "id": "14b7"
+    },
+    {
+      "id": "d146",
+      "model": "cloudinary api working ?",
+      "speeds": "200",
+      "frame": "Plástico",
+      "electric": true,
+      "image": "https://res.cloudinary.com/dlg7gpmha/image/upload/v1708945523/bicyclesmuseum/uve3bs8ydecycwlu9ozq.png"
+    },
+    {
+      "id": "51a6",
+      "model": "cloudinary api working ?",
+      "speeds": "200",
+      "frame": "Acero",
+      "electric": false,
+      "image": "https://res.cloudinary.com/dlg7gpmha/image/upload/v1708945646/bicyclesmuseum/vczju1c8z3g9qdmt1mrh.png"
     }
   ]
 }
