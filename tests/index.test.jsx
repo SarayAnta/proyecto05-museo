@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 // import Nav from '../src/components/nav/Nav';
 import Footer from '../src/components/footer/footer';
 import Home from '../src/components/home/Home';
+import NewItem from '../src/components/newitem/NewItem';
 
 
 test('render Footer', ()=> {
@@ -34,4 +35,10 @@ test('render Title in Home', () => {
     render(<Home/>)
     const title = screen.getByRole('heading', { level: 2});
     expect(title).toBeInTheDocument();
+});
+
+test('Add button appears in add form', () => {
+    render(<NewItem/>)
+    const submitButton = screen.getByRole('button', { name: 'Añadir' });
+    expect(submitButton).toBeInTheDocument();
 })
