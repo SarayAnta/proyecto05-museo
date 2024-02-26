@@ -6,7 +6,8 @@
       "frame": "Aluminio",
       "electric": false,
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png",
-      "id": "1"
+      "id": "1",
+      "likes": 0
     },
     {
       "id": "2",
@@ -14,7 +15,8 @@
       "speeds": "3",
       "frame": "Aluminio",
       "electric": true,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_2_goazza.png"
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_2_goazza.png",
+      "likes": 0
     },
     {
       "id": "3",
@@ -22,7 +24,8 @@
       "speeds": 5,
       "frame": "Acero",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744116/Gallery_3_gamemn.png"
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744116/Gallery_3_gamemn.png",
+      "likes": 1
     },
     {
       "id": "4",
@@ -30,7 +33,8 @@
       "speeds": 28,
       "frame": "Aluminio",
       "electric": true,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744117/Gallery_4_rtud0n.png"
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744117/Gallery_4_rtud0n.png",
+      "likes": 0
     },
     {
       "id": "5",
@@ -38,7 +42,8 @@
       "speeds": 1,
       "frame": "Acero",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744114/Gallery_5_crbwkd.png"
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744114/Gallery_5_crbwkd.png",
+      "likes": 0
     },
     {
       "id": "6",
@@ -46,7 +51,8 @@
       "speeds": 3,
       "frame": "Acero",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744114/Gallery_6_bpemav.png"
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744114/Gallery_6_bpemav.png",
+      "likes": 0
     },
     {
       "id": "7",
@@ -54,7 +60,8 @@
       "speeds": 1,
       "frame": "Plástico",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744113/Gallery_7_ubzo2k.png"
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744113/Gallery_7_ubzo2k.png",
+      "likes": 0
     },
     {
       "id": "8",
@@ -62,7 +69,8 @@
       "speeds": 1,
       "frame": "Acero",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707742752/Gallery_8_uyvbzu.png"
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707742752/Gallery_8_uyvbzu.png",
+      "likes": 0
     },
     {
       "id": "9",
@@ -70,7 +78,8 @@
       "speeds": 1,
       "frame": "Acero",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png",
+      "likes": 0
     },
     {
       "id": "9e2e",
@@ -78,7 +87,8 @@
       "speeds": "3",
       "frame": "Aluminio",
       "electric": false,
-      "image": "https://plus.unsplash.com/premium_photo-1677623022346-2175a0aaa2c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "image": "https://plus.unsplash.com/premium_photo-1677623022346-2175a0aaa2c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "likes": 0
     },
     {
       "id": "8126",
@@ -86,7 +96,8 @@
       "speeds": "200",
       "frame": "Acero",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png",
+      "likes": 0
     },
     {
       "id": "9139",
@@ -94,15 +105,9 @@
       "speeds": "200",
       "frame": "Aluminio",
       "electric": false,
-      "image": "https://plus.unsplash.com/premium_photo-1677623022346-2175a0aaa2c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.png"
-    },
-    {
-      "id": "0578",
-      "model": "bmx",
-      "speeds": "3",
-      "frame": "Acero",
-      "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
+      "image": "https://plus.unsplash.com/premium_photo-1677623022346-2175a0aaa2c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.png",
+      "likes": 0
+    
     },
     {
       "id": "73de",
@@ -110,7 +115,8 @@
       "speeds": "200",
       "frame": "Aluminio",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png",
+      "likes": 4
     },
     {
       "id": "3d47",
@@ -118,7 +124,8 @@
       "speeds": "200",
       "frame": "Aluminio",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png",
+      "likes": 0
     },
     {
       "id": "14b7",

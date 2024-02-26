@@ -6,7 +6,6 @@ import { useRef } from 'react';
 
 const StyledNewItem = styled.div`
 
-
 height: 80vh;
 display: flex;
 align-items: center;
@@ -17,12 +16,12 @@ body {
 
   form {
     font-family: 'Jost', sans-serif;
-    max-width: 450px;
-    min-width: 300px;
+    font-size: 1vw;
+    max-width: 550px;
     margin: 0 auto;
     margin-top: 3%;
     margin-bottom: 3%;
-    padding: 2%;
+    padding: 20px;
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -30,7 +29,7 @@ body {
   
   label {
     display: block;
-    margin-bottom: 2%;
+    margin-bottom: 10px;
     color: #000000;
   }
   
@@ -38,8 +37,8 @@ body {
   input[type="file"],
   select {
     width: 100%;
-    padding: 3%;
-    margin-bottom: 5%;
+    padding: 10px;
+    margin-bottom: 20px;
     border: none;
     background-color: #D9D9D9;
     border-radius: 5px;
@@ -48,11 +47,11 @@ body {
   
   input[type="submit"] {
     width: 100%;
-    padding: 3%;
+    padding: 10px;
     border: none;
     background-color: #000000;
     color: #FFFFFF;
-    font-size: 15%;
+    font-size: 1vw;
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 5px;
@@ -64,11 +63,12 @@ body {
   }
   
   .add {
-    margin-top: 10%;
+    margin-top: 15px;
   }
   
   .error-message {
     color: red;
+    font-size: 14px;
   }  
   
   .cuadred {
@@ -79,31 +79,34 @@ body {
   .electric {
     display: flex;
     align-items: center; /* Alinear verticalmente */
-    margin-right: 5%; /* Espacio entre los campos */
+    margin-right: 30px; /* Espacio entre los campos */
   }
   
   .frame label,
   .electric label {
-    margin-right: 5%; /* Espacio entre el label y el input */
-    
+    margin-right: 20px; /* Espacio entre el label y el input */
+    margin-top: -2vh;
   }
   
   .frame select {
     flex: 1; /* El input ocupa todo el espacio restante */
-    width: 125px;
-    margin-top: 5%;
-    
+    width: 200px;
   }
   
   .electric input[type="checkbox"] {
-    justify-content: flex-end;
-    width: 50%;
-    height: 50%;
+    flex: 1; /* El input ocupa todo el espacio restante */
+    margin-top: -3vh;
   }
   
   input[type="submit"] {
     background-color: #3de161d2;
     margin-top: 1%;
+  }
+  
+  @media screen and (max-width: 480px) {
+    form {
+      padding: 30px;
+    }
   }
 `;
 
@@ -130,7 +133,7 @@ const NewItem = () => {  // Añade el hook useNavigate a la importación de reac
             // Mostrar mensaje de error
             alert(error);  // Si success es false, muestra el mensaje de error
         }
-    };
+    }
 
     return (
         <StyledNewItem>

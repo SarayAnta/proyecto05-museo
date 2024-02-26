@@ -4,13 +4,16 @@ import styled from "styled-components";  // Importa styled-components
  
 const AddButton = styled.button`    // Crea un componente AddButton con styled-components
         background-color: #3DE361;
-       
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-family: 'Jost', sans-serif;
         width: 25vw;
         height: 8vh;
         max-width: 150px;
         margin-right: 20px;
         border-radius: 15px;
+        
 
         &:hover {
             background-color: #3DE361;
@@ -26,21 +29,23 @@ const AddButton = styled.button`    // Crea un componente AddButton con styled-c
             transition: 0.5s;
         }
 
-        &:focus {
-            outline: none;
-            cursor: pointer;
-        }
-
+    
         .add-bicycle {
-            font-size: 100%;
-            text-align: center;
-            
+            justify-content: center;
+            font-size:1vw;
+            margin:0;
         }
 
         //media queries
-        @media (max-width: 500px) {
+        @media (width > 550px) {
             width: 30%;
             margin-right: 10px;
+
+            add-bicycle {
+                font-size: 50%;
+                text-align: center;
+                
+
         }
 
       

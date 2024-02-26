@@ -16,7 +16,16 @@ const CardContainer = styled.div`
         max-height: 60vh;
         max-width: 60vw;
         border: 0.5rem solid #D9D9D9;
+
     }
+        img:hover {
+            transform: scale(1.1);
+
+            transition: 0.5s;
+            border: 1rem solid #b3b3b3;
+
+        }
+    
 
     .properties {
         display: grid;
@@ -30,13 +39,13 @@ const CardContainer = styled.div`
         justify-content: space-evenly;
         align-items: center;
         width: 30vw;
-        max-height: 70vh;
+        max-height: 60vh;
     }
 
     h2 {
         text-align: center;
         font-family: 'Jost', sans-serif;
-        font-size: 20%;
+        font-size: 1vw;
         text-transform: uppercase;
         text-decoration: bold;
         text-shadow:  4px 4px 4px #D9D9D9;
@@ -45,17 +54,18 @@ const CardContainer = styled.div`
     p {
         font-family: 'Jost', sans-serif;
         text-align: center;
+        font-size: 1vw;
     }
 
   
 `
 
 const Card = () => {  // Cambiado "props" por "id" para que coincida con el nombre que le damos en el archivo App.jsx
-    const { id } = useParams();  //UseParams es un hook que nos permite acceder a los parámetros de la URL
-    const [bicycle, setBicycle] = useState();  //Usamos el hook useState para guardar el estado de la bicicleta
+    const { id } = useParams();  //UseParams es un hook que nos permite acceder a los parámetros de la URL 
+    const [bicycle, setBicycle] = useState();  //Usamos el hook useState para guardar el estado de la bicicleta y el método setBicycle para actualizar el estado de la bicicleta
 
-    useEffect(() => {  //Usamos el hook useEffect para hacer la petición a la API
-        const fetchBicycleDetails = async () => {           //fetchBicycleDetails es una función asíncrona que nos permite hacer la petición a la API
+    useEffect(() => {  //Usamos el hook useEffect para hacer la petición a la API y obtener los detalles de la bicicleta
+        const fetchBicycleDetails = async () => {           //fetchBicycleDetails es una función asíncrona que nos permite hacer la petición a la API 
             const detailedBicycle = await getOneBicycle(id);  //Usamos el método getOneBicycle de la API para obtener los detalles de la bicicleta
             setBicycle(detailedBicycle); //Usamos el método setBicycle para guardar los detalles de la bicicleta en el estado
         };
@@ -64,9 +74,9 @@ const Card = () => {  // Cambiado "props" por "id" para que coincida con el nomb
     
       if (!bicycle) {  //Si no hay bicicleta, devolvemos un mensaje de error
         return <div style={{height: "80vh", fontFamily: "Jost", fontSize: "2em", color: "red", display: "flex", justifyContent: "center", alignItems: "center"}}>No se encontró la bicicleta</div>;
-      }; //Si hay bicicleta, devolvemos la información de la bicicleta
+      }; 
 
-    return ( //Usamos el componente CardContainer para mostrar la información de la bicicleta
+    return ( //Si hay bicicleta, devolvemos la información de la biciclet y usamos el componente CardContainer para mostrar la información de la bicicleta //Si hay bicicleta, devolvemos la información de la bicicleta
         <CardContainer> 
         <img src={bicycle.image} alt={bicycle.model} />
         <section className="container-properties">
@@ -85,6 +95,10 @@ const Card = () => {  // Cambiado "props" por "id" para que coincida con el nomb
             <div className="properties">
                 <h2>Eléctrica:</h2>
                 <p>{bicycle.electric ? "Sí" : "No"}</p>
+            </div>
+            <div className="properties">
+                <h2>Likes:</h2>
+                <p>{bicycle.likes}</p>
             </div>
         </section>
         </CardContainer>
