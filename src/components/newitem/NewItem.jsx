@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { useForm } from "react-hook-form";
+import React, { useState, useRef } from 'react';
+import { useForm } from 'react-hook-form';
 import styled, { keyframes } from 'styled-components';
-import { addBicycle } from '../../services/service';
-import { useRef } from 'react';
+import { addBicycle, uploadImage} from '../../services/service';
+
 
 const moveBike = keyframes`
   0% {
@@ -141,86 +141,87 @@ const FormContainer = styled.div`
   position: relative;
 `;
 
-const NewItem = () => {  // Añade el hook useNavigate a la importación de react-router-dom y declara una constante navigate que almacena el hook useNavigate
-
-    const { register, formState: { errors }, handleSubmit, reset} = useForm(); // Desestructura los métodos register, errors y handleSubmit del hook useForm
+const NewItem = () => {
+  const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const audioRef = useRef(null);
+  const audioRef = useRef(null);
+  const [imageUrl, setImageUrl] = useState(""); // Estado para almacenar la URL de la imagen
 
-    // Function to play sound
-    const playSound = () => {
-      if (audioRef.current) {
-        audioRef.current.play();
-      }
-    };  
-    const onSubmit = async (data) => {  // Crea una función asíncrona onSubmit que recibe un parámetro data y hace una petición a la API con el método addBicycle
-        const { success, error } = await addBicycle(data);  // Desestructura las propiedades success y error de la respuesta de la petición a la API con el método addBicycle
+  const playSound = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  };
 
-        if (success) {  // Si success es true
-            // Mostrar mensaje de éxito
-            alert('¡La bicicleta fue añadida correctamente!');
-            // Reiniciar el formulario
-            reset();
+  const onSubmit = async (data) => {
+    try {
+      const imageData = new FormData();
+      imageData.append("file", data.image[0]); // Agrega el archivo de imagen al FormData
+      imageData.append("upload_preset", "Presents_react"); // Agrega el preset de carga de Cloudinary // declaramos donde estan guardados nuestros achivos dentro de cloudinary
+
+      const response = await uploadImage(imageData); // Llama a la función para cargar la imagen en Cloudinary
+      setImageUrl(response.secure_url); // Almacena la URL de la imagen devuelta por Cloudinary
+
+      const bicycleData = { ...data, image: response.secure_url }; //le pedimos mediandte respons que nos de como respuesta la url del archivo
+      const { success, error } = await addBicycle(bicycleData);
+
+      if (success) {
+        alert('¡La bicicleta fue añadida correctamente!');
+        reset();
             setIsSubmitted(true); // Marca el formulario como enviado
             setTimeout(() => setIsSubmitted(false), 1500);
-        } else {
-            // Mostrar mensaje de error
-            alert(error);  // Si success es false, muestra el mensaje de error
-        }
+      } else {
+        alert(error);
+      }
+    } catch (error) {
+      console.error("Error al cargar la imagen:", error);
+      alert('Error al cargar la imagen. Por favor, intenta nuevamente.');
     }   
+  };
 
-    return (
-        <StyledNewItem>
+  return (
+    <StyledNewItem>
            <FormContainer isSubmitted={isSubmitted}>
            <StyledBike src="src\assets\img\Bicycle393939.png" alt="Bike" />
-        <audio ref={audioRef} src="src\assets\sound\7TSW2M4-bicycle-bell.mp3" />
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div>
-                <label>Modelo</label>
-                <input className='model' type="text" {...register('model', {
-                    required: true,
-                })}/>
-                {errors.model?.type === 'required' && <p className="error-message">El campo modelo es requerido</p>}
-            </div>
-            <div>
-                <label>Velocidades</label>
-                <input className='speeding' type="text" {...register('speeds', {
-                    pattern: /^[0-9]{1,3}$/,
-                    required: true,
-                })}/>
-                {errors.speeds?.type === 'pattern' && <p className="error-message">La velocidad debe ser un valor numérico</p>}
-                {errors.speeds?.type === 'required' && <p className="error-message">El campo velocidades es requerido</p>}
-            </div>
-            <div className='cuadred'>
-                <div className='frame'>
-                    <label>Cuadro</label>
-                    <select {...register('frame')}>
-                        <option value="Aluminio">Aluminio</option>
-                        <option value="Acero">Acero</option>
-                        <option value="Plástico">Plástico</option>
-                        <option value="Carbono">Carbono</option>
-                        <option value="Otros">Otros</option>
-                    </select>
-                </div>
-                <div className='electric'>
-                    <label>Eléctrica</label>
-                    <input className="checkbox-css" type="checkbox" {...register('electric')} />
-                </div>
-            </div>
-            <div>
-                <label htmlFor="imageUpload">Img URL</label>
-                <input className="bicyclesimg" type="text" {...register('image', {
-                pattern: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
-                required:true,
-                })}/>
-                {errors.image?.type === 'pattern' && <p className="error-message">El formato de la url de la imagen es incorrecto</p>}
-                {errors.image?.type === 'required' && <p className="error-message">El campo url de la imagen es requerido</p>}
-            </div>
-            <input type="submit" value="Añadir" onClick={playSound}/>
-       </form>
+          <audio ref={audioRef} src="src\assets\sound\7TSW2M4-bicycle-bell.mp3" />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <label>Modelo</label>
+          <input className='model' type="text" {...register('model', { required: true })}/>
+          {errors.model?.type === 'required' && <p className="error-message">El campo modelo es requerido</p>} 
+        </div>
+        <div>
+          <label>Velocidades</label>
+          <input className='speeding' type="text" {...register('speeds', { pattern: /^[0-9]{1,3}$/, required: true })}/>
+          {errors.speeds?.type === 'pattern' && <p className="error-message">La velocidad debe ser un valor numérico</p>}
+          {errors.speeds?.type === 'required' && <p className="error-message">El campo velocidades es requerido</p>}
+        </div>
+        <div className='cuadred'>
+          <div className='frame'>
+            <label>Cuadro</label>
+            <select {...register('frame')}>
+              <option value="Aluminio">Aluminio</option>
+              <option value="Acero">Acero</option>
+              <option value="Plástico">Plástico</option>
+              <option value="Carbono">Carbono</option>
+              <option value="Otros">Otros</option>
+            </select>
+          </div>
+          <div className='electric'>
+            <label>Eléctrica</label>
+            <input className="checkbox-css" type="checkbox" {...register('electric')} />
+          </div>
+        </div>
+        <div>
+          <label>Adjuntar imagen</label>
+          <input type="file" {...register('image', { required: true })} />
+          {errors.image && <p className="error-message">Por favor adjunta una imagen</p>}
+        </div>
+        <input type="submit" value="Añadir" onClick={playSound} />
+      </form>
        </FormContainer>
-        </StyledNewItem>
-    );
+    </StyledNewItem>
+  );
 }
-           
-export default NewItem; // Exporta el componente NewItem para poder utilizarlo en otros archivos
+
+export default NewItem;

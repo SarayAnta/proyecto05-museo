@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import BackgroundHome from '../../assets/img/BackgroundHome.png';
 import { useNavigate } from "react-router-dom";
-import { getBicycles, deleteBicycle } from '../../services/service';
+import { getBicycles, deleteBicycle, deleteImage } from '../../services/service';
 import { useLinkClickHandler } from 'react-router-dom';
 /*import { LikeButton } from '../likeButton/LikeButton';*/
 
@@ -97,53 +97,55 @@ button img {
   }
 `;
 
-const Home = () => { // Crea un componente Home
-  const [bicycles, setBicycles] = useState([]); // Declara una constante bicycles y una función setBicycles que almacenan un array vacío UseState, se desestructura el array en dos elementos
-  const navigate = useNavigate(); // Declara una constante navigate que almacena el hook useNavigate
+const Home = () => {
+  const [bicycles, setBicycles] = useState([]);
+  const navigate = useNavigate();
 
-  useEffect(() => {  // Crea un efecto que se ejecuta al renderizar el componente
-      const fetchData = async () => {  // Crea una función fetchData que se ejecuta de manera asíncrona
-      const data = await getBicycles() // Declara una constante data que almacena el resultado de la función getBicycles
-      console.log(data); // Muestra en consola el contenido de la constante data
-      setBicycles(data); // Ejecuta la función setBicycles con el contenido de la constante data como argumento
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getBicycles();
+      setBicycles(data);
+    };
+    fetchData();
+  }, []);
+
+  const handleDelete = async (id, imageUrl) => {
+    try {
+      await deleteBicycle(id); // Eliminar la bicicleta de la base de datos
+      await deleteImage(imageUrl); // Eliminar la imagen de Cloudinary
+
+      // Actualizar el estado local u otras acciones necesarias
+      setBicycles(bicycles.filter(bicycle => bicycle.id !== id));
+    } catch (error) {
+      console.error('Error deleting bicycle and image:', error);
     }
-    fetchData(); // Ejecuta la función fetchData
-    }
-   , []);
+  };
 
-
-  return ( // Retorna un fragmento con el contenido del componente
-    <>
+  return (
     <HomeContainer>
-        <img className="background-img"src={BackgroundHome} alt="Imagen de fondo de una chica apoyada sobre una bicicleta azul" />
-        <h2 className="title-gallery">Modelos de bicicletas</h2>
-        <div className='gallery'>
-          {bicycles.map((bicycle) => (
-            <div className='gallerygrid' key={bicycle.id}>
-              <img  onClick={() => navigate(`/card/${bicycle.id}`)} className="bicyclesimg" src={bicycle.image} alt={bicycle.model} />
-              <p>{bicycle.model}</p>
-              <div className="gallery-button" >
+      <img className="background-img" src={BackgroundHome} alt="Imagen de fondo" />
+      <h2 className="title-gallery">Modelos de bicicletas</h2>
+      <div className='gallery'>
+        {bicycles.map((bicycle) => (
+          <div className='gallerygrid' key={bicycle.id}>
+            <img onClick={() => navigate(`/card/${bicycle.id}`)} className="bicyclesimg" src={bicycle.image} alt={bicycle.model} />
+            <p>{bicycle.model}</p>
+            <div className="gallery-button" >
               <button className="edit-button" onClick={() => navigate(`/Edit/${bicycle.id}`)}>
                 <img src="src\assets\img\Edit.png" alt="Editar" />
               </button>
-              <button className="delete-button" onClick={() => {const confirmDelete = window.confirm('¿Deseas eliminar esta bicicleta?'); if (confirmDelete) {deleteBicycle(`${bicycle.id}`); navigate(0)}}}>
-                <img src="src\assets\img\Delete.png" alt= "Eliminar"/>
+              <button className="delete-button" onClick={() => { const confirmDelete = window.confirm('¿Deseas eliminar esta bicicleta?'); if (confirmDelete) { handleDelete(bicycle.id, bicycle.image); navigate(0)}}}>
+                <img src="src\assets\img\Delete.png" alt="Eliminar"/>
               </button>
-              <button className="like-button" onDoubleClick={() => CounterLikes(`${bicycle.likes}`)}>
+              <button className="like-button">
                 <img src="src\assets\img\Like.png" alt="Me gusta" />
               </button>
-              
-            
-
-
-              </div>
             </div>
-          ))}
-        </div>
-      </HomeContainer>
-    </>
+          </div>
+        ))}
+      </div>
+    </HomeContainer>
   );
 }
 
-//useparamt luego peticion get de id que tngo en la url y luego el id que me llega lo paso a la funcion de getBicycleById
 export default Home;
