@@ -137,7 +137,7 @@ const Home = () => {
               <button className="delete-button" onClick={() => { const confirmDelete = window.confirm('¿Deseas eliminar esta bicicleta?'); if (confirmDelete) { handleDelete(bicycle.id, bicycle.image); navigate(0)}}}>
                 <img src="src\assets\img\Delete.png" alt="Eliminar"/>
               </button>
-              <button className="like-button" onDoubleClick={() => CounterLikes(`${bicycle.likes}`)}>
+              <button className="like-button">
                 <img src="src\assets\img\Like.png" alt="Me gusta" />
               </button>
             </div>
