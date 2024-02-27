@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { addBicycle } from '../../services/service';
 import { useRef } from 'react';
+
+const moveBike = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1110px);
+  }
+`;
+
+const StyledBike = styled.img`
+  position: absolute;
+  top: 88%;
+  left: -390px; /* Inicia fuera del área visible */
+  animation: ${moveBike} 20s linear infinite; /* Ajusta la duración y el tipo de animación según tus preferencias */
+  width: 100px;
+`;
 
 const StyledNewItem = styled.div`
 
 height: 80vh;
 display: flex;
 align-items: center;
+justify-content: center;
+position: relative;
 
 body {
     max-height: 100%;
@@ -110,9 +129,22 @@ body {
   }
 `;
 
+const FormContainer = styled.div`
+  max-width: 550px;
+  margin: 0 auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+`;
+
 const NewItem = () => {  // Añade el hook useNavigate a la importación de react-router-dom y declara una constante navigate que almacena el hook useNavigate
 
     const { register, formState: { errors }, handleSubmit, reset} = useForm(); // Desestructura los métodos register, errors y handleSubmit del hook useForm
+    const [isSubmitted, setIsSubmitted] = useState(false);
     const audioRef = useRef(null);
 
     // Function to play sound
@@ -129,15 +161,19 @@ const NewItem = () => {  // Añade el hook useNavigate a la importación de reac
             alert('¡La bicicleta fue añadida correctamente!');
             // Reiniciar el formulario
             reset();
+            setIsSubmitted(true); // Marca el formulario como enviado
+            setTimeout(() => setIsSubmitted(false), 1500);
         } else {
             // Mostrar mensaje de error
             alert(error);  // Si success es false, muestra el mensaje de error
         }
-    }
+    }   
 
     return (
         <StyledNewItem>
-    <audio ref={audioRef} src="src\assets\sound\7TSW2M4-bicycle-bell.mp3" />
+           <FormContainer isSubmitted={isSubmitted}>
+           <StyledBike src="src\assets\img\Bicycle393939.png" alt="Bike" />
+        <audio ref={audioRef} src="src\assets\sound\7TSW2M4-bicycle-bell.mp3" />
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Modelo</label>
@@ -182,6 +218,7 @@ const NewItem = () => {  // Añade el hook useNavigate a la importación de reac
             </div>
             <input type="submit" value="Añadir" onClick={playSound}/>
        </form>
+       </FormContainer>
         </StyledNewItem>
     );
 }
