@@ -5,7 +5,7 @@
       "speeds": "200",
       "frame": "Aluminio",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png",
+      "image": "https://res.cloudinary.com/dlg7gpmha/image/upload/v1708946762/bicyclesmuseum/z1zwa3nfflrtybucnely.png",
       "id": "1"
     },
     {
@@ -66,62 +66,20 @@
       "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707742752/Gallery_8_uyvbzu.png"
     },
     {
-      "id": "9",
-      "model": "Cuadro Csepel",
-      "speeds": 1,
-      "frame": "Acero",
-      "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
+      "id": "d146",
+      "model": "cloudinary api working ?",
+      "speeds": "200",
+      "frame": "Plástico",
+      "electric": true,
+      "image": "https://res.cloudinary.com/dlg7gpmha/image/upload/v1708945523/bicyclesmuseum/uve3bs8ydecycwlu9ozq.png"
     },
     {
-      "id": "9e2e",
-      "model": "BH",
-      "speeds": "3",
-      "frame": "Aluminio",
-      "electric": false,
-      "image": "https://plus.unsplash.com/premium_photo-1677623022346-2175a0aaa2c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      "id": "8126",
-      "model": "bmx",
+      "id": "51a6",
+      "model": "cloudinary api working ?",
       "speeds": "200",
       "frame": "Acero",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
-    },
-    {
-      "id": "9139",
-      "model": "bmw",
-      "speeds": "200",
-      "frame": "Aluminio",
-      "electric": false,
-      "image": "https://plus.unsplash.com/premium_photo-1677623022346-2175a0aaa2c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.png"
-    
-    },
-    {
-      "id": "73de",
-      "model": "bmx",
-      "speeds": "200",
-      "frame": "Aluminio",
-      "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png",
-      "likes": 4
-    },
-    {
-      "id": "3d47",
-      "model": "bmx",
-      "speeds": "200",
-      "frame": "Aluminio",
-      "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_9_txtg0i.png"
-    },
-    {
-      "id": "14b7",
-      "model": "bmx",
-      "speeds": "3",
-      "frame": "Aluminio",
-      "electric": false,
-      "image": "https://plus.unsplash.com/premium_photo-1677623022346-2175a0aaa2c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.png"
+      "image": "https://res.cloudinary.com/dlg7gpmha/image/upload/v1708945646/bicyclesmuseum/vczju1c8z3g9qdmt1mrh.png"
     }
   ]
 }
