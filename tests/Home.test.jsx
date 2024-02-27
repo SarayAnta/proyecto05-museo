@@ -1,11 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import Home from '../src/components/home/Home';
 import { beforeEach, describe } from 'vitest';
+import { MemoryRouter } from "react-router";
 
 describe('test Home', () => {
 
     beforeEach(() => {
-        render(<Home/>);
+        render(<MemoryRouter><Home/></MemoryRouter>);
     })
 
     test('render img Background in Home', ()=> {
