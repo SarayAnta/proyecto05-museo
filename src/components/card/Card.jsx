@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
-import { getOneBicycle } from '../../services/service';  // Cambiado "service" por "services/service" donde tenemos los métodos de la API
+import { getOneBicycle } from '../../services/service';  
 const CardContainer = styled.div`
     display: flex;
     align-content: center;
@@ -60,23 +60,23 @@ const CardContainer = styled.div`
   
 `
 
-const Card = () => {  // Cambiado "props" por "id" para que coincida con el nombre que le damos en el archivo App.jsx
-    const { id } = useParams();  //UseParams es un hook que nos permite acceder a los parámetros de la URL 
-    const [bicycle, setBicycle] = useState();  //Usamos el hook useState para guardar el estado de la bicicleta y el método setBicycle para actualizar el estado de la bicicleta
+const Card = () => { 
+    const { id } = useParams();  
+    const [bicycle, setBicycle] = useState();  
 
-    useEffect(() => {  //Usamos el hook useEffect para hacer la petición a la API y obtener los detalles de la bicicleta
-        const fetchBicycleDetails = async () => {           //fetchBicycleDetails es una función asíncrona que nos permite hacer la petición a la API 
-            const detailedBicycle = await getOneBicycle(id);  //Usamos el método getOneBicycle de la API para obtener los detalles de la bicicleta
-            setBicycle(detailedBicycle); //Usamos el método setBicycle para guardar los detalles de la bicicleta en el estado
+    useEffect(() => {  
+        const fetchBicycleDetails = async () => {         
+            const detailedBicycle = await getOneBicycle(id); 
+            setBicycle(detailedBicycle); 
         };
-        fetchBicycleDetails();          //Llamamos a la función fetchBicycleDetails
-    }, [id]);   //Le pasamos el id como dependencia para que se ejecute cada vez que cambie el id
+        fetchBicycleDetails();    
+    }, [id]);  
     
-      if (!bicycle) {  //Si no hay bicicleta, devolvemos un mensaje de error
+      if (!bicycle) {  
         return <div style={{height: "80vh", fontFamily: "Jost", fontSize: "2em", color: "red", display: "flex", justifyContent: "center", alignItems: "center"}}>No se encontró la bicicleta</div>;
       }; 
 
-    return ( //Si hay bicicleta, devolvemos la información de la biciclet y usamos el componente CardContainer para mostrar la información de la bicicleta //Si hay bicicleta, devolvemos la información de la bicicleta
+    return (
         <CardContainer> 
         <img src={bicycle.image} alt={bicycle.model} />
         <section className="container-properties">

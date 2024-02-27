@@ -4,7 +4,7 @@ import BackgroundHome from '../../assets/img/BackgroundHome.png';
 import { useNavigate } from "react-router-dom";
 import { getBicycles, deleteBicycle, deleteImage } from '../../services/service';
 import { useLinkClickHandler } from 'react-router-dom';
-/*import { LikeButton } from '../likeButton/LikeButton';*/
+
 
 const HomeContainer = styled.div`
 
@@ -111,10 +111,10 @@ const Home = () => {
 
   const handleDelete = async (id, imageUrl) => {
     try {
-      await deleteBicycle(id); // Eliminar la bicicleta de la base de datos
-      await deleteImage(imageUrl); // Eliminar la imagen de Cloudinary
+      await deleteBicycle(id); 
+      await deleteImage(imageUrl); 
 
-      // Actualizar el estado local u otras acciones necesarias
+   
       setBicycles(bicycles.filter(bicycle => bicycle.id !== id));
     } catch (error) {
       console.error('Error deleting bicycle and image:', error);

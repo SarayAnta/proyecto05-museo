@@ -16,8 +16,8 @@ const moveBike = keyframes`
 const StyledBike = styled.img`
   position: absolute;
   top: 88%;
-  left: -390px; /* Inicia fuera del área visible */
-  animation: ${moveBike} 20s linear infinite; /* Ajusta la duración y el tipo de animación según tus preferencias */
+  left: -390px; 
+  animation: ${moveBike} 20s linear infinite; 
   width: 100px;
 `;
 
@@ -97,23 +97,23 @@ body {
   .frame,
   .electric {
     display: flex;
-    align-items: center; /* Alinear verticalmente */
-    margin-right: 30px; /* Espacio entre los campos */
+    align-items: center; 
+    margin-right: 30px; 
   }
   
   .frame label,
   .electric label {
-    margin-right: 20px; /* Espacio entre el label y el input */
+    margin-right: 20px; 
     margin-top: -2vh;
   }
   
   .frame select {
-    flex: 1; /* El input ocupa todo el espacio restante */
+    flex: 1; 
     width: 200px;
   }
   
   .electric input[type="checkbox"] {
-    flex: 1; /* El input ocupa todo el espacio restante */
+    flex: 1; 
     margin-top: -3vh;
   }
   
@@ -145,7 +145,7 @@ const NewItem = () => {
   const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const [isSubmitted, setIsSubmitted] = useState(false);
   const audioRef = useRef(null);
-  const [imageUrl, setImageUrl] = useState(""); // Estado para almacenar la URL de la imagen
+  const [imageUrl, setImageUrl] = useState(""); 
 
   const playSound = () => {
     if (audioRef.current) {
@@ -156,19 +156,19 @@ const NewItem = () => {
   const onSubmit = async (data) => {
     try {
       const imageData = new FormData();
-      imageData.append("file", data.image[0]); // Agrega el archivo de imagen al FormData
-      imageData.append("upload_preset", "Presents_react"); // Agrega el preset de carga de Cloudinary // declaramos donde estan guardados nuestros achivos dentro de cloudinary
+      imageData.append("file", data.image[0]); 
+      imageData.append("upload_preset", "Presents_react"); 
 
-      const response = await uploadImage(imageData); // Llama a la función para cargar la imagen en Cloudinary
-      setImageUrl(response.secure_url); // Almacena la URL de la imagen devuelta por Cloudinary
+      const response = await uploadImage(imageData); 
+      setImageUrl(response.secure_url); 
 
-      const bicycleData = { ...data, image: response.secure_url }; //le pedimos mediandte respons que nos de como respuesta la url del archivo
+      const bicycleData = { ...data, image: response.secure_url }; 
       const { success, error } = await addBicycle(bicycleData);
 
       if (success) {
         alert('¡La bicicleta fue añadida correctamente!');
         reset();
-            setIsSubmitted(true); // Marca el formulario como enviado
+            setIsSubmitted(true); 
             setTimeout(() => setIsSubmitted(false), 1500);
       } else {
         alert(error);

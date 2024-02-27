@@ -78,19 +78,19 @@ body {
   .frame,
   .electric {
     display: flex;
-    align-items: center; /* Alinear verticalmente */
-    margin-right: 5%; /* Espacio entre los campos */
+    align-items: center; 
+    margin-right: 5%; 
     font-size: 1.5vw;
   }
   
   .frame label,
   .electric label {
-    margin-right: 5%; /* Espacio entre el label y el input */
+    margin-right: 5%; 
     
   }
   
   .frame select {
-    flex: 1; /* El input ocupa todo el espacio restante */
+    flex: 1; 
     width: 125px;
     margin-top: 5%;
     
