@@ -96,10 +96,6 @@ const Card = () => {  // Cambiado "props" por "id" para que coincida con el nomb
                 <h2>Eléctrica:</h2>
                 <p>{bicycle.electric ? "Sí" : "No"}</p>
             </div>
-            <div className="properties">
-                <h2>Likes:</h2>
-                <p>{bicycle.likes}</p>
-            </div>
         </section>
         </CardContainer>
     )

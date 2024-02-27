@@ -14,8 +14,7 @@
       "speeds": "3",
       "frame": "Aluminio",
       "electric": true,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_2_goazza.png",
-      "likes": 0
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744089/Gallery_2_goazza.png"
     },
     {
       "id": "3",
@@ -32,8 +31,7 @@
       "speeds": 28,
       "frame": "Aluminio",
       "electric": true,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744117/Gallery_4_rtud0n.png",
-      "likes": 0
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744117/Gallery_4_rtud0n.png"
     },
     {
       "id": "5",
@@ -41,8 +39,7 @@
       "speeds": 1,
       "frame": "Acero",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744114/Gallery_5_crbwkd.png",
-      "likes": 0
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744114/Gallery_5_crbwkd.png"
     },
     {
       "id": "6",
@@ -50,8 +47,7 @@
       "speeds": 3,
       "frame": "Acero",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744114/Gallery_6_bpemav.png",
-      "likes": 0
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744114/Gallery_6_bpemav.png"
     },
     {
       "id": "7",
@@ -59,8 +55,7 @@
       "speeds": 1,
       "frame": "Plástico",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744113/Gallery_7_ubzo2k.png",
-      "likes": 0
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707744113/Gallery_7_ubzo2k.png"
     },
     {
       "id": "8",
@@ -68,8 +63,7 @@
       "speeds": 1,
       "frame": "Acero",
       "electric": false,
-      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707742752/Gallery_8_uyvbzu.png",
-      "likes": 0
+      "image": "https://res.cloudinary.com/dgrh4vkj0/image/upload/v1707742752/Gallery_8_uyvbzu.png"
     },
     {
       "model": "cloudinary api working ?",
@@ -84,8 +78,8 @@
       "speeds": "200",
       "frame": "Acero",
       "electric": false,
-      "image": "https://res.cloudinary.com/dlg7gpmha/image/upload/v1708948803/bicyclesmuseum/uorgqutvwtxzunzwcjcb.png",
-      "id": "51a6"
+      "image": "https://res.cloudinary.com/dlg7gpmha/image/upload/v1708945646/bicyclesmuseum/vczju1c8z3g9qdmt1mrh.png",
+      "likes": 0
     }
   ]
 }
