@@ -1,8 +1,4 @@
-import React from 'react';
-import React, { useState } from 'react';
-import styled from "styled-components";
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+
 
 
 const LikeContainer = styled.div`
@@ -25,21 +21,29 @@ const LikeContainer = styled.div`
     }
 `;
 
-
-
-
 function CounterLikes() {
   const [likes, setLikes] = useState(0);
+  const [loading, setLoading] = useState(false);
 
-  
+  useEffect(() => { // Utiliza el hook useEffect para hacer la petición a la API
+    const fetchData = async () => { //fetchData es una función asíncrona que nos permite hacer la petición a la API
+      const bicycleData = await getOneBicycle(id); //bicycleData es una constante que almacena el resultado de la petición a la API
+      const likesData = await getLikes(id); //likesData es una constante que almacena el resultado de la petición a la API
 
-  useEffect(() => {
-    // Obtén los likes actuales de la foto al cargar el componente
-    axios.get(`/server/db.json/${bicyles.Id}`)
-      .then(response => {
-        setLikes(response.data.likes);
-      });
-  }, [bicyles.Likes]);
+      setLikes(likesData); //Usamos el método setLikes para guardar los likes de la bicicleta en el estado
+    };
+
+    fetchData(); // Llama a la función fetchData cuando el componente se monta
+  }, [id]) // Le pasa el id como dependencia para que se ejecute cada vez que cambie
+
+  const onLikes = async (data) => { // Define una función asincrónica llamada onLikes que recibe los datos del formulario
+    try { // Utiliza un bloque try...catch para manejar errores
+      setLoading(true); // Actualiza el estado de loading a true
+      await updateItem(id, data); // Utiliza el id capturado de la URL
+    } finally {
+      setLoading(false); // Actualiza el estado de loading a false
+    }
+  };
 
   const handleLike = () => {
     // Incrementa los likes en el estado local
@@ -56,31 +60,18 @@ function CounterLikes() {
 
   // ...otro código...
 
- 
-    return response.json(CounterLikes()); //Retornamos la respuesta de la API
-  
-  };
-
-
-  /*
-    (
-      
-      <div className="bicycle-container">
-            
-            <button className="like-button" onDoubleClick={handleLike}>Me gusta</button>
-            <p className="like-counter">{likes}</p>
-          
-        
-      <button onClick={handleLike}>Me gusta</button>
-      <p>{likes}</p>
+  return (
+    <div>
+      <button className="like-button" onDoubleClick={handleLike(CounterLikes)}>Me gusta</button>
+      <p className="like-counter">{likes}</p>
     </div>
   );
-
-export default CounterLikes;
-
+};
 
 
-
+export { LikeContainer };
+export { CounterLikes };
+export { LikeButton };
 
 
 /*

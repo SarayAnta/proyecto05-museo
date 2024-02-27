@@ -4,7 +4,7 @@ import BackgroundHome from '../../assets/img/BackgroundHome.png';
 import { useNavigate } from "react-router-dom";
 import { getBicycles, deleteBicycle } from '../../services/service';
 import { useLinkClickHandler } from 'react-router-dom';
-/*import { LikeButton } from '../likeButton/LikeButton';*/
+
 
 const HomeContainer = styled.div`
 
