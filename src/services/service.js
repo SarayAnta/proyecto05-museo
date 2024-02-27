@@ -88,11 +88,28 @@ export const getOneBicycle = async (id) => {
 export const uploadImage = async (imageData) => {
   try {
     const response = await axios.post(
-      "http://api.cloudinary.com/v1_1/dlg7gpmha/image/upload",
+      "http://api.cloudinary.com/v1_1/dlg7gpmha/image/upload", //http://api.cloudinary/v1_1 (siempre necesario tal cual para la carga de archivos) / nombre de usuario/ image/upload
       imageData
     );
     return response.data;
   } catch (error) {
     throw new Error("Error al cargar la imagen en Cloudinary: " + error.message);
+  }
+};
+
+// // Método para eliminar una imagen de Cloudinary
+export const deleteImage = async (imageUrl) => {
+  try {
+      const response = await fetch(`http://api.cloudinary.com/v1_1/dlg7gpmha/image/destroy?url=${imageUrl}`, {
+          method: 'DELETE',
+          headers: {
+              'Authorization': 'Bearer 814857226871881', // Aquí se incluye tu API Key de Cloudinary
+          },
+      });
+      const data = await response.json();
+      return data;
+  } catch (error) {
+      console.error('Error deleting image from Cloudinary:', error);
+      throw new Error('Error deleting image from Cloudinary');
   }
 };
