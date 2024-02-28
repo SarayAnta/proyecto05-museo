@@ -131,13 +131,12 @@ El proyecto está estructurado de la siguiente manera:
 
 ## Estructurado:
 
-El proyecto esta estructurado de la siguiente manera
-
-    - src/: Contiene todos los archivos fuente de la aplicación.
-    - components/: Contiene los componentes de React utilizados en la aplicación, como Home, NewItem, Edit, Footer, Gallery, Card, etc.
-    - services/: Contiene los archivos que gestionan las llamadas a la API para obtener, añadir, editar y eliminar bicicletas. como getBicycles, addBicycle, deleteBicycle, updateItem, etc.
-    - assets/: Contiene archivos estáticos como imágenes, fuentes, y sonidos utilizados en la aplicación.
-    - router/: Contiene el enrutador de la aplicación que mapea las rutas a los componentes correspondientes.
+El proyecto esta estructurado de la siguiente manera:
+1. src/: Contiene todos los archivos fuente de la aplicación.
+2. components/: Contiene los componentes de React utilizados en la aplicación, como Home, NewItem, Edit, Footer, Gallery, Card, etc.
+3. services/: Contiene los archivos que gestionan las llamadas a la API para obtener, añadir, editar y eliminar bicicletas. como getBicycles, addBicycle, deleteBicycle, updateItem, etc.
+4. assets/: Contiene archivos estáticos como imágenes, fuentes, y sonidos utilizados en la aplicación.
+5. router/: Contiene el enrutador de la aplicación que mapea las rutas a los componentes correspondientes.
 
 ## Código
 
