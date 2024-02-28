@@ -4,6 +4,7 @@ import Home from "../components/home/Home";
 import NewItem from "../components/newitem/NewItem";
 import Edit from "../components/edit/Edit";
 import Footer from "../components/footer/footer";
+
 import Card from "../components/card/Card";
 
 
@@ -29,6 +30,7 @@ export const router = createBrowserRouter([
       path: "/Edit/:id",
       element: <Edit/>
     },
+   
     {
       path: "/card/:id",
       element: <Card/>
