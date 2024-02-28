@@ -14,17 +14,18 @@ const AddButton = styled.button`    // Crea un componente AddButton con styled-c
         max-width: 150px;
         margin-right: 20px;
         border-radius: 15px;
+        font-weight: bold;
         
 
         &:hover {
-            background-color: #3DE361;
+            background-color: #FFFFF;
             color: black;
             transform: scale(1.1);
             transition: 0.5s;
         }
 
         &:active {
-            background-color: #3DE361;
+            background-color: #3DE161d2;
             color: black;
             transform: scale(0.9);
             transition: 0.5s;
