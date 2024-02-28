@@ -19,10 +19,6 @@ export const router = createBrowserRouter([
     },
 
     {
-      path: "/footer",
-      element: <Footer/>
-    },
-    {
       path: "/NewItem",
       element: <NewItem/>,
     },
