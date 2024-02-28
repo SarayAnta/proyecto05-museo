@@ -64,54 +64,64 @@ Eliminar una bicicleta: Haz clic en el botón "Eliminar" junto a un modelo de bi
 Explorar la galería de imágenes: Visita la sección de la galería para ver imágenes relacionadas con el ciclismo.
 
 
-     organizar por carpetas: 
+|-- src/
+|   |-- assets/
+|   |   |-- img/
+|   |   |   |-- Gallery1.png
+|   |   |   |-- BackgroundHome.png
+|   |   |   |-- ...
+|   |   |
+|   |   |-- sound/
+|   |       |-- 7TSW2M4-bicycle-bell.mp3
+|   |       |-- ...
+|   |
+|   |-- components/
+|   |   |-- add-button/
+|   |   |   |-- AddButton.jsx
+|   |   |
+|   |   |-- card/
+|   |   |   |-- Card.jsx
+|   |   |
+|   |   |-- edit/
+|   |   |   |-- Edit.jsx
+|   |   |
+|   |   |-- footer/
+|   |   |   |-- Footer.jsx
+|   |   |
+|   |   |-- gallery/
+|   |   |   |-- Gallery.jsx
+|   |   |
+|   |   |-- home/
+|   |   |   |-- Home.jsx
+|   |   |
+|   |   |-- layout/
+|   |   |   |-- LayoutPublic.jsx
+|   |   |
+|   |   |-- like-button/           // Cambié el nombre de la carpeta "likebutton" a "like-button" por convención de nombres.
+|   |   |   |-- LikeButton.jsx
+|   |   |
+|   |   |-- nav/
+|   |   |   |-- Nav.jsx
+|   |   |
+|   |   |-- new-item/              // Cambié el nombre de la carpeta "newitem" a "new-item" por convención de nombres.
+|   |       |-- NewItem.jsx
+|   |
+|   |-- router/
+|   |   |-- router.jsx
+|   |
+|   |-- services/
+|   |   |-- service.js
+|   |
+|   |-- index.html
+|   |-- index.js
+|
+|-- test/
+|   |-- Footer.test.jsx
+|   |-- Home.test.jsx
+|   |-- Nav.test.jsx
 
-src/
-|-- assets/
-|   |-- img/
-|   |   |-- Gallery1.png
-|   |   |-- BackgroundHome.png
-|   |   |-- ...
-|   |-- sound/
-|       |-- 7TSW2M4-bicycle-bell.mp3
-|       |-- ...
-|
-|-- components/
-|   |-- card/
-|   |   |-- Card.jsx
-|   |
-|   |-- edit/
-|   |   |-- Edit.jsx
-|   |
-|   |-- footer/
-|   |   |-- Footer.jsx
-|   |
-|   |-- gallery/
-|   |   |-- Gallery.jsx
-|   |
-|   |-- home/
-|   |   |-- Home.jsx
-|   |
-|   |-- layout/
-|   |   |-- LayoutPublic.jsx
-|   |
-|   |-- nav/
-|   |   |-- Nav.jsx
-|   |
-|   |-- newitem/
-|       |-- NewItem.jsx
-|
-|-- router/
-|   |-- router.jsx
-|
-|-- services/
-|   |-- service.js
-|
-|-- index.html
-|-- index.js
-
-
-      El proyecto está estructurado de la siguiente manera:
+     
+El proyecto está estructurado de la siguiente manera:
 
 src/: Contiene todos los archivos fuente de la aplicación.
 components/: Contiene los componentes de React utilizados en la aplicación, como Home, NewItem, Edit, Footer, Gallery, Card, etc.
