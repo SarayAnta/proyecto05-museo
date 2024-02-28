@@ -1,10 +1,28 @@
-# Museo de Bicicletas 🚲
+<div align="center">
+  <h1>Museo de Bicicletas 🚲</h1>
+</div>
 
-[![Jessica Noguera](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/JnogueraGonzalez/) Jessica Noguera [![Fatima Cosme](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/pointfs) Fatima Cosme [![Saray Rodriguez](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/SarayAnta) Saray Rodriguez [![Elena López](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/elenalope) Elena López [![Usuario 5](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/usuario5) Usuario5
+<p align="center">
+  <a href="https://github.com/JnogueraGonzalez/">
+    <img src="https://img.icons8.com/ios-filled/30/000000/github.png" alt="Jessica Noguera">Jessica Noguera
+  </a>
+  <a href="https://github.com/pointfs">
+    <img src="https://img.icons8.com/ios-filled/30/000000/github.png" alt="Fatima Cosme">Fatima Cosme
+  </a>
+  <a href="https://github.com/SarayAnta">
+    <img src="https://img.icons8.com/ios-filled/30/000000/github.png" alt="Saray Rodriguez">Saray Rodriguez
+  </a>
+  <a href="https://github.com/elenalope">
+    <img src="https://img.icons8.com/ios-filled/30/000000/github.png" alt="Elena López">Elena López
+  </a>
+  <a href="https://github.com/TrianaSolerMartín">
+    <img src="https://img.icons8.com/ios-filled/30/000000/github.png" alt="Triana Soler Martín">Triana Soler Martín
+  </a>
+</p>
 
-¡Bienvenido al Museo de Bicicletas!
-
-Este proyecto es una aplicación web desarrollada con React que sirve como un museo virtual de bicicletas, donde los usuarios pueden ver diferentes modelos de bicicletas, agregar nuevas bicicletas, editar y eliminar modelos existentes, y explorar una galería de imágenes relacionadas con el ciclismo.
+<div align="center">
+  <p>¡Bienvenido al Museo de Bicicletas!</p>
+</div>
 
 ## Descripción
 
@@ -55,47 +73,70 @@ React - React Router - Styled Components - Fetch API - Vite - Jest
 
 El proyecto está estructurado de la siguiente manera:
 
-src/
-|-- activos/
-| |-- img/
-| | |-- Galería1.png
-| | |-- FondoHome.png
-| | |-- ...
-| |-- sonido/
-| |-- 7TSW2M4-timbre-bicicleta.mp3
-| |-- ...
-|-- componentes/
-| |-- tarjeta/
-| | |-- Tarjeta.jsx
-| |
-| |-- editar/
-| | |-- Editar.jsx
-| |
-| |-- pie de página/
-| | |-- Pie de página.jsx
-| |
-| |-- galería/
-| | |-- Galería.jsx
-| |
-| |-- inicio/
-| | |-- Inicio.jsx
-| |
-| |-- diseño/
-| | |-- DiseñoPublic.jsx
-| |
-| |-- nav/
-| | |-- Nav.jsx
-| |
-| |-- nuevo elemento/
-| |-- NuevoItem.jsx
-|-- enrutador/
-| |-- enrutador.jsx
+|-- src/
+|   |-- assets/
+|   |   |-- img/
+|   |   |   |-- Gallery1.png
+|   |   |   |-- BackgroundHome.png
+|   |   |   |-- ...
+|   |   |
+|   |   |-- sound/
+|   |       |-- 7TSW2M4-bicycle-bell.mp3
+|   |       |-- ...
+|   |
+|   |-- components/
+|   |   |-- add-button/
+|   |   |   |-- AddButton.jsx
+|   |   |
+|   |   |-- card/
+|   |   |   |-- Card.jsx
+|   |   |
+|   |   |-- edit/
+|   |   |   |-- Edit.jsx
+|   |   |
+|   |   |-- footer/
+|   |   |   |-- Footer.jsx
+|   |   |
+|   |   |-- gallery/
+|   |   |   |-- Gallery.jsx
+|   |   |
+|   |   |-- home/
+|   |   |   |-- Home.jsx
+|   |   |
+|   |   |-- layout/
+|   |   |   |-- LayoutPublic.jsx
+|   |   |
+|   |   |-- like-button/          
+|   |   |   |-- LikeButton.jsx
+|   |   |
+|   |   |-- nav/
+|   |   |   |-- Nav.jsx
+|   |   |
+|   |   |-- new-item/            
+|   |       |-- NewItem.jsx
+|   |
+|   |-- router/
+|   |   |-- router.jsx
+|   |
+|   |-- services/
+|   |   |-- service.js
+|   |
+|   |-- index.html
+|   |-- index.js
 |
-|-- servicios/
-| |-- servicio.js
-|
-|-- index.html
-|-- index.js
+|-- test/
+|   |-- Footer.test.jsx
+|   |-- Home.test.jsx
+|   |-- Nav.test.jsx
+
+## Estructurado:
+
+El proyecto esta estructurado de la siguiente manera:
+1. src/: Contiene todos los archivos fuente de la aplicación.
+2. components/: Contiene los componentes de React utilizados en la aplicación, como Home, NewItem, Edit, Footer, Gallery, Card, etc.
+3. services/: Contiene los archivos que gestionan las llamadas a la API para obtener, añadir, editar y eliminar bicicletas. como getBicycles, addBicycle, deleteBicycle, updateItem, etc.
+4. assets/: Contiene archivos estáticos como imágenes, fuentes, y sonidos utilizados en la aplicación.
+5. router/: Contiene el enrutador de la aplicación que mapea las rutas a los componentes correspondientes.
 
 ## Código
 
@@ -114,10 +155,6 @@ El código proporcionado se refiere a la configuración y desarrollo de una apli
 6. **Comunicación con la API**: Se definen funciones en el directorio de servicios para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en la base de datos o en algún backend externo. Estas funciones utilizan fetch para realizar solicitudes HTTP a la API.
 
 7. **Integración de sonidos**: Se integra un archivo de audio para reproducir un sonido cuando se realiza una acción en la aplicación, como agregar un nuevo elemento.
-
-En resumen, el código proporcionado muestra la configuración y desarrollo de una aplicación web utilizando React.js y Vite.js, junto con otras herramientas y tecnologías complementarias para construir una aplicación funcional con estilos personalizados, gestión de rutas, comunicación con la API y otras características.
-
-
 
 ## Cloudinary: Gestión de Imágenes
 
