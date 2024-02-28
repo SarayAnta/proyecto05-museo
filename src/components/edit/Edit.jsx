@@ -102,7 +102,7 @@ body {
   }
   
   input[type="submit"] {
-    background-color: #3de161d2;
+    background-color: #3DE161d2;
     margin-top: 1%;
   }
   
