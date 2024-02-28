@@ -1,6 +1,6 @@
 # Museo de Bicicletas 🚲
 
-[![Jessica Noguera](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/JnogueraGonzalez/) Jessica Noguera [![Fatima Cosme](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/pointfs) Fatima Cosme [![Saray Rodriguez](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/SarayAnta) Saray Rodriguez [![Elena López](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/elenalope) Elena López [![Usuario 5](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/usuario5) Usuario5
+[![Jessica Noguera](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/JnogueraGonzalez/) Jessica Noguera [![Fatima Cosme](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/pointfs) Fatima Cosme [![Saray Rodriguez](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/SarayAnta) Saray Rodriguez [![Elena López](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/elenalope) Elena López [![Usuario 5](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/TrianaSolerMartín) Triana Soler Martín 
 
 ¡Bienvenido al Museo de Bicicletas!
 
