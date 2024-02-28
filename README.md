@@ -1,5 +1,7 @@
 # Museo de Bicicletas 🚲
 
+[![Jessica Noguera](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/JnogueraGonzalez/) Jessica Noguera [![Fatima Cosme](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/pointfs) Fatima Cosme [![Saray Rodriguez](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/SarayAnta) Saray Rodriguez [![Elena López](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/elenalope) Elena López [![Usuario 5](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/usuario5) Usuario5
+
 ¡Bienvenido al Museo de Bicicletas!
 
 Este proyecto es una aplicación web desarrollada con React que sirve como un museo virtual de bicicletas, donde los usuarios pueden ver diferentes modelos de bicicletas, agregar nuevas bicicletas, editar y eliminar modelos existentes, y explorar una galería de imágenes relacionadas con el ciclismo.
@@ -95,9 +97,6 @@ src/
 |-- index.html
 |-- index.js
 
-markdown
-Copy code
-
 ## Código
 
 El código proporcionado se refiere a la configuración y desarrollo de una aplicación web utilizando React.js y Vite.js. Aquí está la lógica general del código:
@@ -160,5 +159,3 @@ Si tienes alguna pregunta o sugerencia sobre el proyecto, no dudes en ponerte en
 
 ¡Gracias por tu interés y apoyo! Pedalea con nosotros hacia un futuro lleno de aventuras en dos ruedas. 🚲✨
 
-## Integrantes del Equipo
-[![Usuario 1](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/usuario1) Usuario1 [![Usuario 2](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/usuario2) Usuario2 [![Usuario 3](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/usuario3) Usuario3 [![Usuario 4](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/usuario4) Usuario4 [![Usuario 5](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/usuario5) Usuario5
