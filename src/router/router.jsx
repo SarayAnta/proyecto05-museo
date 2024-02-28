@@ -26,10 +26,6 @@ export const router = createBrowserRouter([
       element: <Edit/>
     },
     {
-      path: "/Gallery",
-      element: <Gallery/>
-    },
-    {
       path: "/card/:id",
       element: <Card/>
     }
