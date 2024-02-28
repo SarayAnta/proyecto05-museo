@@ -129,6 +129,16 @@ El proyecto está estructurado de la siguiente manera:
 |   |-- Home.test.jsx
 |   |-- Nav.test.jsx
 
+## Estructurado:
+
+El proyecto esta estructurado de la siguiente manera
+
+    - src/: Contiene todos los archivos fuente de la aplicación.
+    - components/: Contiene los componentes de React utilizados en la aplicación, como Home, NewItem, Edit, Footer, Gallery, Card, etc.
+    - services/: Contiene los archivos que gestionan las llamadas a la API para obtener, añadir, editar y eliminar bicicletas. como getBicycles, addBicycle, deleteBicycle, updateItem, etc.
+    - assets/: Contiene archivos estáticos como imágenes, fuentes, y sonidos utilizados en la aplicación.
+    - router/: Contiene el enrutador de la aplicación que mapea las rutas a los componentes correspondientes.
+
 ## Código
 
 El código proporcionado se refiere a la configuración y desarrollo de una aplicación web utilizando React.js y Vite.js. Aquí está la lógica general del código:
