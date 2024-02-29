@@ -103,7 +103,7 @@ export const deleteImage = async (imageUrl) => {
       const response = await fetch(`http://api.cloudinary.com/v1_1/dlg7gpmha/image/destroy?url=${imageUrl}`, {
           method: 'DELETE',
           headers: {
-              'Authorization': 'Bearer 814857226871881', // Aquí se incluye tu API Key de Cloudinary
+              'Authorization': `Bearer ${process.env.CLOUNDINARY_API_KEY}`, // Aquí se incluye tu API Key de Cloudinary
           },
       });
       const data = await response.json();
